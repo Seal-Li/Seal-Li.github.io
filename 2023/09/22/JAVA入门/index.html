@@ -1,0 +1,977 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Seal Li">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Java8新特性Java 8引入了许多新特性和改进，其中一些最显著的包括：  Lambda 表达式：Lambda 表达式是 Java 8 中最显著的新特性之一。它允许在方法内部定义匿名函数，从而更容易实现函数式编程。这使得代码更简洁和可读，并提供了更好的抽象机制。 (a, b) -&gt; a + b  函数式接口：Java 8引入了函数式接口概念，这是一种只有一个抽象方法的接口。这为Lambda">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA入门">
+<meta property="og:url" content="http://seal-li.github.io/2023/09/22/JAVA%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="Seal&#39;s Whisky">
+<meta property="og:description" content="Java8新特性Java 8引入了许多新特性和改进，其中一些最显著的包括：  Lambda 表达式：Lambda 表达式是 Java 8 中最显著的新特性之一。它允许在方法内部定义匿名函数，从而更容易实现函数式编程。这使得代码更简洁和可读，并提供了更好的抽象机制。 (a, b) -&gt; a + b  函数式接口：Java 8引入了函数式接口概念，这是一种只有一个抽象方法的接口。这为Lambda">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-22T02:54:01.000Z">
+<meta property="article:modified_time" content="2023-12-02T16:01:42.172Z">
+<meta property="article:author" content="Seal Li">
+<meta property="article:tag" content="JAVA">
+<meta property="article:tag" content="开发">
+<meta property="article:tag" content="编程语言">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>JAVA入门 - Seal&#39;s Whisky</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"seal-li.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"2623283313733e2775c175798b084e6e","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?2623283313733e2775c175798b084e6e";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Seal&#39;s Whisky</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="JAVA入门"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-22 10:54" pubdate>
+          September 22, 2023 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.4k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          45 mins
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> views
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">JAVA入门</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="Java8新特性"><a href="#Java8新特性" class="headerlink" title="Java8新特性"></a>Java8新特性</h3><p>Java 8引入了许多新特性和改进，其中一些最显著的包括：</p>
+<ol>
+<li><p><strong>Lambda 表达式</strong>：Lambda 表达式是 Java 8 中最显著的新特性之一。它允许在方法内部定义匿名函数，从而更容易实现函数式编程。这使得代码更简洁和可读，并提供了更好的抽象机制。</p>
+<div class="code-wrapper"><pre><code class="hljs java">(a, b) -&gt; a + b</code></pre></div>
+</li>
+<li><p><strong>函数式接口</strong>：Java 8引入了函数式接口概念，这是一种只有一个抽象方法的接口。这为Lambda表达式提供了类型和基本的函数式编程支持。例如，<code>java.util.function</code> 包中包含了许多常用的函数式接口，如 <code>Consumer</code>、<code>Function</code>、<code>Predicate</code>。</p>
+</li>
+<li><p><strong>方法引用</strong>：方法引用允许您使用已存在的方法来实现函数式接口。有四种主要的方法引用类型：静态方法引用、实例方法引用、构造方法引用、类构造方法引用。</p>
+<div class="code-wrapper"><pre><code class="hljs java">List&lt;String&gt; names = Arrays.asList(<span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;Charlie&quot;</span>);
+names.forEach(System.out::println);</code></pre></div>
+</li>
+<li><p>**流 (Stream)**：Java 8引入了Stream API，它提供了一种用于处理集合数据的高级抽象方式。使用Stream，您可以轻松地进行过滤、映射、归约和其他数据处理操作。</p>
+<div class="code-wrapper"><pre><code class="hljs java">List&lt;Integer&gt; numbers = Arrays.asList(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);
+<span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> numbers.stream()
+                .filter(n -&gt; n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
+                .mapToInt(Integer::intValue)
+                .sum();</code></pre></div>
+</li>
+<li><p>**默认方法 (Default Method)**：接口中可以包含默认方法的定义，这使得向接口添加新方法时不会破坏已经实现该接口的类。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">MyInterface</span> &#123;
+    <span class="hljs-keyword">default</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">myDefaultMethod</span><span class="hljs-params">()</span> &#123;
+        <span class="hljs-comment">// 默认实现</span>
+    &#125;
+&#125;</code></pre></div>
+</li>
+<li><p><strong>新的日期和时间 API</strong>：Java 8引入了<code>java.time</code> 包，提供了全新的日期和时间 API，以替代旧的 <code>Date</code> 和 <code>Calendar</code> 类。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">LocalDate</span> <span class="hljs-variable">today</span> <span class="hljs-operator">=</span> LocalDate.now();
+<span class="hljs-type">LocalTime</span> <span class="hljs-variable">now</span> <span class="hljs-operator">=</span> LocalTime.now();</code></pre></div>
+</li>
+<li><p><strong>新的 JavaScript 引擎</strong>：Java 8引入了 Nashorn JavaScript 引擎，可用于在Java应用程序中嵌入和执行JavaScript代码。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">ScriptEngine</span> <span class="hljs-variable">engine</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ScriptEngineManager</span>().getEngineByName(<span class="hljs-string">&quot;nashorn&quot;</span>);
+engine.eval(<span class="hljs-string">&quot;print(&#x27;Hello, world!&#x27;)&quot;</span>);</code></pre></div>
+</li>
+<li><p><strong>并行数组</strong>：Java 8引入了并行数组，可用于在多核处理器上并行处理大规模数据。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">int</span>[] numbers = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>&#125;;
+<span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> Arrays.parallelStream(numbers)
+                .sum();</code></pre></div></li>
+</ol>
+<p>这些新特性和改进使Java 8成为了一个更强大、更现代的编程语言，更容易进行并发编程和函数式编程。它提供了更多的工具来简化和改进Java应用程序的开发。</p>
+<h3 id="Java基本数据类型"><a href="#Java基本数据类型" class="headerlink" title="Java基本数据类型"></a>Java基本数据类型</h3><p>Java 的基本数据类型包括以下八种：</p>
+<ol>
+<li><p><strong>byte</strong>：字节类型，8 位，范围为 -128 到 127。用于节省内存空间。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">byte</span> <span class="hljs-variable">myByte</span> <span class="hljs-operator">=</span> <span class="hljs-number">42</span>;</code></pre></div>
+</li>
+<li><p><strong>short</strong>：短整数类型，16 位，范围为 -32,768 到 32,767。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">short</span> <span class="hljs-variable">myShort</span> <span class="hljs-operator">=</span> <span class="hljs-number">1000</span>;</code></pre></div>
+</li>
+<li><p><strong>int</strong>：整数类型，32 位，范围为 -2^31 到 2^31 - 1。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">myInt</span> <span class="hljs-operator">=</span> <span class="hljs-number">12345</span>;</code></pre></div>
+</li>
+<li><p><strong>long</strong>：长整数类型，64 位，范围为 -2^63 到 2^63 - 1。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">long</span> <span class="hljs-variable">myLong</span> <span class="hljs-operator">=</span> <span class="hljs-number">1234567890L</span>;</code></pre></div>
+</li>
+<li><p><strong>float</strong>：单精度浮点类型，32 位，用于表示小数。通常用 <code>f</code> 后缀表示。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">float</span> <span class="hljs-variable">myFloat</span> <span class="hljs-operator">=</span> <span class="hljs-number">3.14f</span>;</code></pre></div>
+</li>
+<li><p><strong>double</strong>：双精度浮点类型，64 位，通常用于表示小数。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">double</span> <span class="hljs-variable">myDouble</span> <span class="hljs-operator">=</span> <span class="hljs-number">3.14159265359</span>;</code></pre></div>
+</li>
+<li><p><strong>char</strong>：字符类型，16 位，用于表示一个 Unicode 字符。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">char</span> <span class="hljs-variable">myChar</span> <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;A&#x27;</span>;</code></pre></div>
+</li>
+<li><p><strong>boolean</strong>：布尔类型，用于表示真或假。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">boolean</span> <span class="hljs-variable">myBoolean</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;</code></pre></div></li>
+</ol>
+<p>这些基本数据类型用于存储不同类型的数据，根据需要选择合适的类型以节省内存并确保数据的准确性。例如，使用 <code>byte</code> 类型来存储年龄通常足够，而使用 <code>double</code> 类型来存储精确的浮点数值。</p>
+<p>除了基本数据类型，Java 还提供了对象数据类型，如 <code>String</code>、<code>Integer</code>、<code>Double</code>，用于处理更复杂的数据。但这些对象数据类型通常包装在基本数据类型之上，以提供额外的功能。</p>
+<h3 id="Java重点内容总结"><a href="#Java重点内容总结" class="headerlink" title="Java重点内容总结"></a>Java重点内容总结</h3><p>Java 是一门功能强大的编程语言，有一些主要的重点概念，其中一些可能较难理解。以下是一些 Java 中的重难点内容以及相应的示例：</p>
+<ol>
+<li><p><strong>面向对象编程（OOP）</strong>：Java 是一门面向对象的语言，它强调类和对象的概念。在 Java 中，你可以创建类和对象，这些对象可以包含属性和方法。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">// 创建一个类</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> &#123;
+    String name;
+
+    <span class="hljs-comment">// 构造方法</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Dog</span><span class="hljs-params">(String name)</span> &#123;
+        <span class="hljs-built_in">this</span>.name = name;
+    &#125;
+
+    <span class="hljs-comment">// 方法</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">bark</span><span class="hljs-params">()</span> &#123;
+        System.out.println(name + <span class="hljs-string">&quot; is barking!&quot;</span>);
+    &#125;
+&#125;
+
+<span class="hljs-comment">// 创建对象</span>
+<span class="hljs-type">Dog</span> <span class="hljs-variable">myDog</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>(<span class="hljs-string">&quot;Buddy&quot;</span>);
+myDog.bark();</code></pre></div>
+</li>
+<li><p><strong>继承</strong>：Java 支持继承，一个类可以派生自另一个类，从而获得其属性和方法。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">// 基类</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span> &#123;
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">eat</span><span class="hljs-params">()</span> &#123;
+        System.out.println(<span class="hljs-string">&quot;Animal is eating&quot;</span>);
+    &#125;
+&#125;
+
+<span class="hljs-comment">// 派生类</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span> &#123;
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">bark</span><span class="hljs-params">()</span> &#123;
+        System.out.println(<span class="hljs-string">&quot;Dog is barking&quot;</span>);
+    &#125;
+&#125;</code></pre></div>
+</li>
+<li><p><strong>多态</strong>：Java 具有多态性，允许一个对象在不同上下文中采用不同的行为。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">Animal</span> <span class="hljs-variable">myDog</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>();
+myDog.eat(); <span class="hljs-comment">// 调用 Dog 类的 eat 方法</span></code></pre></div>
+</li>
+<li><p><strong>接口</strong>：接口定义了一组抽象方法，类可以实现接口以提供这些方法的具体实现。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Drawable</span> &#123;
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">draw</span><span class="hljs-params">()</span>;
+&#125;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Circle</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Drawable</span> &#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">draw</span><span class="hljs-params">()</span> &#123;
+        System.out.println(<span class="hljs-string">&quot;Drawing a circle&quot;</span>);
+    &#125;
+&#125;</code></pre></div>
+</li>
+<li><p><strong>异常处理</strong>：Java 强制处理异常，使用 <code>try-catch</code> 块来捕获和处理异常。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">try</span> &#123;
+    <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> <span class="hljs-number">5</span> / <span class="hljs-number">0</span>; <span class="hljs-comment">// 产生 ArithmeticException</span>
+&#125; <span class="hljs-keyword">catch</span> (ArithmeticException e) &#123;
+    System.out.println(<span class="hljs-string">&quot;Division by zero is not allowed&quot;</span>);
+&#125;</code></pre></div>
+</li>
+<li><p><strong>多线程编程</strong>：Java 具有强大的多线程支持。你可以创建多个线程来执行并发任务。</p>
+<div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyThread</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Thread</span> &#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;
+        System.out.println(<span class="hljs-string">&quot;Thread is running&quot;</span>);
+    &#125;
+&#125;
+
+<span class="hljs-type">MyThread</span> <span class="hljs-variable">thread</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyThread</span>();
+thread.start(); <span class="hljs-comment">// 启动线程</span></code></pre></div>
+</li>
+<li><p><strong>集合框架</strong>：Java 提供了各种集合类来处理不同类型的数据。例如，<code>ArrayList</code> 用于存储一组对象。</p>
+<div class="code-wrapper"><pre><code class="hljs java">ArrayList&lt;String&gt; names = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();
+names.add(<span class="hljs-string">&quot;Alice&quot;</span>);
+names.add(<span class="hljs-string">&quot;Bob&quot;</span>);
+System.out.println(names.get(<span class="hljs-number">0</span>)); <span class="hljs-comment">// 输出 &quot;Alice&quot;</span></code></pre></div>
+</li>
+<li><p><strong>Lambda 表达式</strong>：Java 8 引入了 Lambda 表达式，它允许你以更简洁的方式编写函数式接口的实现。</p>
+<div class="code-wrapper"><pre><code class="hljs java">List&lt;Integer&gt; numbers = Arrays.asList(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);
+numbers.forEach(n -&gt; System.out.println(n));</code></pre></div></li>
+</ol>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><ol>
+<li><strong>Java 中的接口和抽象类有什么区别？</strong><br>接口是抽象方法的集合，抽象类是抽象方法和具体方法的集合。</li>
+<li><strong>什么是泛型？</strong><br>泛型允许你使用一个通用类型来表示多个类型。</li>
+<li><strong>什么是 Java 注解？</strong><br>注解是元数据，用于为 Java 代码提供额外的信息。注解可用于生成文档，跟踪代码中的依赖关系，甚至在运行时执行检查和编译时检查。</li>
+<li><strong>什么是 Java 反射？</strong><br>Java 反射使你可以在运行时查看和修改 Java 对象。</li>
+<li><strong>什么是 Java 序列化？</strong><br>Java 序列化允许你使用 <code>ObjectOutputStream</code> 和 <code>ObjectInputStream</code> 保存和读取 Java 对象。</li>
+<li><strong>什么是 Java 异常处理？</strong><br>Java 异常处理通过检查异常，参数检查，运行时异常和错误处理来处理错误。</li>
+<li><strong>什么是 Java 枚举？</strong><br>Java 枚举允许你声明一个枚举类型，其中每个常量都是枚举类型中的唯一实例。 </li>
+<li><strong>什么是 Java 注解处理器？</strong><br>Java 注解处理器允许你扫描和处理 Java 源文件。</li>
+<li><strong>什么是 Java 集合？</strong><br>Java 集合用于存储和操作数据。Java 集合类提供了一种存储和访问对象的统一方式。</li>
+<li><strong>什么是 Java 泛型？</strong><br>   Java 泛型允许你使用一个通用类型来表示多个类型。</li>
+<li><strong>什么是 Java 并发？</strong><br>   Java 并发用于在 Java 程序中实现并发。</li>
+<li><strong>什么是 Java IO？</strong><br>   Java IO 用于读取和写入原始数据。</li>
+<li><strong>什么是 Java 字符串？</strong><br>   Java 字符串用于存储和操作文本。</li>
+<li><strong>什么是 Java 字符串？</strong><br>   Java 字符串用于存储和操作文本。</li>
+<li><strong>Java中如何创建线程？</strong><br>   Java 提供了三种创建线程的方法：</li>
+</ol>
+<ul>
+<li>继承 <code>Thread</code> 类</li>
+<li>实现 <code>Runnable</code> 接口</li>
+<li>实现 <code>Callable</code> 接口</li>
+</ul>
+<ol start="16">
+<li><strong>Java 中的同步是什么？</strong><br>   Java 同步用于防止线程冲突。</li>
+<li><strong>Java 中的同步锁是什么？</strong><br>   Java 同步锁用于防止线程冲突。</li>
+<li><strong>Java 中的同步集合是什么？</strong><br>   Java 同步集合用于防止线程冲突。</li>
+<li><strong>Java 中的同步方法是什么？</strong><br>   Java 同步方法用于防止线程冲突。</li>
+<li><strong>Java 中的同步代码块是什么？</strong><br>   Java 同步代码块用于防止线程冲突。</li>
+<li><strong>Java 中的同步类是什么？</strong><br>   Java 同步类用于防止线程冲突。</li>
+<li><strong>Java 中的同步变量是什么？</strong><br>   Java 同步变量用于防止线程冲突。</li>
+<li><strong>Java中的Builder和Buffer有什么区别和联系？</strong><br>   在 Java 编程中，”Builder” 和 “Buffer” 是两个不同的概念，它们用于不同的目的，并且通常与不同的数据类型相关联。</li>
+</ol>
+<ul>
+<li>“Builder” 通常用于创建不可变对象（Immutable Objects）。它是一种设计模式，目的是解决创建复杂对象的问题，允许你通过一系列的方法链式调用来设置对象的属性，最后返回一个不可变的对象。这有助于确保对象在创建后不会被修改，提高了线程安全性。</li>
+<li>常见的使用场景包括 <code>StringBuilder</code>、<code>StringBuilder</code>、<code>DateTimeFormatter.Builder</code> 等。</li>
+</ul>
+   <div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">StringBuilder</span> <span class="hljs-variable">builder</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();
+builder.append(<span class="hljs-string">&quot;Hello&quot;</span>).append(<span class="hljs-string">&quot; &quot;</span>).append(<span class="hljs-string">&quot;World&quot;</span>);
+<span class="hljs-type">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> builder.toString();</code></pre></div>
+
+<ul>
+<li>“Buffer” 通常用于缓存数据，特别是在处理 I&#x2F;O 操作或大量数据时。它是一块内存区域，可以用来临时存储数据。通常与 I&#x2F;O 操作（如文件读写、网络通信）或处理大型数据集合时结合使用。</li>
+<li>常见的使用场景包括 <code>ByteBuffer</code>（用于处理二进制数据）、<code>CharBuffer</code>（用于处理字符数据）、<code>StringBuffer</code>（<code>StringBuilder</code> 的线程安全版本）等。</li>
+</ul>
+   <div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">ByteBuffer</span> <span class="hljs-variable">buffer</span> <span class="hljs-operator">=</span> ByteBuffer.allocate(<span class="hljs-number">1024</span>);
+<span class="hljs-comment">// 将数据写入缓冲区</span>
+buffer.put(<span class="hljs-string">&quot;Hello, World&quot;</span>.getBytes());
+<span class="hljs-comment">// 从缓冲区读取数据</span>
+<span class="hljs-type">byte</span>[] data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[buffer.remaining()];
+buffer.get(data);</code></pre></div>
+
+<p>总之：</p>
+<ul>
+<li>“Builder” 用于构建不可变对象，支持链式方法调用，返回最终不可变对象。</li>
+<li>“Buffer” 用于临时存储数据，通常用于 I&#x2F;O 操作和数据处理。</li>
+<li>它们在概念上不同，没有直接的联系，因为它们用于不同的用途和场景。</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E8%83%BD/" class="category-chain-item">技能</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/JAVA/" class="print-no-link">#JAVA</a>
+      
+        <a href="/tags/%E5%BC%80%E5%8F%91/" class="print-no-link">#开发</a>
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="print-no-link">#编程语言</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>JAVA入门</div>
+      <div>http://seal-li.github.io/2023/09/22/JAVA入门/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Seal Li</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>September 22, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/09/23/Git%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git入门及常用命令">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Git入门及常用命令</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/09/19/MySQL%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="MySQL快速入门">
+                        <span class="hidden-mobile">MySQL快速入门</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="SOHUCS" sid='http://seal-li.github.io/2023/09/22/JAVA%E5%85%A5%E9%97%A8/'></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cywWvbn0O","appkey":"3eb6e66dccceed81f6a4f94edc83bab0"})
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        Views: 
+        <span id="busuanzi_value_site_pv"></span>
+        
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        Visitors: 
+        <span id="busuanzi_value_site_uv"></span>
+        
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP证123456号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>京公网安备12345678号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

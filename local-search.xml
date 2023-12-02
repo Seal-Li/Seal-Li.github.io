@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>徒步烟台</title>
+    <link href="/2023/12/03/%E5%BE%92%E6%AD%A5%E7%83%9F%E5%8F%B0/"/>
+    <url>/2023/12/03/%E5%BE%92%E6%AD%A5%E7%83%9F%E5%8F%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>常见的网页错误码</title>
+    <link href="/2023/11/23/%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E9%A1%B5%E9%94%99%E8%AF%AF%E7%A0%81/"/>
+    <url>/2023/11/23/%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E9%A1%B5%E9%94%99%E8%AF%AF%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<p>网页访问代码是一种标准化的方式，用于表示 HTTP 请求的状态和结果。这些代码以三位数字组成，每个代码都有一个特定的含义。以下是一些常见的网页访问代码以及它们的含义：</p><p><strong>1xx（信息性状态码）：请求正在处理</strong></p><ul><li>100（Continue）：服务器收到请求，客户端可以继续发送请求体。</li><li>101（Switching Protocols）：服务器已经理解了客户端的请求，并将通过Upgrade消息头通知客户端更改协议。</li></ul><p><strong>2xx（成功）：请求已成功被服务器接收、理解、并接受。</strong></p><ul><li>200（OK）：请求成功，服务器返回请求的数据。</li><li>201（Created）：请求已经被成功处理，并且创建了新的资源。</li><li>204（No Content）：请求已成功处理，但没有返回任何内容。</li></ul><p><strong>3xx（重定向）：需要客户端采取进一步的操作来完成请求。</strong></p><ul><li>301（Moved Permanently）：资源的 URI 已更改，客户端应该使用新的 URI 发起后续请求。</li><li>302（Found）：资源的 URI 临时变更，客户端应该继续使用原始 URI。</li><li>304（Not Modified）：客户端的缓存版本仍然有效，可以继续使用。</li></ul><p><strong>4xx（客户端错误）：请求包含错误或无法被服务器理解。</strong></p><ul><li>400（Bad Request）：请求中存在语法错误。</li><li>401（Unauthorized）：需要身份验证。</li><li>403（Forbidden）：服务器理解请求，但拒绝执行它。</li><li>404（Not Found）：请求的资源未找到。</li></ul><p><strong>5xx（服务器错误）：服务器在尝试处理请求时遇到错误。</strong></p><ul><li>500（Internal Server Error）：服务器遇到意外错误，无法完成请求。</li><li>502（Bad Gateway）：充当网关或代理的服务器从上游服务器接收到无效响应。</li><li>503（Service Unavailable）：服务器目前无法处理请求，通常是因为维护或过载。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网页</tag>
+      
+      <tag>状态码</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="/2023/11/23/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <url>/2023/11/23/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<p>正则表达式是一种强大的文本匹配和处理工具，它可以用于在文本中查找、匹配和替换模式。在学习正则表达式时，需要了解它的基础概念、语法、常用的模式和一些常见的使用示例。</p><h3 id="1-基础概念"><a href="#1-基础概念" class="headerlink" title="1. 基础概念"></a>1. 基础概念</h3><h4 id="1-1-正则表达式是什么？"><a href="#1-1-正则表达式是什么？" class="headerlink" title="1.1 正则表达式是什么？"></a>1.1 正则表达式是什么？</h4><p>正则表达式（Regular Expression），通常简写为”regex”，是一种文本模式，用于匹配和搜索文本字符串。</p><h4 id="1-2-字面量和元字符"><a href="#1-2-字面量和元字符" class="headerlink" title="1.2 字面量和元字符"></a>1.2 字面量和元字符</h4><p>正则表达式由字面量字符和元字符组成。字面量字符是普通字符，而元字符具有特殊含义。</p><h4 id="1-3-字符类"><a href="#1-3-字符类" class="headerlink" title="1.3 字符类"></a>1.3 字符类</h4><p>字符类用方括号 <code>[ ]</code> 表示，用于匹配一个字符集中的任何字符。例如，<code>[aeiou]</code> 匹配任何一个元音字母。</p><h3 id="2-正则表达式语法"><a href="#2-正则表达式语法" class="headerlink" title="2. 正则表达式语法"></a>2. 正则表达式语法</h3><h4 id="2-1-元字符"><a href="#2-1-元字符" class="headerlink" title="2.1 元字符"></a>2.1 元字符</h4><p>常用的元字符包括：</p><ul><li><code>.</code> 匹配任何字符（除了换行符）。</li><li><code>*</code> 匹配前一个元素零次或多次。</li><li><code>+</code> 匹配前一个元素一次或多次。</li><li><code>?</code> 匹配前一个元素零次或一次。</li><li><code>|</code> 表示或的关系，例如 <code>A|B</code> 匹配 A 或 B。</li></ul><h4 id="2-2-字符类"><a href="#2-2-字符类" class="headerlink" title="2.2 字符类"></a>2.2 字符类</h4><p>字符类用于匹配一个字符集中的任何字符，例如：</p><ul><li><code>[aeiou]</code> 匹配任何一个元音字母。</li><li><code>[0-9]</code> 匹配任何一个数字。</li><li><code>[^0-9]</code> 匹配任何一个非数字字符。</li></ul><h4 id="2-3-位置元字符"><a href="#2-3-位置元字符" class="headerlink" title="2.3 位置元字符"></a>2.3 位置元字符</h4><p>位置元字符用于匹配文本的位置，包括：</p><ul><li><code>^</code> 匹配文本的开头。</li><li><code>$</code> 匹配文本的结尾。</li><li><code>\b</code> 匹配单词边界。</li></ul><h4 id="2-4-量词"><a href="#2-4-量词" class="headerlink" title="2.4 量词"></a>2.4 量词</h4><p>量词用于指定模式的重复次数，包括：</p><ul><li><code>&#123;n&#125;</code> 匹配前一个元素恰好 n 次。</li><li><code>&#123;n,&#125;</code> 匹配前一个元素至少 n 次。</li><li><code>&#123;n,m&#125;</code> 匹配前一个元素至少 n 次但不超过 m 次。</li></ul><h3 id="3-正则表达式的使用示例"><a href="#3-正则表达式的使用示例" class="headerlink" title="3. 正则表达式的使用示例"></a>3. 正则表达式的使用示例</h3><h4 id="3-1-匹配-Email-地址"><a href="#3-1-匹配-Email-地址" class="headerlink" title="3.1 匹配 Email 地址"></a>3.1 匹配 Email 地址</h4><div class="code-wrapper"><pre><code class="hljs regex">^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]&#123;2,&#125;$</code></pre></div><h4 id="3-2-匹配-URL"><a href="#3-2-匹配-URL" class="headerlink" title="3.2 匹配 URL"></a>3.2 匹配 URL</h4><div class="code-wrapper"><pre><code class="hljs regex">^(https?|ftp)://[^\s/$.?#].[^\s]*$</code></pre></div><h4 id="3-3-提取日期"><a href="#3-3-提取日期" class="headerlink" title="3.3 提取日期"></a>3.3 提取日期</h4><div class="code-wrapper"><pre><code class="hljs regex">(\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;)</code></pre></div><h4 id="3-4-替换文本"><a href="#3-4-替换文本" class="headerlink" title="3.4 替换文本"></a>3.4 替换文本</h4><div class="code-wrapper"><pre><code class="hljs regex">s/old/new/g</code></pre></div><h3 id="4-需要注意的点"><a href="#4-需要注意的点" class="headerlink" title="4. 需要注意的点"></a>4. 需要注意的点</h3><h4 id="4-1-贪婪和非贪婪匹配"><a href="#4-1-贪婪和非贪婪匹配" class="headerlink" title="4.1 贪婪和非贪婪匹配"></a>4.1 贪婪和非贪婪匹配</h4><p>默认情况下，正则表达式是贪婪的，会匹配尽可能多的文本。你可以在量词后加上 <code>?</code> 来使其变成非贪婪匹配。</p><h4 id="4-2-转义字符"><a href="#4-2-转义字符" class="headerlink" title="4.2 转义字符"></a>4.2 转义字符</h4><p>一些字符具有特殊含义，如果要匹配它们本身，需要使用反斜杠 <code>\</code> 进行转义，例如 <code>\\</code>, <code>\(</code>, <code>\)</code>。</p><h4 id="4-3-正则表达式工具"><a href="#4-3-正则表达式工具" class="headerlink" title="4.3 正则表达式工具"></a>4.3 正则表达式工具</h4><p>使用正则表达式工具来测试和调试你的模式。常见的工具包括在线正则表达式测试器和编程语言内置的正则表达式支持。</p><h3 id="5-高级主题"><a href="#5-高级主题" class="headerlink" title="5. 高级主题"></a>5. 高级主题</h3><h4 id="5-1-分组和捕获"><a href="#5-1-分组和捕获" class="headerlink" title="5.1 分组和捕获"></a>5.1 分组和捕获</h4><p>你可以使用括号 <code>( )</code> 来创建分组，并捕获匹配的内容。例如，<code>(\d&#123;2&#125;)-(\d&#123;2&#125;)</code> 会捕获两个数字组成的日期。</p><h4 id="5-2-反向引用"><a href="#5-2-反向引用" class="headerlink" title="5.2 反向引用"></a>5.2 反向引用</h4><p>你可以在正则表达式内使用反向引用来引用之前捕获的文本。例如，<code>\b (\w+)\s+\1\b</code> 用于匹配重复的单词。</p><h4 id="5-3-零宽断言"><a href="#5-3-零宽断言" class="headerlink" title="5.3 零宽断言"></a>5.3 零宽断言</h4><p>零宽断言是一种用于匹配位置而不是实际字符的元字符，包括正向前视断言 <code>(?=…)</code>, 负向前视断言 <code>(?!…)</code>, 正向后顾断言 <code>(?&lt;=…)</code>, 负向后顾断言 <code>(?&lt;!…)</code>。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>正则表达式</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ubuntu 安装 docker</title>
+    <link href="/2023/11/22/ubuntu-%E5%AE%89%E8%A3%85-docker/"/>
+    <url>/2023/11/22/ubuntu-%E5%AE%89%E8%A3%85-docker/</url>
+    
+    <content type="html"><![CDATA[<p><strong>ubuntu 22.04</strong></p><p>1、更新升级apt</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt updatesudo apt upgrade</code></pre></div><p>2、安装必备的软件包以允许apt通过 HTTPS 使用存储库（repository）</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt-get install ca-certificates curl gnupg lsb-release</code></pre></div><p>3、添加Docker官方版本库的GPG密钥</p><p>先创建目录</p><div class="code-wrapper"><pre><code class="hljs bash">sudo <span class="hljs-built_in">mkdir</span> -p /etc/apt/keyrings</code></pre></div><p>再添加密钥</p><div class="code-wrapper"><pre><code class="hljs bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</code></pre></div><p>4、设置存储库</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb [arch=<span class="hljs-subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu <span class="hljs-subst">$(lsb_release -cs)</span> stable&quot;</span> | sudo <span class="hljs-built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></pre></div><p>5、安装docker</p><p>安装最新版本的Docker Engine、containerd 和 Docker Compose</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code></pre></div><p>6、验证docker是否安装成功</p><p>查看docker版本</p><div class="code-wrapper"><pre><code class="hljs bash">docker version</code></pre></div><p>7、查看docker运行状态</p><div class="code-wrapper"><pre><code class="hljs bash">systemctl status docker</code></pre></div><p>8、启动docker服务</p><div class="code-wrapper"><pre><code class="hljs bash">sudo systemctl start docker</code></pre></div><p>9、设置docker开机自动启动</p><div class="code-wrapper"><pre><code class="hljs bash">sudo systemctl <span class="hljs-built_in">enable</span> docker</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>操作系统</tag>
+      
+      <tag>docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ubuntu修复未满足依赖</title>
+    <link href="/2023/11/08/ubuntu%E4%BF%AE%E5%A4%8D%E6%9C%AA%E6%BB%A1%E8%B6%B3%E4%BE%9D%E8%B5%96/"/>
+    <url>/2023/11/08/ubuntu%E4%BF%AE%E5%A4%8D%E6%9C%AA%E6%BB%A1%E8%B6%B3%E4%BE%9D%E8%B5%96/</url>
+    
+    <content type="html"><![CDATA[<p><strong>问题描述</strong>：安装搜狗输入法时，提示存在依赖问题，无法安装</p><div class="code-wrapper"><pre><code class="hljs shell">Selecting previously unselected package sogoupinyin.(Reading database ... 253474 files and directories currently installed.)Preparing to unpack sogoupinyin_4.2.1.145_amd64.deb ...Unpacking sogoupinyin (4.2.1.145) ...dpkg: dependency problems prevent configuration of sogoupinyin: sogoupinyin depends on fcitx (&gt;= 1:4.2.8); however:  Package fcitx is not installed. sogoupinyin depends on fcitx-frontend-gtk2; however:  Package fcitx-frontend-gtk2 is not installed. sogoupinyin depends on fcitx-frontend-gtk3; however:  Package fcitx-frontend-gtk3 is not installed. sogoupinyin depends on fcitx-frontend-qt5; however:  Package fcitx-frontend-qt5 is not installed. sogoupinyin depends on fcitx-module-x11; however:  Package fcitx-module-x11 is not installed.dpkg: error processing package sogoupinyin (--install): dependency problems - leaving unconfiguredProcessing triggers for mailcap (3.70+nmu1ubuntu1) ...Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...Processing triggers for hicolor-icon-theme (0.17-2) ...Errors were encountered while processing: sogoupinyin</code></pre></div><p><strong>解决方案</strong>：<br>在终端输入，会自动解决依赖问题</p><div class="code-wrapper"><pre><code class="hljs shell">sudo apt --fix-broken install</code></pre></div><p>再次进行安装即可</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>依赖</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GPG 错误: 由于没有公钥，无法验证下列签名</title>
+    <link href="/2023/11/07/GPG-%E9%94%99%E8%AF%AF-%E7%94%B1%E4%BA%8E%E6%B2%A1%E6%9C%89%E5%85%AC%E9%92%A5%EF%BC%8C%E6%97%A0%E6%B3%95%E9%AA%8C%E8%AF%81%E4%B8%8B%E5%88%97%E7%AD%BE%E5%90%8D/"/>
+    <url>/2023/11/07/GPG-%E9%94%99%E8%AF%AF-%E7%94%B1%E4%BA%8E%E6%B2%A1%E6%9C%89%E5%85%AC%E9%92%A5%EF%BC%8C%E6%97%A0%E6%B3%95%E9%AA%8C%E8%AF%81%E4%B8%8B%E5%88%97%E7%AD%BE%E5%90%8D/</url>
+    
+    <content type="html"><![CDATA[<ul><li><strong>问题描述：</strong></li></ul><p>GPG 错误：<a href="https://apt.v2raya.org/">https://apt.v2raya.org</a> v2raya InRelease: 由于没有公钥，无法验证下列签名： NO_PUBKEY 354E516D494EF95F</p><ul><li><strong>方案：</strong><div class="code-wrapper"><pre><code class="hljs bash">sudo apt-key adv --recv-keys --keyserver keyserver.Ubuntu.com 494EF95F <span class="hljs-comment">#取上面PUBKEY后八位</span></code></pre></div></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+      <tag>签名</tag>
+      
+      <tag>Ubuntu</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Ubuntu使用</title>
+    <link href="/2023/11/07/Ubuntu%E4%BD%BF%E7%94%A8/"/>
+    <url>/2023/11/07/Ubuntu%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<ul><li><strong>0、常用命令</strong></li></ul><p>更新软件源</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt update</code></pre></div><p>升级软件包</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt upgrade</code></pre></div><p>下载软件包</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt install package_name <span class="hljs-comment">#推荐使用</span></code></pre></div><p>或使用</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt-get install package_name -y <span class="hljs-comment">#-y 可选，将自动确认安装过程中的询问</span></code></pre></div><p>移除&#x2F;卸载软件包</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt remove --purge package_name <span class="hljs-comment"># remove将保留配置文件；purge将同时删除配置文件</span></code></pre></div><p>解压.tar文件</p><div class="code-wrapper"><pre><code class="hljs bash">tar -xvf package_name.tar</code></pre></div><p>解压.tar.gz文件</p><div class="code-wrapper"><pre><code class="hljs bash">tar -zxvf package_name.tar.gz</code></pre></div><p>删除文件</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> file_name</code></pre></div><p>删除目录</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf file_path</code></pre></div><p>授予终端管理员权限</p><div class="code-wrapper"><pre><code class="hljs bash">sudo su</code></pre></div><p>移动&#x2F;重命名文件</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">mv</span> /old_path/old_file_name /new_path/new_file_name</code></pre></div><ul><li><strong>1、安装.deb包</strong></li></ul><div class="code-wrapper"><pre><code class="hljs bash">dpkg -i ./package_name.deb</code></pre></div><ul><li><strong>2、miniconda的安装与卸载</strong></li></ul><p><strong>安装</strong></p><p>下载最新版miniconda</p><div class="code-wrapper"><pre><code class="hljs bash">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></pre></div><p>安装miniconda</p><div class="code-wrapper"><pre><code class="hljs bash">bash ./Miniconda3-latest-Linux-x86_64.sh</code></pre></div><p>安装后执行</p><div class="code-wrapper"><pre><code class="hljs bash">Source .bashrc</code></pre></div><p>注：询问yes|no时，全选yes</p><p><strong>卸载</strong></p><p>先找到miniconda</p><div class="code-wrapper"><pre><code class="hljs bash">find -name miniconda3</code></pre></div><p>再将其删除</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf miniconda3</code></pre></div><p>打开 ～&#x2F;.bashrc文件</p><div class="code-wrapper"><pre><code class="hljs bash">vim ~/.bashrc</code></pre></div><p>将其中和miniconda相关的语句删除</p><ul><li><strong>3、安装最新稳定版node.js</strong></li></ul><p>使用apt安装，然后使用<code>n</code>工具升级</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt updatesudo apt install nodejs<span class="hljs-comment"># 自行安装npm工具</span>sudo apt install npm<span class="hljs-comment"># 升级npm</span>sudo npm install npm -g</code></pre></div><p>使用<code>n</code>Node版本管理工具安装最新版node.js</p><div class="code-wrapper"><pre><code class="hljs bash">sudo npm install n -g<span class="hljs-comment"># 下载最新稳定版</span>sudo n stable<span class="hljs-comment"># 查看已下载版本</span>sudo n <span class="hljs-built_in">ls</span></code></pre></div><ul><li><p><strong>4、安装最新stable版chrome</strong></p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt install google-chrome-stable</code></pre></div></li><li><p><strong>5、安装WPS-Office</strong></p></li></ul><p>先安装WPS-Office本身</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt install wps-office</code></pre></div><p>然后下载字体</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt install ttf-mscorefonts-installer <span class="hljs-comment"># 安装必需字体</span></code></pre></div><p>注：安装过程需要同意协议，通过<code>tab</code>和<code>enter</code>键来选中和确认</p><p>再按需下载可选字体</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt install fonts-wqy-zenhei fonts-wqy-microhei</code></pre></div><ul><li><strong>6、安装MySQL</strong><br>安装（8.0版本）<div class="code-wrapper"><pre><code class="hljs bash">sudo apt install mysql-server</code></pre></div></li></ul><p>验证已安装</p><div class="code-wrapper"><pre><code class="hljs bash">sudo systemctl status mysql</code></pre></div><p>以root身份登录mysql</p><div class="code-wrapper"><pre><code class="hljs bash">mysql -u root -p</code></pre></div><p>由于没有设置密码，直接回车即可</p><p>在mysql环境下，键入以下命令，来设置root用户密码</p><div class="code-wrapper"><pre><code class="hljs bash">ALTER USER <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="hljs-string">&#x27;你的密码&#x27;</span>;</code></pre></div><p>然后刷新权限(mysql环境下)</p><div class="code-wrapper"><pre><code class="hljs bash">FLUSH PRIVILEGES;</code></pre></div><ul><li><strong>7、安装Vue</strong></li><li>安装vue2<div class="code-wrapper"><pre><code class="hljs bash">sudo npm install vue-cli -g</code></pre></div>卸载vue2<div class="code-wrapper"><pre><code class="hljs bash">sudo npm uninstall vue-cli -g</code></pre></div></li></ul><p>安装vue5</p><div class="code-wrapper"><pre><code class="hljs bash">sudo npm install @vue/cli -g</code></pre></div><ul><li><strong>8、安装Redis</strong></li></ul><p>更新软件源</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt update</code></pre></div><p>安装redis</p><div class="code-wrapper"><pre><code class="hljs bash">sudo apt install redis-server</code></pre></div><p>检查服务的状态</p><div class="code-wrapper"><pre><code class="hljs bash">sudo systemctl status redis-server</code></pre></div><p>提升为sudo权限</p><div class="code-wrapper"><pre><code class="hljs bash">sudo su</code></pre></div><p>编辑配置文件</p><div class="code-wrapper"><pre><code class="hljs bash">vim etc/redis.conf</code></pre></div><p>找到<code>bind 127.0.0.1 ::1</code>，去掉前面的注释符号<code>#</code>；<br>如果不存在则添加;<br>修改后保存文件并退出。</p><p>重启redis服务</p><div class="code-wrapper"><pre><code class="hljs bash">sudo systemctl restart redis-server</code></pre></div><p>验证<code>Redis</code>服务器是否正在监听端口<code>6379</code></p><div class="code-wrapper"><pre><code class="hljs bash">ss -an | grep 6379</code></pre></div><p><code>&gt;&gt;&gt;</code>得到类似如下信息</p><div class="code-wrapper"><pre><code class="hljs bash">tcp  LISTEN 0   511   0.0.0.0:6379   0.0.0.0:*tcp  LISTEN 0   511      [::]:6379      [::]:*</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>操作系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Vue入门</title>
+    <link href="/2023/11/01/Vue%E5%85%A5%E9%97%A8/"/>
+    <url>/2023/11/01/Vue%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<ol><li><p><strong>Vue.js 基础</strong><br>可以通过 Vue 官方文档中的 “Getting Started” 部分学习基础知识。不过，下面我们从 Vue 实例开始：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>  &#123;&#123; message &#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Vue</span>(&#123;  <span class="hljs-attr">el</span>: <span class="hljs-string">&#x27;#app&#x27;</span>,  <span class="hljs-attr">data</span>: &#123;    <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Hello, Vue!&#x27;</span>  &#125;&#125;);</code></pre></div><p>这里，<code>&#123;&#123; message &#125;&#125;</code> 使用 Vue 的数据绑定，显示了 <code>message</code> 数据。</p></li><li><p><strong>组件化开发</strong></p><ul><li>组件基础</li><li>组件通信</li><li>插槽</li><li>动态组件</li><li>单文件组件</li></ul><p>Vue 中的组件化开发是核心概念。了解如何构建、通信和组织组件对于大型应用非常重要。</p><div class="code-wrapper"><pre><code class="hljs vue">&lt;template&gt;  &lt;button @click=&quot;increment&quot;&gt;&#123;&#123; count &#125;&#125;&lt;/button&gt;&lt;/template&gt;&lt;script&gt;  export default &#123;    data() &#123;      return &#123;        count: 0      &#125;;    &#125;,    methods: &#123;      increment() &#123;        this.count++;      &#125;    &#125;  &#125;;&lt;/script&gt;</code></pre></div><p>这是一个简单的计数器组件。</p></li><li><p><strong>Vue 路由</strong></p><ul><li>Vue Router</li><li>路由参数</li><li>嵌套路由</li><li>导航守卫</li><li>路由懒加载</li></ul><p>使用 Vue Router 可以构建单页应用的路由系统。</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> router = <span class="hljs-keyword">new</span> <span class="hljs-title class_">VueRouter</span>(&#123;  <span class="hljs-attr">routes</span>: [    &#123; <span class="hljs-attr">path</span>: <span class="hljs-string">&#x27;/&#x27;</span>, <span class="hljs-attr">component</span>: <span class="hljs-title class_">Home</span> &#125;,    &#123; <span class="hljs-attr">path</span>: <span class="hljs-string">&#x27;/about&#x27;</span>, <span class="hljs-attr">component</span>: <span class="hljs-title class_">About</span> &#125;  ]&#125;);</code></pre></div><p>这是一个简单的路由配置示例。</p></li><li><p><strong>状态管理</strong></p><ul><li>VueX</li><li>State、Getter、Mutation、Action</li><li>模块化</li></ul><p>VueX 是 Vue 的状态管理工具，用于管理全局状态。</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Vuex</span>.<span class="hljs-title class_">Store</span>(&#123;  <span class="hljs-attr">state</span>: &#123;    <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>  &#125;,  <span class="hljs-attr">mutations</span>: &#123;    <span class="hljs-title function_">increment</span>(<span class="hljs-params">state</span>) &#123;      state.<span class="hljs-property">count</span>++;    &#125;  &#125;&#125;);</code></pre></div><p>这是一个简单的 VueX 状态管理示例。</p></li><li><p><strong>HTTP 请求</strong></p><ul><li>Axios 或 Fetch API</li><li>发送 GET 和 POST 请求</li><li>处理响应数据</li></ul><p>Vue 应用通常需要与服务器交互，学习如何进行 HTTP 请求和处理响应数据很关键。</p><div class="code-wrapper"><pre><code class="hljs javascript">axios.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;/api/data&#x27;</span>)  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(response.<span class="hljs-property">data</span>);  &#125;)  .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(error);  &#125;);</code></pre></div><p>这是使用 Axios 发送 GET 请求的示例。</p></li><li><p><strong>Vue 生态系统</strong></p><ul><li>Vue CLI</li><li>UI 框架如 Element UI 或 Vuetify</li><li>Vue 插件</li></ul><p>了解 Vue 生态系统中的工具和框架，如 Vue CLI、UI 框架和常用 Vue 插件。</p></li><li><p><strong>Vue 生命周期钩子</strong></p><p>Vue 组件有一系列生命周期钩子，你可以利用它们执行自定义逻辑。</p><ul><li><code>beforeCreate</code>：在实例初始化之后，数据观测和事件配置之前被调用。</li><li><code>created</code>：在实例创建完成后被立即调用。</li><li><code>beforeMount</code>：在挂载开始之前被调用。</li><li><code>mounted</code>：在挂载完成后被调用。</li><li><code>beforeUpdate</code>：在数据更新时调用，但在虚拟 DOM 重新渲染和打补丁之前。</li><li><code>updated</code>：在由于数据更改导致的虚拟 DOM 重新渲染和打补丁后被调用。</li><li><code>beforeDestroy</code>：在实例销毁之前被调用。</li><li><code>destroyed</code>：在实例销毁后被调用。</li></ul><p>你可以使用这些生命周期钩子来执行一些初始化或清理工作。例如：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;  <span class="hljs-title function_">beforeCreate</span>(<span class="hljs-params"></span>) &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Before Create Hook&#x27;</span>);  &#125;,  <span class="hljs-title function_">created</span>(<span class="hljs-params"></span>) &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Created Hook&#x27;</span>);  &#125;&#125;;</code></pre></div></li><li><p><strong>自定义指令</strong></p><p>Vue.js 允许你创建自定义指令，以扩展其行为。</p><ul><li>创建全局指令</li><li>创建局部指令</li><li>钩子函数</li></ul><p>自定义指令可以用于操作 DOM 元素。例如，创建一个自定义指令来自动获取焦点：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">directive</span>(<span class="hljs-string">&#x27;focus&#x27;</span>, &#123;  <span class="hljs-attr">inserted</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) &#123;    el.<span class="hljs-title function_">focus</span>();  &#125;&#125;);</code></pre></div><p>这个指令允许你在元素上使用 <code>v-focus</code> 指令来自动获取焦点。</p></li><li><p><strong>Vue 过渡与动画</strong></p><p>Vue 提供了一种轻松添加过渡效果和动画的方式。</p><ul><li>过渡类名</li><li>过渡事件</li><li>JavaScript 钩子函数</li></ul><p>你可以使用 Vue 的 <code>&lt;transition&gt;</code> 元素或 <code>transition</code> 组件来实现过渡和动画效果：</p><div class="code-wrapper"><pre><code class="hljs vue">&lt;transition name=&quot;fade&quot; mode=&quot;out-in&quot;&gt;  &lt;button v-if=&quot;showButton&quot; key=&quot;btn&quot;&gt;Click Me&lt;/button&gt;&lt;/transition&gt;</code></pre></div></li><li><p><strong>单元测试</strong></p><p>学习如何为 Vue 组件编写单元测试以确保你的代码质量。</p><ul><li>使用测试运行器</li><li>测试 Vue 组件</li><li>模拟依赖</li></ul><p>例如，使用 Jest 和 Vue Test Utils 编写一个简单的组件测试：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; mount &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@vue/test-utils&#x27;</span>;<span class="hljs-keyword">import</span> <span class="hljs-title class_">MyComponent</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/MyComponent.vue&#x27;</span>;<span class="hljs-title function_">test</span>(<span class="hljs-string">&#x27;MyComponent renders correctly&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;  <span class="hljs-keyword">const</span> wrapper = <span class="hljs-title function_">mount</span>(<span class="hljs-title class_">MyComponent</span>);  <span class="hljs-title function_">expect</span>(wrapper.<span class="hljs-title function_">text</span>()).<span class="hljs-title function_">toMatch</span>(<span class="hljs-string">&#x27;Hello, Vue!&#x27;</span>);&#125;);</code></pre></div><p>这个测试确保 <code>MyComponent</code> 组件正确渲染了文本。</p></li><li><p><strong>部署 Vue 应用</strong></p><p>学习如何将 Vue.js 应用部署到生产环境。</p><ul><li>打包应用</li><li>配置服务器</li><li>部署到服务器</li></ul><p>了解如何使用 Vue CLI 打包你的应用，然后将它部署到服务器上，以便用户可以访问。</p></li><li><p><strong>Vue.js 进阶主题</strong></p><ul><li>插件开发</li><li>服务器端渲染 (SSR)</li><li>性能优化</li><li>扩展 Vue CLI</li></ul></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网页</tag>
+      
+      <tag>前端</tag>
+      
+      <tag>Vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>环浮山记</title>
+    <link href="/2023/10/28/%E7%8E%AF%E6%B5%AE%E5%B1%B1%E8%AE%B0/"/>
+    <url>/2023/10/28/%E7%8E%AF%E6%B5%AE%E5%B1%B1%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<center> 环浮山记 </center><p>不曾赶上重阳节的登高，也没能约得好友崂山之行，至少浮山总是一人可往的！</p><p>第一次走进浮山还是在大二，那时穿过师范学院，走过青大一路，登顶浮山也不过四十分钟！想来，今天拿出两个小时慢行赏景总是够的。于是，便不曾做一些准备，立刻出发了。</p><p>大抵是九点半出发，十点半左右就到达森林公园入口，一小时许的步行不算是远的。王安石曾作“世之奇伟、瑰怪之观，常在与险远，而人之所罕至焉”，今观浮山思之，恐有失偏颇。浮山是懂得先声夺人的，踏进浮山公园，满耳的《渔舟唱晚》将人拉回到天气预报的晚上。临时的出行总是不做规划的，因此，乍一到时不知往何处走。只觉着这边是上坡，我便要往这头走，那边是下坡，我便要反其道而行。没想过浮山正处于封山期，以至连续到达的几个入山口都是封闭着的，心中暗自叫苦不迭，却又不舍这么离去。来回观望了几次，这才恍然明白，浮山森林公园之乐，实非登山，而在于环山之旅。于是，缘一小道，径直而往，行约三五里，这才初见了环浮山栈道的风景。</p><p>一叶落而知秋至，环山小道悉悉索索的落叶，满载着秋意向人袭来。路人们站在落叶上做足了姿态，摄影师们也选好了角度，而我却只能想到叶黄素和脱落酸。七观峰是今天最佳的观景台，是所允许到达地点的最高峰，你只需要张开双臂，感受野风给你的清凉，便可以卸去半天的疲惫。远处停泊于海上的船，映着海面的粼粼波光，颇显出一副“孤帆一片日边来”的画面感。大浮顶的篮球场和足球场是少有人迹的，这算是给攀登者的奖赏吧。山海通道大抵是孩子们的乐园，整条通道充斥着童声，不乏一些家长们也脚踩着地上的鱼儿，彷佛这也是他们的世界。印象深刻的是那句“我们现在的体力，上不如老，下不如小”，难道这是当代年轻人的状态吗？临近环线结束时，一个小男孩数次骑着自行车追上我打着招呼，又数次被妈妈叫回去（男孩妈妈追不上），我想小孩子精力是充沛的，家长们的精力恰恰是给了孩子的。一路上，我体验到了浮山的野，看过了蟾蜍霸道，野蜂飞舞，小蛇爬行，昆虫狂撞，想来这应该是一种自然。</p><p>环山的栈道并不总是向上，我也曾数次怀疑是否走错了道路，只得硬着头皮前行，方知前路可行。我总是乐意取小道而行的，但在这里却显得很不合时宜，浮山峰被栅栏圈禁着，使人只可看，却不得其门而入，他给了人们希望，也断了人们念想，这便是禁忌之地。青岛生活是幸福的，他们有山、有海；可也是不幸福的，他们只有山、只有海。放眼望去，左边是山，右边是海，中间的夹着的就是生活。或许你会在某处驻足，想躺下来思考一些事情，却发现早有人先你一步侵占了这块宝地，你不得不还他一个清净。人在走动的时候思维是非常活跃的，每五十步你便要突生一个想法，再过一百步你又要生出一些感慨，走过两百步你就忘掉了之前的所有想法，只记得落叶如飞。听歌前行时，便要想到涉及这首歌的人、事、地；看到这片景，就能回忆起相关的诗、词、文。</p><p>恰是某时某分，我听了一首歌，做着某些事，那他们便产生了联系，理想三旬是《霍乱时期的爱情》的背景乐，Last Reunion 是“利奇玛”的呼号，Home 是中秋的思念，借我是曾经想要的勇敢，野居是计划的归宿。恰如读过某些章节片段，遇着某些场景，那便能勾起记忆，浮山的湖能让我想起一首打油诗“朝游北海暮苍梧，袖里青蛇胆气粗。三过岳阳人不识，朗吟飞过洞庭湖”，远足之行能回想起读《文化苦旅》的高中时光，篆刻时也偶尔能想起曾经的作品。恰如某年某月某天，我也能再想起今天。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+      <tag>青岛</tag>
+      
+      <tag>浮山</tag>
+      
+      <tag>徒步</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>JavaScript入门</title>
+    <link href="/2023/10/27/JavaScript%E5%85%A5%E9%97%A8/"/>
+    <url>/2023/10/27/JavaScript%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<h3 id="JavaScript-简介"><a href="#JavaScript-简介" class="headerlink" title="JavaScript 简介"></a>JavaScript 简介</h3><p>JavaScript 是一种脚本语言，通常用于构建交互性强大的网页。它可以在网页上处理事件、验证表单、修改 HTML 内容、处理数据等等。</p><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>JavaScript 有自己的语法规则，包括变量、数据类型、运算符、条件语句、循环语句等。让我们从一些基本概念开始：</p><ol><li><p><strong>变量和数据类型</strong></p><p>JavaScript 变量用于存储数据。JavaScript 有多种数据类型，包括数字、字符串、布尔值、数组、对象等。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;John&quot;</span>;<span class="hljs-keyword">var</span> age = <span class="hljs-number">30</span>;<span class="hljs-keyword">var</span> isStudent = <span class="hljs-literal">false</span>;<span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>, <span class="hljs-string">&quot;cherry&quot;</span>];<span class="hljs-keyword">var</span> person = &#123; <span class="hljs-attr">firstName</span>: <span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&quot;Doe&quot;</span> &#125;;</code></pre></div></li><li><p><strong>运算符</strong></p><p>JavaScript 使用运算符执行操作，例如加法、减法、乘法、除法等。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;<span class="hljs-keyword">var</span> y = <span class="hljs-number">5</span>;<span class="hljs-keyword">var</span> sum = x + y; <span class="hljs-comment">// 15</span><span class="hljs-keyword">var</span> product = x * y; <span class="hljs-comment">// 50</span></code></pre></div></li><li><p><strong>条件语句</strong></p><p>条件语句允许根据条件执行不同的代码块。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> age = <span class="hljs-number">18</span>;<span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) &#123;  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;成年人&quot;</span>);&#125; <span class="hljs-keyword">else</span> &#123;  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;未成年人&quot;</span>);&#125;</code></pre></div></li><li><p><strong>循环语句</strong></p><p>循环语句用于多次执行代码块。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;循环次数: &quot;</span> + i);&#125;</code></pre></div></li><li><p><strong>函数</strong></p><p>函数是一种可重复使用的代码块。它可以接受参数并返回结果。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>) &#123;  <span class="hljs-keyword">return</span> a + b;&#125;<span class="hljs-keyword">var</span> result = <span class="hljs-title function_">add</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// 7</span></code></pre></div></li><li><p><strong>事件处理</strong></p><p>JavaScript 可用于处理事件，如点击、鼠标移动等。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> button = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;myButton&quot;</span>);button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;按钮被点击了！&quot;</span>);&#125;);</code></pre></div></li></ol><h3 id="JavaScript-进阶"><a href="#JavaScript-进阶" class="headerlink" title="JavaScript 进阶"></a>JavaScript 进阶</h3><ol start="7"><li><p><strong>对象和面向对象编程</strong></p><p>JavaScript 中的对象是一种数据结构，可以包含属性和方法。对象可以用于模拟现实世界的实体。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> person = &#123;  <span class="hljs-attr">firstName</span>: <span class="hljs-string">&quot;John&quot;</span>,  <span class="hljs-attr">lastName</span>: <span class="hljs-string">&quot;Doe&quot;</span>,  <span class="hljs-attr">fullName</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">firstName</span> + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-variable language_">this</span>.<span class="hljs-property">lastName</span>;  &#125;&#125;;<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(person.<span class="hljs-title function_">fullName</span>()); <span class="hljs-comment">// &quot;John Doe&quot;</span></code></pre></div></li><li><p><strong>数组和数组方法</strong></p><p>JavaScript 数组是存储多个值的有序列表。它们有许多内置方法，用于操作和转换数据。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>, <span class="hljs-string">&quot;cherry&quot;</span>];fruits.<span class="hljs-title function_">push</span>(<span class="hljs-string">&quot;date&quot;</span>); <span class="hljs-comment">// 添加一个元素</span>fruits.<span class="hljs-title function_">pop</span>(); <span class="hljs-comment">// 删除最后一个元素</span>fruits.<span class="hljs-title function_">forEach</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">fruit</span>) &#123;  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(fruit);&#125;);</code></pre></div></li><li><p><strong>闭包和作用域</strong></p><p>了解 JavaScript 中的闭包和作用域有助于更好地理解变量的生命周期和作用域链。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">outer</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;  <span class="hljs-keyword">function</span> <span class="hljs-title function_">inner</span>(<span class="hljs-params"></span>) &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x);  &#125;  <span class="hljs-keyword">return</span> inner;&#125;<span class="hljs-keyword">var</span> closure = <span class="hljs-title function_">outer</span>();<span class="hljs-title function_">closure</span>(); <span class="hljs-comment">// 10</span></code></pre></div></li><li><p><strong>异步编程和回调函数</strong></p></li></ol><div class="code-wrapper"><pre><code class="hljs">JavaScript 是一种单线程语言，但可以使用异步编程和回调函数处理非阻塞操作，如 AJAX 请求和定时器。示例：<pre><code class="hljs javascript"><span class="hljs-built_in">setTimeout</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;延迟执行的代码&quot;</span>);&#125;, <span class="hljs-number">1000</span>);</code></pre></div></code></pre><ol start="11"><li><strong>Promise 和异步&#x2F;await</strong></li></ol><div class="code-wrapper"><pre><code class="hljs">Promise 是一种用于管理异步操作的对象，而异步/await 是处理异步操作的现代方式。示例：<pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fetchData</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) &#123;    <span class="hljs-comment">// 异步操作</span>    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;      <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&quot;数据已获取&quot;</span>);    &#125;, <span class="hljs-number">2000</span>);  &#125;);&#125;<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">fetchAndDisplayData</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-keyword">try</span> &#123;    <span class="hljs-keyword">var</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetchData</span>();    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);  &#125; <span class="hljs-keyword">catch</span> (error) &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(error);  &#125;&#125;<span class="hljs-title function_">fetchAndDisplayData</span>();</code></pre></div></code></pre><ol start="12"><li><strong>模块化编程</strong></li></ol><div class="code-wrapper"><pre><code class="hljs">JavaScript 支持模块化编程，这使得代码更易于维护和扩展。了解 ES6 模块的使用。示例：<pre><code class="hljs javascript"><span class="hljs-comment">// 模块导出</span><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>) &#123;  <span class="hljs-keyword">return</span> a + b;&#125;<span class="hljs-comment">// 模块导入</span><span class="hljs-keyword">import</span> &#123; add &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./myModule&quot;</span>;</code></pre></div></code></pre><ol start="13"><li><p><strong>面向对象编程（OOP）</strong></p><p>深入了解面向对象编程的概念，包括类、对象、继承、封装和多态。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span> &#123;  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name</span>) &#123;    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;  &#125;  <span class="hljs-title function_">speak</span>(<span class="hljs-params"></span>) &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> + <span class="hljs-string">&quot;发出声音&quot;</span>);  &#125;&#125;<span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">Animal</span> &#123;  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name, breed</span>) &#123;    <span class="hljs-variable language_">super</span>(name);    <span class="hljs-variable language_">this</span>.<span class="hljs-property">breed</span> = breed;  &#125;  <span class="hljs-title function_">speak</span>(<span class="hljs-params"></span>) &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> + <span class="hljs-string">&quot;是只&quot;</span> + <span class="hljs-variable language_">this</span>.<span class="hljs-property">breed</span> + <span class="hljs-string">&quot;狗，汪汪！&quot;</span>);  &#125;&#125;<span class="hljs-keyword">const</span> myDog = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>(<span class="hljs-string">&quot;巴克&quot;</span>, <span class="hljs-string">&quot;哈士奇&quot;</span>);myDog.<span class="hljs-title function_">speak</span>(); <span class="hljs-comment">// &quot;巴克是只哈士奇狗，汪汪！&quot;</span></code></pre></div></li><li><p><strong>浏览器事件和DOM 操作</strong></p><p>了解如何使用 JavaScript 操作 HTML 文档，添加事件监听器，以及响应用户交互。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// 添加事件监听器</span><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;myButton&quot;</span>).<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;按钮被点击了！&quot;</span>);&#125;);<span class="hljs-comment">// 修改元素内容</span><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;myElement&quot;</span>).<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&quot;新内容&quot;</span>;</code></pre></div></li><li><p><strong>本地存储和缓存</strong></p><p>使用浏览器提供的本地存储选项（如 localStorage 和 sessionStorage）来存储和检索数据。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// 使用 localStorage 存储数据</span><span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">setItem</span>(<span class="hljs-string">&quot;username&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>);<span class="hljs-keyword">var</span> username = <span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">getItem</span>(<span class="hljs-string">&quot;username&quot;</span>);<span class="hljs-comment">// 使用 sessionStorage 存储临时数据</span><span class="hljs-variable language_">sessionStorage</span>.<span class="hljs-title function_">setItem</span>(<span class="hljs-string">&quot;tempData&quot;</span>, <span class="hljs-string">&quot;some value&quot;</span>);</code></pre></div></li><li><p><strong>跨域请求和 AJAX</strong></p><p>学习如何使用 AJAX 发送跨域请求，从远程服务器获取数据。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;GET&quot;</span>, <span class="hljs-string">&quot;https://api.example.com/data&quot;</span>, <span class="hljs-literal">true</span>);xhr.<span class="hljs-property">onload</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">status</span> === <span class="hljs-number">200</span>) &#123;    <span class="hljs-keyword">var</span> data = <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(xhr.<span class="hljs-property">responseText</span>);    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);  &#125;&#125;;xhr.<span class="hljs-title function_">send</span>();</code></pre></div></li><li><p><strong>前端框架和库</strong></p><p>了解流行的前端框架和库，如 React, Angular, Vue.js，以及如何构建现代单页应用 (SPA)。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// React 组件</span><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">React.Component</span> &#123;  <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) &#123;    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;  &#125;&#125;</code></pre></div></li><li><p><strong>模块化编程</strong></p><p>学习如何将 JavaScript 代码模块化，以便更好地组织和重用代码。了解 CommonJS、ES6 模块等模块系统。</p><p>示例（ES6 模块）：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// math.js</span><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>) &#123;  <span class="hljs-keyword">return</span> a + b;&#125;<span class="hljs-comment">// main.js</span><span class="hljs-keyword">import</span> &#123; add &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./math.js&#x27;</span>;<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">add</span>(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 8</span></code></pre></div></li><li><p><strong>异步编程和 Promise</strong></p><p>深入了解异步编程，包括回调函数、Promise 对象，以及 async&#x2F;await。</p><p>示例（Promise）：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fetchData</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;      <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&quot;Data fetched!&quot;</span>);    &#125;, <span class="hljs-number">1000</span>);  &#125;);&#125;<span class="hljs-title function_">fetchData</span>().<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> &#123;  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);&#125;);</code></pre></div></li><li><p><strong>HTTP 请求和 RESTful API</strong></p><p>学习如何使用 JavaScript 发送 HTTP 请求，与 RESTful API 交互，获取和发送数据。</p><p>示例（使用 Fetch API）：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;https://api.example.com/data&quot;</span>)  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);  &#125;)  .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> &#123;    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(error);  &#125;);</code></pre></div></li><li><p><strong>单元测试</strong></p><p>理解单元测试的重要性，学习使用测试框架如 Jest 编写和运行测试用例。</p><p>示例（Jest 测试用例）：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// math.js</span><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>) &#123;  <span class="hljs-keyword">return</span> a + b;&#125;<span class="hljs-comment">// math.test.js</span><span class="hljs-keyword">import</span> &#123; add &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./math.js&#x27;</span>;<span class="hljs-title function_">test</span>(<span class="hljs-string">&#x27;adds 1 + 2 to equal 3&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;  <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">add</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">3</span>);&#125;);</code></pre></div></li><li><p><strong>工具和构建流程</strong></p><p>了解构建工具如 Webpack 和打包工具如 Babel，以及如何将项目编译成生产代码。</p><p>示例（使用 Webpack 打包）：</p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// webpack.config.js</span><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;  <span class="hljs-attr">entry</span>: <span class="hljs-string">&#x27;./src/index.js&#x27;</span>,  <span class="hljs-attr">output</span>: &#123;    <span class="hljs-attr">filename</span>: <span class="hljs-string">&#x27;bundle.js&#x27;</span>,  &#125;,&#125;;</code></pre></div></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网页</tag>
+      
+      <tag>前端</tag>
+      
+      <tag>JavaScript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Vim入门</title>
+    <link href="/2023/10/23/Vim%E5%85%A5%E9%97%A8/"/>
+    <url>/2023/10/23/Vim%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<p>Vim是一款强大的文本编辑器，它以其高度可定制性和快速操作而著称。以下是一些常见的Vim操作命令及其用例：</p><p><strong>基本的移动和编辑操作：</strong></p><ol><li><p><strong>移动光标：</strong></p><ul><li><code>h</code>：左移一个字符</li><li><code>j</code>：下移一行</li><li><code>k</code>：上移一行</li><li><code>l</code>：右移一个字符</li><li><code>0</code>：移到行首</li><li><code>$</code>：移到行尾</li><li><code>gg</code>：移到文档开头</li><li><code>G</code>：移到文档末尾</li><li><code>w</code>：以词为单位向前移动</li><li><code>b</code>：以词为单位向后移动</li></ul></li><li><p><strong>编辑文本：</strong></p><ul><li><code>i</code>：在光标前插入文本</li><li><code>I</code>：在行首插入文本</li><li><code>a</code>：在光标后插入文本</li><li><code>A</code>：在行尾插入文本</li><li><code>o</code>：在当前行下插入新行</li><li><code>O</code>：在当前行上插入新行</li><li><code>x</code>：删除当前字符</li><li><code>dd</code>：删除当前行</li><li><code>yy</code>：复制当前行</li><li><code>p</code>：粘贴剪贴板内容</li></ul></li><li><p><strong>撤销和重做：</strong></p><ul><li><code>u</code>：撤销上一次操作</li><li><code>Ctrl-r</code>：重做上一次撤销的操作</li></ul></li><li><p><strong>查找和替换：</strong></p><ul><li><code>/</code>：查找文本，例如：<code>/keyword</code></li><li><code>n</code>：查找下一个匹配项</li><li><code>N</code>：查找上一个匹配项</li><li><code>:s/old/new/g</code>：替换文本，例如：<code>:%s/foo/bar/g</code></li></ul></li></ol><p><strong>模式和复制粘贴：</strong></p><ol><li><p><strong>Normal 模式：</strong></p><ul><li><code>:</code>：进入命令行模式</li><li><code>v</code>：进入可视模式，用于选择文本</li></ul></li><li><p><strong>可视模式：</strong></p><ul><li><code>V</code>：进入行选择模式</li><li><code>Ctrl-v</code>：进入块选择模式</li></ul></li></ol><p><strong>文件操作：</strong></p><ol><li><code>:w</code>：保存文件</li><li><code>:q</code>：退出Vim</li><li><code>:q!</code>：强制退出Vim（不保存）</li><li><code>:wq</code>：保存并退出</li><li><code>:e filename</code>：打开另一个文件</li></ol><p><strong>分屏操作：</strong></p><ol><li><code>:split</code>：水平分割屏幕</li><li><code>:vsplit</code>：垂直分割屏幕</li><li><code>Ctrl-w w</code>：切换屏幕</li><li><code>Ctrl-w [hjkl]</code>：在不同屏幕之间移动</li></ol><p><strong>其他命令：</strong></p><ol><li><code>:help</code>：打开帮助文档</li><li><code>:set</code>：查看或设置选项</li><li><code>:cd directory</code>：切换工作目录</li></ol><p>这只是Vim命令的基本概述，Vim有很多高级功能和插件，可以根据需要进一步学习。要深入了解Vim，请查看Vim的内置帮助系统，使用命令<code>:help</code>来查找特定命令的帮助文档。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vim</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode插件推荐</title>
+    <link href="/2023/10/22/vscode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    <url>/2023/10/22/vscode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+    
+    <content type="html"><![CDATA[<p>语言插件：Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</p><p>绘图：Draw.io Integration</p><p>代码格式化：Prettier - Code formatter</p><p>代码检查：ESLint</p><p>代码提示：Intellicode &#x2F; Code Spell Checker</p><p>Git Tools：GitLens — Git supercharged  &#x2F;   GitGraph</p><p>Markdown：Markdown All in One &#x2F; Markdown Preview Enhanced &#x2F; Markdown TOC &#x2F; Markdown PDF</p><p>Latex：LaTeX Workshop &#x2F; LaTeX Utilities</p><p>Icons：Material Icon Theme</p><p>实时网页：Live Preview</p><p>Maven：Maven for Java</p><p>CSV展示：Rainbow CSV</p><p>代码截图：Snapcode</p><p>代码联想及代码评估：Sourcery</p><p>Spring Boot Tools：Spring Boot Extension Pack</p><p>代码语言转换&#x2F;解释：CodeGeex</p><p>代码生成：CodeCursor</p><p>Json格式化：json</p><p>Jupter：Jupyter</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
+      
+      <tag>插件</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HTML入门</title>
+    <link href="/2023/10/22/HTML%E5%85%A5%E9%97%A8/"/>
+    <url>/2023/10/22/HTML%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<p>让我们开始学习HTML。</p><h3 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h3><p>HTML（HyperText Markup Language）是一种标记语言，用于创建和呈现网页。HTML使用各种标记和标签来定义文档的结构、内容和链接。HTML文件通常以<code>.html</code>扩展名结尾。</p><h3 id="HTML文档结构"><a href="#HTML文档结构" class="headerlink" title="HTML文档结构"></a>HTML文档结构</h3><p>一个标准的HTML文档包含以下几个主要部分：</p><ol><li><code>&lt;!DOCTYPE&gt;</code>声明：指定文档的版本和类型。</li><li><code>&lt;html&gt;</code>元素：包裹整个HTML文档的根元素。</li><li><code>&lt;head&gt;</code>元素：包含元信息和链接到外部资源，不可见于页面。</li><li><code>&lt;title&gt;</code>元素：设置网页标题，显示在浏览器的标签页上。</li><li><code>&lt;meta&gt;</code>元素：包含关于文档的元信息，如字符编码、作者、描述等。</li><li><code>&lt;link&gt;</code>元素：用于引入外部资源，通常是样式表。</li><li><code>&lt;script&gt;</code>元素：用于嵌入JavaScript代码或引入外部JavaScript文件。</li><li><code>&lt;style&gt;</code>元素：包含内部样式表，用于定义页面的样式。</li><li><code>&lt;body&gt;</code>元素：包含可见于页面的内容，如文本、图片、链接等。</li></ol><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>我的网页<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>欢迎来到我的网页<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个简单的HTML文档示例。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div><p>在上面的示例中，我们有一个基本的HTML文档结构，包括<code>&lt;!DOCTYPE&gt;</code>声明、<code>&lt;html&gt;</code>、<code>&lt;head&gt;</code>、<code>&lt;body&gt;</code>等元素。</p><h3 id="HTML标签和元素"><a href="#HTML标签和元素" class="headerlink" title="HTML标签和元素"></a>HTML标签和元素</h3><p>HTML中使用标签来定义元素。标签通常成对出现，由开始标签和结束标签组成，中间包裹内容。开始标签通常以<code>&lt;</code>开头，结束标签以<code>&lt;/</code>开头。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个段落。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div><p>在这个示例中，<code>&lt;p&gt;</code>是开始标签，<code>&lt;/p&gt;</code>是结束标签，内容”这是一个段落”被包裹在两个标签之间。</p><h3 id="HTML元素的常见类型"><a href="#HTML元素的常见类型" class="headerlink" title="HTML元素的常见类型"></a>HTML元素的常见类型</h3><p>在HTML中，有许多不同类型的元素，包括：</p><ul><li><strong>文本元素：</strong> 用于显示文本内容，如 <code>&lt;p&gt;</code>（段落）、<code>&lt;h1&gt;</code>（标题）、<code>&lt;a&gt;</code>（链接）等。</li><li><strong>媒体元素：</strong> 用于显示多媒体内容，如 <code>&lt;img&gt;</code>（图片）、<code>&lt;audio&gt;</code>（音频）、<code>&lt;video&gt;</code>（视频）等。</li><li><strong>表单元素：</strong> 用于创建输入表单，如 <code>&lt;form&gt;</code>（表单）、<code>&lt;input&gt;</code>（输入框）、<code>&lt;button&gt;</code>（按钮）等。</li><li><strong>列表元素：</strong> 用于创建有序或无序列表，如 <code>&lt;ul&gt;</code>（无序列表）、<code>&lt;ol&gt;</code>（有序列表）、<code>&lt;li&gt;</code>（列表项）等。</li><li><strong>表格元素：</strong> 用于创建表格，如 <code>&lt;table&gt;</code>（表格）、<code>&lt;tr&gt;</code>（行）、<code>&lt;th&gt;</code>（表头单元格）、<code>&lt;td&gt;</code>（数据单元格）等。</li></ul><h3 id="文本元素"><a href="#文本元素" class="headerlink" title="文本元素"></a>文本元素</h3><h4 id="标题标签-到"><a href="#标题标签-到" class="headerlink" title="标题标签 &lt;h1&gt; 到 &lt;h6&gt;"></a>标题标签 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code></h4><p>HTML提供了六个级别的标题标签，分别是 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>，表示标题的重要性递减。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>这是一级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>这是二级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>这是三级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></code></pre></div><h4 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签 &lt;p&gt;"></a>段落标签 <code>&lt;p&gt;</code></h4><p><code>&lt;p&gt;</code> 标签用于创建段落，通常用于包裹文本内容。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个段落。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div><h4 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签 &lt;a&gt;"></a>链接标签 <code>&lt;a&gt;</code></h4><p><code>&lt;a&gt;</code> 标签用于创建超链接，允许用户点击链接跳转到其他页面。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.example.com&quot;</span>&gt;</span>访问示例网站<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div><h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签 &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;"></a>列表标签 <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></h4><p>HTML提供了无序列表和有序列表的标签。无序列表使用 <code>&lt;ul&gt;</code> 标签，有序列表使用 <code>&lt;ol&gt;</code> 标签，列表项使用 <code>&lt;li&gt;</code> 标签。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>无序列表项 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>无序列表项 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>有序列表项 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>有序列表项 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code></pre></div><h3 id="媒体元素"><a href="#媒体元素" class="headerlink" title="媒体元素"></a>媒体元素</h3><h4 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签 &lt;img&gt;"></a>图片标签 <code>&lt;img&gt;</code></h4><p><code>&lt;img&gt;</code> 标签用于显示图像。它有一个 <code>src</code> 属性，指定图像文件的路径。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;图片描述&quot;</span>&gt;</span></code></pre></div><h4 id="音频标签"><a href="#音频标签" class="headerlink" title="音频标签 &lt;audio&gt;"></a>音频标签 <code>&lt;audio&gt;</code></h4><p><code>&lt;audio&gt;</code> 标签用于嵌入音频文件，允许用户播放音频。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;music.mp3&quot;</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span></code></pre></div><h4 id="视频标签"><a href="#视频标签" class="headerlink" title="视频标签 &lt;video&gt;"></a>视频标签 <code>&lt;video&gt;</code></h4><p><code>&lt;video&gt;</code> 标签用于嵌入视频文件，允许用户观看视频。示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;video.mp4&quot;</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span></code></pre></div><h3 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h3><p>HTML中的表单元素用于收集用户输入。以下是一些常见的表单元素：</p><ul><li><code>&lt;form&gt;</code>：创建表单。</li><li><code>&lt;input&gt;</code>：用于文本输入、单选框、复选框等。</li><li><code>&lt;button&gt;</code>：创建按钮。</li><li><code>&lt;label&gt;</code>：为表单元素创建标签。</li><li><code>&lt;select&gt;</code>：创建下拉列表。</li><li><code>&lt;textarea&gt;</code>：创建多行文本输入。</li></ul><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>用户名：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">required</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>密码：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">required</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>登录<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre></div><h3 id="表格元素"><a href="#表格元素" class="headerlink" title="表格元素"></a>表格元素</h3><p>HTML中的表格元素用于创建表格以显示数据。以下是一些表格元素和属性：</p><ul><li><code>&lt;table&gt;</code>：定义表格。</li><li><code>&lt;tr&gt;</code>：定义表格行。</li><li><code>&lt;th&gt;</code>：定义表格标题单元格。</li><li><code>&lt;td&gt;</code>：定义表格数据单元格。</li><li><code>colspan</code>：指定单元格横跨的列数。</li><li><code>rowspan</code>：指定单元格横跨的行数。</li></ul><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>姓名<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>年龄<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>小明<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>25<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>小红<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>22<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code></pre></div><h3 id="嵌套元素"><a href="#嵌套元素" class="headerlink" title="嵌套元素"></a>嵌套元素</h3><p>HTML允许元素嵌套，这意味着你可以将一个元素放在另一个元素内部。例如，你可以在段落中嵌套链接或在列表中嵌套其他元素。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>请点击 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.example.com&quot;</span>&gt;</span>这里<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> 查看示例网站。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div><h3 id="HTML注释"><a href="#HTML注释" class="headerlink" title="HTML注释"></a>HTML注释</h3><p>你可以在HTML代码中添加注释，这些注释不会在浏览器中显示，但可以帮助你和其他开发者理解代码。HTML注释以 <code>&lt;!--</code> 开始，以 <code>--&gt;</code> 结束。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 这是一个HTML注释，用于说明代码的作用 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这段文字在浏览器中显示。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div><h3 id="HTML实体引用"><a href="#HTML实体引用" class="headerlink" title="HTML实体引用"></a>HTML实体引用</h3><p>HTML实体引用用于在HTML中显示特殊字符，如小于号 <code>&lt;</code> 或版权符号 ©。以下是一些常用的实体引用：</p><ul><li><code>&amp;lt;</code>：小于号 <code>&lt;</code></li><li><code>&amp;gt;</code>：大于号 <code>&gt;</code></li><li><code>&amp;amp;</code>：和符号 <code>&amp;</code></li><li><code>&amp;copy;</code>：版权符号 ©</li></ul><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> <span class="hljs-symbol">&amp;copy;</span> 版权所有<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div><h3 id="表单元素-1"><a href="#表单元素-1" class="headerlink" title="表单元素"></a>表单元素</h3><p>表单元素用于创建网页中的交互式表单，用户可以在表单中输入数据或进行选择。以下是一些常见的表单元素：</p><ul><li><code>&lt;form&gt;</code>：定义一个表单。</li><li><code>&lt;input&gt;</code>：定义一个输入字段，如文本框、单选框、复选框等。</li><li><code>&lt;textarea&gt;</code>：定义多行文本输入字段。</li><li><code>&lt;label&gt;</code>：定义表单元素的标签。</li><li><code>&lt;select&gt;</code>：定义下拉列表框。</li><li><code>&lt;button&gt;</code>：定义按钮。</li></ul><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>用户名：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>密码：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;提交&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre></div><h3 id="链接和锚点"><a href="#链接和锚点" class="headerlink" title="链接和锚点"></a>链接和锚点</h3><p>HTML中的链接元素 <code>&lt;a&gt;</code> 用于创建超链接，使用户能够点击链接以导航到其他页面。链接可以指向其他网页、文件或站点内的其他部分。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.example.com&quot;</span>&gt;</span>访问示例网站<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div><p>你还可以使用锚点来创建页面内部链接。在目标位置设置一个锚点，然后使用链接将用户导航到该锚点。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#section2&quot;</span>&gt;</span>跳转到第二部分<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;section2&quot;</span>&gt;</span>第二部分内容<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></code></pre></div><h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>图像元素 <code>&lt;img&gt;</code> 用于在网页上显示图像。你需要指定图像的 <code>src</code> 属性来指定图像文件的路径。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;示例图像&quot;</span>&gt;</span></code></pre></div><h3 id="HTML注释-1"><a href="#HTML注释-1" class="headerlink" title="HTML注释"></a>HTML注释</h3><p>HTML注释可以帮助你在代码中添加注释和说明，这对于维护和合作开发非常有用。HTML注释以 <code>&lt;!--</code> 开始，以 <code>--&gt;</code> 结束。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 这是一个HTML注释，用于解释代码 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这段文字将在浏览器中显示。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div><h3 id="HTML框架"><a href="#HTML框架" class="headerlink" title="HTML框架"></a>HTML框架</h3><p>HTML框架允许你将网页分割成若干部分，每个部分显示不同的内容。常见的框架元素包括 <code>&lt;frameset&gt;</code>、<code>&lt;frame&gt;</code> 和 <code>&lt;iframe&gt;</code>。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">frameset</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">&quot;25%,50%,25%&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">frame</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;left.html&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">frame</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;main.html&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">frame</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;right.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">frameset</span>&gt;</span></code></pre></div><h3 id="HTML元数据"><a href="#HTML元数据" class="headerlink" title="HTML元数据"></a>HTML元数据</h3><p>元数据元素提供关于文档的信息，如文档的字符编码、作者、关键字等。常见的元数据元素包括 <code>&lt;head&gt;</code>、<code>&lt;title&gt;</code>、<code>&lt;meta&gt;</code>、<code>&lt;link&gt;</code> 等。</p><p>示例：</p><div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>示例网页<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个示例网页。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+      <tag>网页</tag>
+      
+      <tag>前端</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo+GithubPages搭建自己的博客</title>
+    <link href="/2023/10/22/Hexo-GithubPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2023/10/22/Hexo-GithubPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h3><p><strong>第一步</strong>：打开终端(cmd)</p><p><strong>第二步</strong>：新建一个文件夹命名为 “blog”</p><p>windows下配置了vim（或macos下）可使用如下命令</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> blog</code></pre></div><p><strong>第三步</strong>：到blog目录下</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> blog</code></pre></div><p><strong>第四步</strong>：执行如下命令，初始化一个hexo项目</p><div class="code-wrapper"><pre><code class="hljs bash">hexo init</code></pre></div><p><strong>第五步</strong>：执行如下命令，建立一个新的markdown文件</p><div class="code-wrapper"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;my first article&quot;</span></code></pre></div><p>或使用如下简化命令</p><div class="code-wrapper"><pre><code class="hljs bash">hexo n <span class="hljs-string">&quot;my first article&quot;</span></code></pre></div><p>查看是否成功创建my-first-article.md文件(文件名中的空格会被-替代)</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> <span class="hljs-built_in">source</span>/_posts<span class="hljs-built_in">ls</span></code></pre></div><p><strong>第六步</strong>：编辑 my-first-article.md文件</p><div class="code-wrapper"><pre><code class="hljs bash">vim my-first-article.md</code></pre></div><p>i键进入插入模式，在.md文件中输入如下内容</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment">## Chapter1</span>chapter content<span class="hljs-comment">## Chapter2</span>chapter2 content</code></pre></div><p>esc退出插入模式，输入:wq保存并退出</p><p><strong>第七步</strong>：执行如下命令，安装Github Pages得部署工具</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-deployer-git --save</code></pre></div><p><strong>第八步</strong>：在Github上新建一个空项目，并命名为username.github.io<br><strong>注意1：项目名称必须严格为username.github.io格式</strong><br>例如，我的github用户名为Seal-Li，那么这个新建的项目名称就必须要是 Seal-Li.github.io</p><p><strong>注意2：必须时一个空项目</strong><br>gitignore, license, README.md等文件在创建时也不要勾选，保持全空</p><p><strong>第九步</strong>：编辑blog文件夹下得_config.yml文件<br>先回退到blog文件夹目录下</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ../.. <span class="hljs-comment"># 回退两级目录</span></code></pre></div><p>使用如下命令，编辑_config.yml文件</p><div class="code-wrapper"><pre><code class="hljs bash">vim _config.yml</code></pre></div><p>i键进入插入模式，在.yml文件中输入如下内容<br>注意：deploy和type时已经存在的直接编辑即可<br>repository和branch参数需要自行添加</p><div class="code-wrapper"><pre><code class="hljs bash">deploy:  <span class="hljs-built_in">type</span>: git  repository: 你新建的git仓库地址  branch: master</code></pre></div><p><strong>第十步</strong>：执行如下命令，生成网页</p><div class="code-wrapper"><pre><code class="hljs bash">hexo generate</code></pre></div><p>也可以使用简化命令</p><div class="code-wrapper"><pre><code class="hljs bash">hexo g</code></pre></div><p><strong>第十一步</strong>：本地查看是否已经成功生成</p><div class="code-wrapper"><pre><code class="hljs bash">hexo server</code></pre></div><p>或使用简化命令</p><div class="code-wrapper"><pre><code class="hljs bash">hexo s</code></pre></div><p>按住ctrl键，然后点击终端给出的 <a href="http://localhost:4000/">http://localhost:4000/</a> 链接，预览网页</p><p>回到终端 Ctrl+C 关闭hexo server</p><p><strong>第十二步</strong>：执行如下命令，部署到GithubPages</p><div class="code-wrapper"><pre><code class="hljs bash">hexo deploy</code></pre></div><p>或使用简化命令</p><div class="code-wrapper"><pre><code class="hljs bash">hexo d</code></pre></div><p>到这里使用默认主题的hexo博客就搭建完成了！</p><h3 id="二、主题"><a href="#二、主题" class="headerlink" title="二、主题"></a>二、主题</h3><p>下面介绍如何更换自己喜欢的主题(在这里<a href="https://hexo.io/themes/index.html">Hexo Theme</a>可以查看hexo支持的各种主题)，我们以fluid主题为例</p><p><strong>第一步</strong>：安装fluid主题</p><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid 主题的github主页</a>，也可以在Hexo Theme中找到</p><p>进入到blog目录下</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> blog</code></pre></div><p>安装fluid主题</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-theme-fluid --save</code></pre></div><p><strong>第二步</strong>：新建_config.fluid.yml文件</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">touch</span> _config.fluid.yml</code></pre></div><p>复制fluid主题的配置文件(blog&#x2F;node_modules&#x2F;hexo-theme-fluid&#x2F;_config.yml)内容到新建的_config.fluid.yml文件中</p><p><strong>第三步</strong>：编辑blog目录下的_config.yml文件<br>修改theme参数</p><div class="code-wrapper"><pre><code class="hljs bash">vim _config.yml</code></pre></div><p>&#x2F;theme 进入搜索模式，</p><p>theme参数的默认值如下，找到它</p><div class="code-wrapper"><pre><code class="hljs bash">theme: landscape</code></pre></div><p>i进入插入模式，将其修改为</p><div class="code-wrapper"><pre><code class="hljs bash">theme: fluid</code></pre></div><p><strong>第四步</strong>：依次执行如下命令</p><div class="code-wrapper"><pre><code class="hljs bash">hexo clean <span class="hljs-comment"># 防止之前进行过 hexo g操作，所以先进行一次clen</span></code></pre></div><div class="code-wrapper"><pre><code class="hljs bash">hexo g</code></pre></div><div class="code-wrapper"><pre><code class="hljs bash">hexo d</code></pre></div><p>到此主题就已经更换完成了，其他参数的调整可以参考主题的文档。</p><h3 id="三、blog文件夹托管到github或gitee（建议）"><a href="#三、blog文件夹托管到github或gitee（建议）" class="headerlink" title="三、blog文件夹托管到github或gitee（建议）"></a>三、blog文件夹托管到github或gitee（建议）</h3><p>每次生成网页都依赖于blog文件夹，如果不小心删除了，那就没了，因此将其托管到远端，因为blog文件夹可能会比较大，github连接上传较慢，可使用gitee效率更高，具体操作这里就不再细说了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+      <tag>GithubPages</tag>
+      
+      <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SpringCloud初识</title>
+    <link href="/2023/10/08/SpringCloud%E5%88%9D%E8%AF%86/"/>
+    <url>/2023/10/08/SpringCloud%E5%88%9D%E8%AF%86/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Spring-Cloud-的基本操作"><a href="#Spring-Cloud-的基本操作" class="headerlink" title="Spring Cloud 的基本操作"></a>Spring Cloud 的基本操作</h3><p>Spring Cloud 是一个用于构建分布式系统和微服务架构的框架，它在Spring Boot的基础上提供了一些额外的功能，以支持构建云原生应用程序。以下是 Spring Cloud 的一些基本操作和核心特性：</p><ol><li><p><strong>服务注册与发现</strong>：Spring Cloud 提供了服务注册与发现的支持，Eureka 和 Consul 是常用的服务注册中心，通过它们，你可以注册和发现各种微服务。</p></li><li><p><strong>负载均衡</strong>：Spring Cloud 能够集成 Ribbon 和 LoadBalancer，实现客户端负载均衡，从而提高应用的性能和可用性。</p></li><li><p><strong>断路器</strong>：通过集成 Hystrix，Spring Cloud 提供了断路器模式，可以有效处理微服务之间的故障和超时。</p></li><li><p><strong>分布式配置管理</strong>：Spring Cloud Config 允许将应用程序的配置分离到外部，通过 Git 或其他后端存储来管理配置。</p></li><li><p><strong>API 网关</strong>：Spring Cloud Gateway 和 Zuul 提供了 API 网关的功能，可以用于路由、过滤和加载均衡微服务请求。</p></li><li><p><strong>分布式追踪</strong>：Spring Cloud Sleuth 和 Zipkin 提供了分布式追踪的支持，帮助诊断微服务架构中的性能问题。</p></li><li><p><strong>消息驱动微服务</strong>：Spring Cloud Stream 和 Apache Kafka 或 RabbitMQ 集成，支持消息驱动的微服务。</p></li><li><p><strong>服务安全性</strong>：Spring Cloud Security 提供了 OAuth2 和单点登录（SSO）等功能，保障微服务的安全性。</p></li><li><p><strong>任务调度</strong>：Spring Cloud Task 提供了分布式任务调度的支持，适用于定时任务和批处理任务。</p></li><li><p><strong>微服务容器化</strong>：Spring Cloud 提供了 Docker 和 Kubernetes 的支持，帮助你容器化和部署微服务。</p></li><li><p><strong>监控和指标</strong>：Spring Boot Actuator 和 Micrometer 提供了丰富的监控和指标收集功能，帮助监视和管理微服务。</p></li><li><p><strong>服务链路追踪</strong>：Spring Cloud Sleuth 和 Zipkin 支持跟踪整个微服务调用链路，有助于故障排查和性能分析。</p></li><li><p><strong>流程编排</strong>：Spring Cloud Data Flow 提供了数据流和任务编排功能，用于构建复杂的数据处理流程。</p></li></ol><p>这些基本操作和核心特性使 Spring Cloud 成为构建复杂分布式系统和微服务架构的理想选择。</p><h3 id="Spring-Cloud-中的常用组件"><a href="#Spring-Cloud-中的常用组件" class="headerlink" title="Spring Cloud 中的常用组件"></a>Spring Cloud 中的常用组件</h3><p>Spring Cloud 提供了多个组件和工具，用于构建和管理微服务架构。以下是一些常用的 Spring Cloud 组件：</p><ol><li><p><strong>Eureka（Netflix Eureka）</strong>：</p><ul><li>用途：服务注册与发现。</li><li>描述：Eureka 用于构建分布式系统中的服务注册中心。微服务应用程序可以向 Eureka 注册，以便其他服务能够发现和调用它们。</li></ul></li><li><p><strong>Ribbon</strong>：</p><ul><li>用途：客户端负载均衡。</li><li>描述：Ribbon 是一个客户端负载均衡器，用于分发请求到多个服务实例中。它与 Eureka 集成，可以自动选择可用的服务实例。</li></ul></li><li><p><strong>Hystrix</strong>：</p><ul><li>用途：断路器模式和服务容错。</li><li>描述：Hystrix 用于增强应用程序的容错性，它可以防止服务降级，快速失败，以避免级联故障。Hystrix 还提供了断路器模式，可以在服务不可用时断开请求。</li></ul></li><li><p><strong>Zuul</strong>：</p><ul><li>用途：API 网关。</li><li>描述：Zuul 是一个 API 网关，可以用于路由和过滤请求。它可以将请求转发到后端的服务，同时执行诸如身份验证、授权、日志记录等操作。</li></ul></li><li><p><strong>Config</strong>：</p><ul><li>用途：分布式配置管理。</li><li>描述：Config 用于集中管理应用程序的配置，以便动态更新应用程序的配置信息。配置可以存储在版本控制中，并根据需要动态刷新。</li></ul></li><li><p><strong>Feign</strong>：</p><ul><li>用途：声明式 REST 客户端。</li><li>描述：Feign 是一个声明式的 REST 客户端，它允许开发者使用注解定义和调用 REST 服务。Feign 集成了 Ribbon 和 Hystrix，支持负载均衡和容错处理。</li></ul></li><li><p><strong>Sleuth</strong>：</p><ul><li>用途：分布式请求跟踪。</li><li>描述：Sleuth 用于跟踪分布式应用程序的请求。它为每个请求生成唯一的跟踪 ID，并记录请求的调用链。</li></ul></li><li><p><strong>Stream</strong>：</p><ul><li>用途：消息驱动微服务。</li><li>描述：Spring Cloud Stream 用于构建消息驱动的微服务。它提供了一种简化消息传递的方式，可用于连接消息代理，如 RabbitMQ 或 Kafka。</li></ul></li><li><p><strong>Bus</strong>：</p><ul><li>用途：消息总线。</li><li>描述：Spring Cloud Bus 用于在微服务之间广播配置变更和状态更改。它可以用于触发微服务的配置刷新。</li></ul></li></ol><p>这些组件是 Spring Cloud 生态系统中的一部分，可以根据项目的需求选择使用。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SpringCloud</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SpringBoot初识</title>
+    <link href="/2023/09/27/SpringBoot%E5%88%9D%E8%AF%86/"/>
+    <url>/2023/09/27/SpringBoot%E5%88%9D%E8%AF%86/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Spring-Boot-的基本操作"><a href="#Spring-Boot-的基本操作" class="headerlink" title="Spring Boot 的基本操作"></a>Spring Boot 的基本操作</h3><p>Spring Boot 是一个用于快速开发生产级别的基于 Spring 框架的应用程序的框架。以下是 Spring Boot 的一些基本操作：</p><ol><li><p><strong>创建一个 Spring Boot 项目</strong>：<br>使用 Spring Initializr 或 Spring Boot CLI 创建一个新的 Spring Boot 项目。</p></li><li><p><strong>主程序类</strong>：<br>创建一个主程序类，通常带有 <code>@SpringBootApplication</code> 注解，这个注解用于标识应用程序的入口点。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootApplication</span><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyApplication</span> &#123;    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;        SpringApplication.run(MyApplication.class, args);    &#125;&#125;</code></pre></div></li><li><p><strong>依赖管理</strong>：<br>在 <code>pom.xml</code> 中定义项目的依赖，Spring Boot 提供了各种 Starter 依赖，可简化常见任务的配置。</p></li><li><p><strong>配置</strong>：<br>使用 <code>application.properties</code> 或 <code>application.yml</code> 文件配置应用程序属性。例如，配置数据库连接、端口号等。</p></li><li><p><strong>控制器</strong>：<br>创建控制器类来处理 HTTP 请求和构建 RESTful API。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyController</span> &#123;    <span class="hljs-meta">@GetMapping(&quot;/hello&quot;)</span>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">hello</span><span class="hljs-params">()</span> &#123;        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, World!&quot;</span>;    &#125;&#125;</code></pre></div></li><li><p><strong>服务</strong>：<br>创建业务逻辑的服务类，通过 <code>@Service</code> 注解标识。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-meta">@Service</span><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyService</span> &#123;    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getMessage</span><span class="hljs-params">()</span> &#123;        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello from the service!&quot;</span>;    &#125;&#125;</code></pre></div></li><li><p><strong>数据库访问</strong>：<br>使用 Spring Data JPA 或 Spring JDBC 等组件来访问数据库。</p></li><li><p><strong>模板引擎</strong>：<br>使用 Thymeleaf、FreeMarker 或 Velocity 等模板引擎来构建动态页面。</p></li><li><p><strong>Spring Boot 自动配置</strong>：<br>Spring Boot 自动配置减少了对 XML 配置文件的需求，但你仍然可以进行自定义配置。</p></li><li><p><strong>测试</strong>：<br>编写单元测试和集成测试来确保应用程序的正确性。</p></li><li><p><strong>打包</strong>：<br>使用 Maven 或 Gradle 打包应用程序。</p></li><li><p><strong>运行</strong>：<br>运行应用程序，可以使用 <code>mvn spring-boot:run</code> 或直接运行主程序类。</p></li><li><p><strong>部署</strong>：<br>部署应用程序到 Tomcat、Jetty 或其他 Servlet 容器，或使用 Spring Boot 内嵌的 Tomcat。</p></li><li><p><strong>监控和管理</strong>：<br>Spring Boot 提供了 Actuator 模块，用于监控和管理应用程序。</p></li></ol><h3 id="Spring-Boot-的重难点内容"><a href="#Spring-Boot-的重难点内容" class="headerlink" title="Spring Boot 的重难点内容"></a>Spring Boot 的重难点内容</h3><p>Spring Boot 是一个功能强大的框架，涵盖了许多方面，以下是一些 Spring Boot 中的重难点内容和示例：</p><ol><li><p><strong>自动配置</strong>:<br>Spring Boot 使用自动配置来根据项目的依赖自动配置应用程序。这可以显著减少手动配置的需求。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootApplication</span><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyApplication</span> &#123;    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;        SpringApplication.run(MyApplication.class, args);    &#125;&#125;</code></pre></div></li><li><p><strong>配置属性</strong>:<br>使用 <code>application.properties</code> 或 <code>application.yml</code> 文件，可以配置应用程序属性，包括数据库连接、端口号等。</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span>  <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span><span class="hljs-attr">spring:</span>  <span class="hljs-attr">datasource:</span>    <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/mydb</span></code></pre></div></li><li><p><strong>RESTful API</strong>:<br>Spring Boot 可以轻松创建 RESTful API。示例：</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyController</span> &#123;    <span class="hljs-meta">@GetMapping(&quot;/api/hello&quot;)</span>    <span class="hljs-keyword">public</span> ResponseEntity&lt;String&gt; <span class="hljs-title function_">hello</span><span class="hljs-params">()</span> &#123;        <span class="hljs-keyword">return</span> ResponseEntity.ok(<span class="hljs-string">&quot;Hello, World!&quot;</span>);    &#125;&#125;</code></pre></div></li><li><p><strong>数据库访问</strong>:<br>Spring Boot 集成了 Spring Data JPA，可以轻松访问数据库。示例：</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-meta">@Entity</span><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Product</span> &#123;    <span class="hljs-meta">@Id</span>    <span class="hljs-meta">@GeneratedValue(strategy = GenerationType.IDENTITY)</span>    <span class="hljs-keyword">private</span> Long id;    <span class="hljs-keyword">private</span> String name;&#125;</code></pre></div></li><li><p><strong>Spring Boot Starter</strong>:<br>Spring Boot Starter 依赖简化了项目的依赖管理，可以轻松添加功能，如 Web、数据访问、安全等。</p><div class="code-wrapper"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre></div></li><li><p><strong>Spring Boot Actuator</strong>:<br>Spring Boot Actuator 提供了监控和管理端点，可用于检查应用程序的运行状况。</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">management:</span>  <span class="hljs-attr">endpoints:</span>    <span class="hljs-attr">web:</span>      <span class="hljs-attr">exposure:</span>        <span class="hljs-attr">include:</span> <span class="hljs-string">&quot;*&quot;</span></code></pre></div></li><li><p><strong>Spring Boot 数据缓存</strong>:<br>Spring Boot 集成了数据缓存支持，包括 Ehcache、Redis、Caffeine 等。</p></li><li><p><strong>Spring Boot 安全性</strong>:<br>Spring Boot 提供了许多安全性功能，可以轻松保护应用程序，包括身份验证和授权。</p></li><li><p><strong>Spring Boot 测试</strong>:<br>Spring Boot 提供了测试支持，可以编写单元测试和集成测试来验证应用程序的行为。</p></li><li><p><strong>部署</strong>:<br>Spring Boot 支持内嵌 Servlet 容器，如 Tomcat 和 Jetty，也可以打包成 WAR 文件并部署到外部容器。</p></li><li><p><strong>Spring Boot 扩展</strong>:<br>可以自定义自动配置和添加自定义 Starter 来扩展 Spring Boot。</p></li><li><p><strong>Spring Boot 生产配置</strong>:<br>在生产环境中配置属性，例如使用外部配置文件或环境变量。</p></li></ol><p>这些是 Spring Boot 中的一些重难点内容，随着你的项目需求的不同，你可能会涉及到更多的高级特性，如消息队列、任务调度、微服务等。 Spring Boot 提供了广泛的文档和示例，以帮助你更深入地学习和应用这些功能。</p><h3 id="Spring-Boot-核心特性"><a href="#Spring-Boot-核心特性" class="headerlink" title="Spring Boot 核心特性"></a>Spring Boot 核心特性</h3><p>Spring Boot 是一个用于构建独立的、生产级别的 Spring 应用的框架，它包含了很多核心特性，其中一些关键的核心特性包括：</p><ol><li><p><strong>自动配置</strong>：Spring Boot 使用自动配置来减少开发者的配置工作。通过依赖管理和条件化配置，Spring Boot根据你的项目的依赖自动配置应用程序。</p></li><li><p><strong>起步依赖</strong>：Spring Boot Starter 提供了一组预定义的依赖，使构建应用程序更容易，你可以通过添加特定的 Starter 来添加功能，如Web、数据访问、安全性等。</p></li><li><p><strong>嵌入式 Web 服务器</strong>：Spring Boot 支持嵌入式 Web 服务器，如Tomcat、Jetty和Undertow，无需部署WAR文件，可以直接运行应用。</p></li><li><p><strong>开发者工具</strong>：Spring Boot 提供了开发者工具，支持自动重启和快速重新加载，使开发过程更加高效。</p></li><li><p><strong>自动化的配置管理</strong>：Spring Boot 提供了多种方式来配置属性，包括 <code>application.properties</code> 或 <code>application.yml</code> 文件、环境变量、命令行参数等。</p></li><li><p><strong>内置监控</strong>：Spring Boot Actuator 模块提供了应用程序的监控和管理功能，包括健康检查、度量信息、环境信息等。</p></li><li><p><strong>自动化的Spring容器</strong>：Spring Boot 简化了Spring应用程序的配置，无需配置XML文件，提供JavaConfig（注解配置）的支持。</p></li><li><p><strong>外部化配置</strong>：Spring Boot 支持将应用程序的配置分离到外部，可用于不同环境下的配置管理。</p></li><li><p><strong>大量的 Starters</strong>：Spring Boot 提供了丰富的 Starter，包括 Spring Boot Starter Data JPA、Spring Boot Starter Web、Spring Boot Starter Security 等，用于构建不同类型的应用。</p></li><li><p><strong>自定义 Starter</strong>：你可以创建自己的 Starter，将常用的配置、库和功能打包成一个独立的依赖。</p></li><li><p><strong>Spring Boot CLI</strong>：Spring Boot 提供了一个命令行工具，可以用Groovy编写Spring Boot应用程序。</p></li><li><p><strong>微服务支持</strong>：Spring Boot 非常适合构建微服务应用，结合Spring Cloud项目可以轻松实现微服务架构。</p></li><li><p><strong>集成测试</strong>：Spring Boot 提供了用于编写单元测试和集成测试的支持，确保应用程序的可靠性。</p></li><li><p><strong>JDK 8 支持</strong>：Spring Boot 支持 JDK 8 特性，如Lambda 表达式、方法引用和默认方法等。</p></li><li><p><strong>IDE 支持</strong>：Spring Boot 支持 IntelliJ IDEA、Eclipse、NetBeans 和TextMate 等IDE。</p></li><li><p><strong>JPA 和数据库</strong>：Spring Boot 支持 JPA 和数据库，如 Hibernate、MyBatis 和Spring Data JPA 等。</p></li><li><p><strong>Spring MVC</strong>：Spring Boot 支持 Spring MVC 框架，用于构建 RESTful Web 服务。</p></li><li><p><strong>Spring WebFlux</strong>：Spring Boot 支持 Spring WebFlux 框架，用于构建异步响应式 Web 服务。</p></li><li><p><strong>Web 应用</strong>：Spring Boot 支持 Web 应用，如 Spring MVC、Spring WebFlux 等。</p></li><li><p><strong>Web 服务</strong>：Spring Boot 支持 Web 服务，如 Spring Web Services、Apache CXF 等。</p></li><li><p><strong>测试</strong>：Spring Boot 支持 JUnit、Mockito、AssertJ 等测试框架。</p></li><li><p><strong>JMX</strong>：Spring Boot 支持 JMX，用于监控和管理 Spring Boot 应用程序。</p></li><li><p><strong>Spring Boot CLI</strong>：Spring Boot 提供了命令行工具，可以使用 Groovy 语言编写 Spring Boot 应用程序。</p></li><li><p><strong>Spring Boot 支持多种 IDE</strong>：Spring Boot 支持 IntelliJ IDEA、Eclipse、NetBeans 和TextMate 等 IDE。</p></li><li><p><strong>Spring Boot 支持多种构建工具</strong>：Spring Boot 支持 Maven 和 Gradle 构建工具。</p></li><li><p><strong>Spring Boot 支持多种项目模板</strong>：Spring Boot 支持 Maven、Gradle 和 Spring Initializr 项目模板。</p></li><li><p><strong>Spring Boot 支持多种数据库</strong>：Spring Boot 支持 H2、HSQL、Oracle、MySQL、PostgreSQL、SQL Server 等数据库。</p></li><li><p><strong>Spring Boot 支持多种 Web 容器</strong>：Spring Boot 支持 Tomcat、Jetty、Undertow 等 Web 容器。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SpringBoot</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Redis入门及常用命令</title>
+    <link href="/2023/09/26/Redis%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <url>/2023/09/26/Redis%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Redis的数据类型"><a href="#Redis的数据类型" class="headerlink" title="Redis的数据类型"></a>Redis的数据类型</h3><p>Redis支持多种数据类型，每种数据类型都有不同的用途和特性。以下是Redis的一些常见数据类型：</p><ol><li><p>**字符串 (String)**：字符串是Redis最基本的数据类型，可以包含文本、二进制数据等。常用命令包括 <code>SET</code>、<code>GET</code>、<code>INCR</code>、<code>DECR</code> 等。</p></li><li><p>**哈希表 (Hash)**：哈希表是键值对的集合，其中每个键都与一个值相关联。用于存储对象的多个字段。常用命令包括 <code>HSET</code>、<code>HGET</code>、<code>HDEL</code>、<code>HGETALL</code> 等。</p></li><li><p>**列表 (List)**：列表是有序的元素集合，可以用于实现队列、堆栈等数据结构。常用命令包括 <code>LPUSH</code>、<code>RPUSH</code>、<code>LPOP</code>、<code>RPOP</code> 等。</p></li><li><p>**集合 (Set)**：集合是无序的唯一元素集合，常用于存储唯一值的集合。常用命令包括 <code>SADD</code>、<code>SREM</code>、<code>SMEMBERS</code>、<code>SINTER</code> 等。</p></li><li><p>**有序集合 (Sorted Set)**：有序集合是元素带有分数的集合，元素按分数进行排序。常用于排行榜等场景。常用命令包括 <code>ZADD</code>、<code>ZREM</code>、<code>ZRANGE</code>、<code>ZREVRANGE</code> 等。</p></li><li><p>**位图 (Bitmap)**：位图是字符串的二进制位的集合，可以进行位运算。常用于统计、标志位等操作。常用命令包括 <code>SETBIT</code>、<code>GETBIT</code>、<code>BITCOUNT</code> 等。</p></li><li><p>**地理位置 (Geospatial)**：地理位置是存储地理坐标的数据类型，用于实现地理位置相关的应用。常用命令包括 <code>GEOADD</code>、<code>GEODIST</code>、<code>GEORADIUS</code>、<code>GEORADIUSBYMEMBER</code> 等。</p></li></ol><p>这些数据类型使Redis非常灵活，可以满足各种不同的应用需求。</p><h3 id="Redis基本操作"><a href="#Redis基本操作" class="headerlink" title="Redis基本操作"></a>Redis基本操作</h3><p>Redis是一个高性能的键-值存储系统，提供了许多用于存储、检索和操作数据的命令。以下是一些常用的Redis操作和命令，以及相应的示例：</p><ol><li><p><strong>设置键值对</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">SET key value</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">SET mykey <span class="hljs-string">&quot;Hello, Redis!&quot;</span></code></pre></div></li><li><p><strong>获取键值对</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">GET key</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">GET mykey</code></pre></div></li><li><p><strong>检查键是否存在</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">EXISTS key</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">EXISTS mykey</code></pre></div></li><li><p><strong>删除键</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">DEL key</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">DEL mykey</code></pre></div></li><li><p><strong>设置键的过期时间</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">EXPIRE key seconds</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">EXPIRE mykey 3600</code></pre></div></li><li><p><strong>获取键的剩余生存时间</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">TTL key</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">TTL mykey</code></pre></div></li><li><p><strong>自增键的值</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">INCR key</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">INCR counter</code></pre></div></li><li><p><strong>自减键的值</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">DECR key</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">DECR counter</code></pre></div></li><li><p><strong>设置哈希表字段</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">HSET <span class="hljs-built_in">hash</span> key value</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">HSET user:1 name <span class="hljs-string">&quot;Alice&quot;</span></code></pre></div></li><li><p><strong>获取哈希表字段的值</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">HGET <span class="hljs-built_in">hash</span> key</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">HGET user:1 name</code></pre></div></li><li><p><strong>列出哈希表的所有字段</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">HKEYS <span class="hljs-built_in">hash</span></code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">HKEYS user:1</code></pre></div></li><li><p><strong>删除哈希表字段</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">HDEL <span class="hljs-built_in">hash</span> field</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">HDEL user:1 name</code></pre></div></li><li><p><strong>将值添加到列表的左侧</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">LPUSH list value</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">LPUSH mylist <span class="hljs-string">&quot;item1&quot;</span></code></pre></div></li><li><p><strong>获取列表的元素</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">LRANGE list start stop</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">LRANGE mylist 0 -1</code></pre></div></li><li><p><strong>发布订阅消息</strong>：</p><div class="code-wrapper"><pre><code class="hljs bash">PUBLISH channel message</code></pre></div><p>示例：</p><div class="code-wrapper"><pre><code class="hljs bash">PUBLISH notifications <span class="hljs-string">&quot;New message received&quot;</span></code></pre></div></li></ol><h3 id="Redis优点"><a href="#Redis优点" class="headerlink" title="Redis优点"></a>Redis优点</h3><p>Redis（Remote Dictionary Server）是一个开源的内存数据库，它具有以下主要作用：</p><ol><li><p><strong>缓存存储</strong>：Redis最常见的用途之一是作为缓存层。它可以在内存中快速存储和检索数据，以提高应用程序的响应时间。Redis的快速读写操作和灵活的数据结构使其成为理想的缓存解决方案。</p></li><li><p><strong>数据存储</strong>：Redis不仅可以用作缓存，还可以用作数据存储。它支持各种数据结构，包括字符串、列表、集合、有序集合、哈希表等。这使得Redis可以用于存储应用程序数据，如会话数据、排行榜、消息队列等。</p></li><li><p><strong>消息队列</strong>：Redis支持发布&#x2F;订阅（Pub&#x2F;Sub）模式，可以用作轻量级的消息队列。开发者可以使用Redis来实现异步任务处理、事件通知和消息传递等功能。</p></li><li><p><strong>分布式锁</strong>：Redis可以用于实现分布式锁，确保在多个应用程序实例之间对共享资源的安全访问。这对于协调并发任务和避免竞争条件非常有用。</p></li><li><p><strong>实时统计</strong>：由于其高性能，Redis可用于实时统计数据，如页面浏览次数、在线用户计数、性能指标等。这些统计数据对于监控和应用程序性能优化非常有帮助。</p></li><li><p><strong>会话管理</strong>：Redis可以用来存储和管理用户会话数据。它可以替代传统的会话存储机制，如基于文件或数据库的会话管理，以提供更快的访问速度和可伸缩性。</p></li><li><p><strong>地理位置数据</strong>：Redis的有序集合（Sorted Set）结构可以用于存储地理位置数据，如城市或商家的地理坐标。这使得Redis成为构建位置服务和地理应用的有力工具。</p></li><li><p><strong>分布式应用程序</strong>：Redis支持分布式架构，可以用于构建分布式应用程序，如分布式锁、共享配置、集群协调等。它还支持数据复制和分片，以提供高可用性和可扩展性。</p></li></ol><p>总的来说，Redis是一个功能丰富、高性能、轻量级的内存数据库，可用于多种应用程序场景，包括缓存、数据存储、消息队列、分布式锁等。它在大型互联网应用和分布式系统中得到广泛使用。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Redis</tag>
+      
+      <tag>数据库</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Git入门及常用命令</title>
+    <link href="/2023/09/23/Git%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <url>/2023/09/23/Git%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><p>初次使用Git时，有一些重要的配置设置是必须的，以确保Git正常工作。以下是一些你应该进行的初次配置步骤：</p><ol><li><p><strong>设置用户名和邮箱</strong>：你需要配置Git使用的用户名和电子邮件地址，这些信息将与你的提交相关联。你可以使用以下命令分别设置用户名和电子邮件地址：</p><div class="code-wrapper"><pre><code class="hljs stylus">git config <span class="hljs-attr">--global</span> user<span class="hljs-selector-class">.name</span> <span class="hljs-string">&quot;Your Name&quot;</span>git config <span class="hljs-attr">--global</span> user<span class="hljs-selector-class">.email</span> <span class="hljs-string">&quot;youremail@example.com&quot;</span></code></pre></div><p>将”Your Name”和”<a href="mailto:&#x79;&#111;&#x75;&#x72;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;</a>“替换为你的实际姓名和电子邮件地址。</p></li><li><p><strong>选择默认文本编辑器</strong>：Git会在某些情况下要求你输入文本消息（例如提交消息）。你可以设置你喜欢的文本编辑器，例如，使用以下命令将默认编辑器设置为VSCode：</p><div class="code-wrapper"><pre><code class="hljs css">git config <span class="hljs-attr">--global</span> core<span class="hljs-selector-class">.editor</span> &quot;<span class="hljs-selector-tag">code</span> <span class="hljs-attr">--wait</span>&quot;</code></pre></div><p>如果你使用其他文本编辑器，将其替换为适当的命令。</p></li><li><p><strong>配置全局忽略文件</strong>：你可以创建一个全局的.gitignore文件，用于指定Git应该忽略的文件或目录。这样，你就可以避免将不需要的文件提交到仓库中。使用以下命令设置全局.gitignore文件：</p><div class="code-wrapper"><pre><code class="hljs jboss-cli">git config <span class="hljs-params">--global</span> core.excludesfile ~<span class="hljs-string">/.gitignore_global</span></code></pre></div><p>然后，在用户主目录下创建.gitignore_global文件并定义你要忽略的内容。</p></li><li><p><strong>配置SSH密钥</strong>（可选）：如果你计划通过SSH协议访问远程仓库，你可以为GitHub、GitLab等服务生成SSH密钥，并将公钥添加到你的帐户。这可以减少每次推送或拉取时的认证需求。<br>要生成新的SSH密钥对，请使用以下命令：</p><div class="code-wrapper"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> <span class="hljs-symbol">ed25519</span> -C <span class="hljs-string">&quot;youremail@example.com&quot;</span></code></pre></div><p>将”<a href="mailto:&#121;&#111;&#x75;&#x72;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#109;">&#121;&#111;&#x75;&#x72;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#109;</a>“替换为你的电子邮件地址。</p><p>要添加公钥，请使用以下命令：</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_ed25519.pub</code></pre></div><p>然后，将公钥复制并粘贴到你的GitHub、GitLab等帐户中。</p></li></ol><h3 id="Git基本操作"><a href="#Git基本操作" class="headerlink" title="Git基本操作"></a>Git基本操作</h3><ol><li><p><strong>初始化仓库</strong>：创建一个新的Git仓库，可以使用<code>git init</code>命令。例如，<code>git init my-repo</code>将在名为<code>my-repo</code>的文件夹中创建一个新的Git仓库。</p></li><li><p><strong>克隆仓库</strong>：获取现有的Git仓库的拷贝，可以使用<code>git clone</code>命令。例如，<code>git clone https://github.com/user/repo.git</code>将克隆远程仓库到本地。</p></li><li><p><strong>添加文件</strong>：将文件添加到暂存区，可以使用<code>git add</code>命令。例如，<code>git add filename</code>将文件添加到下一次提交中。</p></li><li><p><strong>提交更改</strong>：将已添加到暂存区的文件提交到版本历史，可以使用<code>git commit</code>命令。例如，<code>git commit -m &quot;提交信息&quot;</code>将更改提交到仓库。</p></li><li><p><strong>查看状态</strong>：查看仓库中文件的状态，可以使用<code>git status</code>命令。这将显示已修改、已暂存和未跟踪的文件。</p></li><li><p><strong>查看历史</strong>：查看提交历史，可以使用<code>git log</code>命令。你可以使用不同的选项来定制输出的格式和范围。</p></li><li><p><strong>创建分支</strong>：创建新的分支，可以使用<code>git branch</code>命令。例如，<code>git branch new-branch</code>将创建一个名为<code>new-branch</code>的新分支。</p></li><li><p><strong>切换分支</strong>：切换到不同的分支，可以使用<code>git checkout</code>命令。例如，<code>git checkout new-branch</code>将切换到<code>new-branch</code>分支。</p></li><li><p><strong>合并分支</strong>：将不同分支的更改合并到当前分支，可以使用<code>git merge</code>命令。例如，<code>git merge feature-branch</code>将合并<code>feature-branch</code>的更改到当前分支。</p></li><li><p><strong>远程操作</strong>：与远程仓库交互，可以使用<code>git remote</code>命令。例如，<code>git remote add origin https://github.com/user/repo.git</code>将添加一个名为<code>origin</code>的远程仓库。</p></li><li><p><strong>推送更改</strong>：将本地更改推送到远程仓库，可以使用<code>git push</code>命令。例如，<code>git push origin master</code>将将本地<code>master</code>分支的更改推送到远程仓库。</p></li><li><p><strong>拉取更改</strong>：从远程仓库获取最新的更改，可以使用<code>git pull</code>命令。例如，<code>git pull origin master</code>将获取<code>origin</code>上<code>master</code>分支的最新更改。</p></li><li><p><strong>解决冲突</strong>：在合并分支或拉取更改时，可能会出现冲突。解决冲突需要手动编辑文件并标记解决的部分。</p></li><li><p><strong>标签版本</strong>：为重要的提交创建标签，可以使用<code>git tag</code>命令。例如，<code>git tag v1.0</code>将创建一个名为<code>v1.0</code>的标签。</p></li><li><p><strong>撤销更改</strong>：撤销已提交的更改，可以使用<code>git reset</code>和<code>git revert</code>等命令，具体取决于情况。</p></li><li><p><strong>删除文件</strong>：从仓库中删除文件，可以使用<code>git rm</code>命令。例如，<code>git rm filename</code>将删除文件。</p></li><li><p><strong>删除仓库</strong>：删除本地仓库，可以使用<code>git rm -rf --cached .</code>命令。</p></li><li><p><strong>重置仓库</strong>：重置本地仓库，可以使用<code>git reset --hard</code>命令。</p></li><li><p><strong>回退版本</strong>：回退到以前的版本，可以使用<code>git checkout</code>命令。例如，<code>git checkout HEAD~1</code>将回退</p></li><li><p><strong>删除分支</strong>：删除分支，可以使用<code>git branch -d</code>命令。例如，<code>git branch -d feature-branch</code>将删除名为<code>feature-branch</code>的分支</p></li><li><p><strong>查看分支</strong>：查看所有分支，可以使用<code>git branch</code>命令。例如，<code>git branch</code>将列出所有分支。</p></li><li><p><strong>代码审查</strong>：code review，可以使用<code>git diff</code>命令。例如，<code>git diff</code>将显示所有未提交的更改。</p></li><li><p><strong>代码优选</strong>：选择有一个最优的commit进行合并，可以使用<code>git cherry-pick</code>命令。例如，<code>git cherry-pick commit-id</code>将选择<code>commit-id</code>的更改。</p></li><li><p><strong>分支合并</strong>：将分支合并到主分支，可以使用<code>git merge</code>命令。例如，<code>git merge feature-branch</code>将将<code>feature-branch</code>分支合并到当前分支。</p></li></ol><h3 id="Git优点"><a href="#Git优点" class="headerlink" title="Git优点"></a>Git优点</h3><p>使用Git进行代码托管具有许多好处，其中一些主要好处包括：</p><ol><li><p><strong>版本控制</strong>：Git允许开发者跟踪项目的不同版本，并轻松切换、恢复或回滚到不同的版本。这使得开发过程更加可控，有助于团队合作和错误修复。</p></li><li><p><strong>团队协作</strong>：多人协作开发时，Git使团队成员能够在不干扰其他人的情况下并行工作，然后轻松合并各自的更改。Git的分支模型为团队协作提供了便利。</p></li><li><p><strong>追踪更改</strong>：Git会自动记录每个文件的更改历史，包括何时修改、谁修改以及修改了什么。这有助于了解代码的演化过程。</p></li><li><p><strong>本地开发</strong>：Git支持本地仓库，开发者可以在不需要互联网连接的情况下进行开发，仅在需要时与远程仓库同步。</p></li><li><p><strong>分布式开发</strong>：Git是分布式版本控制系统，每个开发者都拥有完整的仓库，可以在本地执行版本控制操作。这种模型使得协作和合并更加灵活。</p></li><li><p><strong>容易修复错误</strong>：如果出现问题，你可以轻松恢复到以前的版本，而不会丢失任何代码。这可以减少错误修复的风险。</p></li><li><p><strong>支持多平台</strong>：Git可以运行在不同的操作系统上，包括Windows、macOS和Linux。这意味着团队成员可以使用他们最熟悉的操作系统。</p></li><li><p><strong>社区支持</strong>：Git拥有庞大的用户社区，提供了大量的教程、文档和开源工具，帮助开发者更好地使用Git。</p></li><li><p><strong>持续集成</strong>：Git与持续集成（CI）工具结合使用，可以自动构建、测试和部署代码，加速开发流程。</p></li><li><p><strong>备份和存档</strong>：Git仓库本身就是一个备份，即使某个存储位置出现问题，你仍然可以从其他存储库克隆代码。</p></li></ol><p>总的来说，Git是一个强大的版本控制工具，可以提高代码质量、团队协作效率，以及开发者的工作流程。无论是个人项目还是大型团队项目，使用Git都可以提供很多好处。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+      <tag>协同开发</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>JAVA入门</title>
+    <link href="/2023/09/22/JAVA%E5%85%A5%E9%97%A8/"/>
+    <url>/2023/09/22/JAVA%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Java8新特性"><a href="#Java8新特性" class="headerlink" title="Java8新特性"></a>Java8新特性</h3><p>Java 8引入了许多新特性和改进，其中一些最显著的包括：</p><ol><li><p><strong>Lambda 表达式</strong>：Lambda 表达式是 Java 8 中最显著的新特性之一。它允许在方法内部定义匿名函数，从而更容易实现函数式编程。这使得代码更简洁和可读，并提供了更好的抽象机制。</p><div class="code-wrapper"><pre><code class="hljs java">(a, b) -&gt; a + b</code></pre></div></li><li><p><strong>函数式接口</strong>：Java 8引入了函数式接口概念，这是一种只有一个抽象方法的接口。这为Lambda表达式提供了类型和基本的函数式编程支持。例如，<code>java.util.function</code> 包中包含了许多常用的函数式接口，如 <code>Consumer</code>、<code>Function</code>、<code>Predicate</code>。</p></li><li><p><strong>方法引用</strong>：方法引用允许您使用已存在的方法来实现函数式接口。有四种主要的方法引用类型：静态方法引用、实例方法引用、构造方法引用、类构造方法引用。</p><div class="code-wrapper"><pre><code class="hljs java">List&lt;String&gt; names = Arrays.asList(<span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;Charlie&quot;</span>);names.forEach(System.out::println);</code></pre></div></li><li><p>**流 (Stream)**：Java 8引入了Stream API，它提供了一种用于处理集合数据的高级抽象方式。使用Stream，您可以轻松地进行过滤、映射、归约和其他数据处理操作。</p><div class="code-wrapper"><pre><code class="hljs java">List&lt;Integer&gt; numbers = Arrays.asList(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);<span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> numbers.stream()                .filter(n -&gt; n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)                .mapToInt(Integer::intValue)                .sum();</code></pre></div></li><li><p>**默认方法 (Default Method)**：接口中可以包含默认方法的定义，这使得向接口添加新方法时不会破坏已经实现该接口的类。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">MyInterface</span> &#123;    <span class="hljs-keyword">default</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">myDefaultMethod</span><span class="hljs-params">()</span> &#123;        <span class="hljs-comment">// 默认实现</span>    &#125;&#125;</code></pre></div></li><li><p><strong>新的日期和时间 API</strong>：Java 8引入了<code>java.time</code> 包，提供了全新的日期和时间 API，以替代旧的 <code>Date</code> 和 <code>Calendar</code> 类。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">LocalDate</span> <span class="hljs-variable">today</span> <span class="hljs-operator">=</span> LocalDate.now();<span class="hljs-type">LocalTime</span> <span class="hljs-variable">now</span> <span class="hljs-operator">=</span> LocalTime.now();</code></pre></div></li><li><p><strong>新的 JavaScript 引擎</strong>：Java 8引入了 Nashorn JavaScript 引擎，可用于在Java应用程序中嵌入和执行JavaScript代码。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">ScriptEngine</span> <span class="hljs-variable">engine</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ScriptEngineManager</span>().getEngineByName(<span class="hljs-string">&quot;nashorn&quot;</span>);engine.eval(<span class="hljs-string">&quot;print(&#x27;Hello, world!&#x27;)&quot;</span>);</code></pre></div></li><li><p><strong>并行数组</strong>：Java 8引入了并行数组，可用于在多核处理器上并行处理大规模数据。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">int</span>[] numbers = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>&#125;;<span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> Arrays.parallelStream(numbers)                .sum();</code></pre></div></li></ol><p>这些新特性和改进使Java 8成为了一个更强大、更现代的编程语言，更容易进行并发编程和函数式编程。它提供了更多的工具来简化和改进Java应用程序的开发。</p><h3 id="Java基本数据类型"><a href="#Java基本数据类型" class="headerlink" title="Java基本数据类型"></a>Java基本数据类型</h3><p>Java 的基本数据类型包括以下八种：</p><ol><li><p><strong>byte</strong>：字节类型，8 位，范围为 -128 到 127。用于节省内存空间。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">byte</span> <span class="hljs-variable">myByte</span> <span class="hljs-operator">=</span> <span class="hljs-number">42</span>;</code></pre></div></li><li><p><strong>short</strong>：短整数类型，16 位，范围为 -32,768 到 32,767。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">short</span> <span class="hljs-variable">myShort</span> <span class="hljs-operator">=</span> <span class="hljs-number">1000</span>;</code></pre></div></li><li><p><strong>int</strong>：整数类型，32 位，范围为 -2^31 到 2^31 - 1。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">myInt</span> <span class="hljs-operator">=</span> <span class="hljs-number">12345</span>;</code></pre></div></li><li><p><strong>long</strong>：长整数类型，64 位，范围为 -2^63 到 2^63 - 1。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">long</span> <span class="hljs-variable">myLong</span> <span class="hljs-operator">=</span> <span class="hljs-number">1234567890L</span>;</code></pre></div></li><li><p><strong>float</strong>：单精度浮点类型，32 位，用于表示小数。通常用 <code>f</code> 后缀表示。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">float</span> <span class="hljs-variable">myFloat</span> <span class="hljs-operator">=</span> <span class="hljs-number">3.14f</span>;</code></pre></div></li><li><p><strong>double</strong>：双精度浮点类型，64 位，通常用于表示小数。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">double</span> <span class="hljs-variable">myDouble</span> <span class="hljs-operator">=</span> <span class="hljs-number">3.14159265359</span>;</code></pre></div></li><li><p><strong>char</strong>：字符类型，16 位，用于表示一个 Unicode 字符。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">char</span> <span class="hljs-variable">myChar</span> <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;A&#x27;</span>;</code></pre></div></li><li><p><strong>boolean</strong>：布尔类型，用于表示真或假。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">boolean</span> <span class="hljs-variable">myBoolean</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;</code></pre></div></li></ol><p>这些基本数据类型用于存储不同类型的数据，根据需要选择合适的类型以节省内存并确保数据的准确性。例如，使用 <code>byte</code> 类型来存储年龄通常足够，而使用 <code>double</code> 类型来存储精确的浮点数值。</p><p>除了基本数据类型，Java 还提供了对象数据类型，如 <code>String</code>、<code>Integer</code>、<code>Double</code>，用于处理更复杂的数据。但这些对象数据类型通常包装在基本数据类型之上，以提供额外的功能。</p><h3 id="Java重点内容总结"><a href="#Java重点内容总结" class="headerlink" title="Java重点内容总结"></a>Java重点内容总结</h3><p>Java 是一门功能强大的编程语言，有一些主要的重点概念，其中一些可能较难理解。以下是一些 Java 中的重难点内容以及相应的示例：</p><ol><li><p><strong>面向对象编程（OOP）</strong>：Java 是一门面向对象的语言，它强调类和对象的概念。在 Java 中，你可以创建类和对象，这些对象可以包含属性和方法。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">// 创建一个类</span><span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> &#123;    String name;    <span class="hljs-comment">// 构造方法</span>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Dog</span><span class="hljs-params">(String name)</span> &#123;        <span class="hljs-built_in">this</span>.name = name;    &#125;    <span class="hljs-comment">// 方法</span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">bark</span><span class="hljs-params">()</span> &#123;        System.out.println(name + <span class="hljs-string">&quot; is barking!&quot;</span>);    &#125;&#125;<span class="hljs-comment">// 创建对象</span><span class="hljs-type">Dog</span> <span class="hljs-variable">myDog</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>(<span class="hljs-string">&quot;Buddy&quot;</span>);myDog.bark();</code></pre></div></li><li><p><strong>继承</strong>：Java 支持继承，一个类可以派生自另一个类，从而获得其属性和方法。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">// 基类</span><span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span> &#123;    <span class="hljs-keyword">void</span> <span class="hljs-title function_">eat</span><span class="hljs-params">()</span> &#123;        System.out.println(<span class="hljs-string">&quot;Animal is eating&quot;</span>);    &#125;&#125;<span class="hljs-comment">// 派生类</span><span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span> &#123;    <span class="hljs-keyword">void</span> <span class="hljs-title function_">bark</span><span class="hljs-params">()</span> &#123;        System.out.println(<span class="hljs-string">&quot;Dog is barking&quot;</span>);    &#125;&#125;</code></pre></div></li><li><p><strong>多态</strong>：Java 具有多态性，允许一个对象在不同上下文中采用不同的行为。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">Animal</span> <span class="hljs-variable">myDog</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>();myDog.eat(); <span class="hljs-comment">// 调用 Dog 类的 eat 方法</span></code></pre></div></li><li><p><strong>接口</strong>：接口定义了一组抽象方法，类可以实现接口以提供这些方法的具体实现。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Drawable</span> &#123;    <span class="hljs-keyword">void</span> <span class="hljs-title function_">draw</span><span class="hljs-params">()</span>;&#125;<span class="hljs-keyword">class</span> <span class="hljs-title class_">Circle</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Drawable</span> &#123;    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">draw</span><span class="hljs-params">()</span> &#123;        System.out.println(<span class="hljs-string">&quot;Drawing a circle&quot;</span>);    &#125;&#125;</code></pre></div></li><li><p><strong>异常处理</strong>：Java 强制处理异常，使用 <code>try-catch</code> 块来捕获和处理异常。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">try</span> &#123;    <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> <span class="hljs-number">5</span> / <span class="hljs-number">0</span>; <span class="hljs-comment">// 产生 ArithmeticException</span>&#125; <span class="hljs-keyword">catch</span> (ArithmeticException e) &#123;    System.out.println(<span class="hljs-string">&quot;Division by zero is not allowed&quot;</span>);&#125;</code></pre></div></li><li><p><strong>多线程编程</strong>：Java 具有强大的多线程支持。你可以创建多个线程来执行并发任务。</p><div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyThread</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Thread</span> &#123;    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;        System.out.println(<span class="hljs-string">&quot;Thread is running&quot;</span>);    &#125;&#125;<span class="hljs-type">MyThread</span> <span class="hljs-variable">thread</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyThread</span>();thread.start(); <span class="hljs-comment">// 启动线程</span></code></pre></div></li><li><p><strong>集合框架</strong>：Java 提供了各种集合类来处理不同类型的数据。例如，<code>ArrayList</code> 用于存储一组对象。</p><div class="code-wrapper"><pre><code class="hljs java">ArrayList&lt;String&gt; names = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();names.add(<span class="hljs-string">&quot;Alice&quot;</span>);names.add(<span class="hljs-string">&quot;Bob&quot;</span>);System.out.println(names.get(<span class="hljs-number">0</span>)); <span class="hljs-comment">// 输出 &quot;Alice&quot;</span></code></pre></div></li><li><p><strong>Lambda 表达式</strong>：Java 8 引入了 Lambda 表达式，它允许你以更简洁的方式编写函数式接口的实现。</p><div class="code-wrapper"><pre><code class="hljs java">List&lt;Integer&gt; numbers = Arrays.asList(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);numbers.forEach(n -&gt; System.out.println(n));</code></pre></div></li></ol><h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><ol><li><strong>Java 中的接口和抽象类有什么区别？</strong><br>接口是抽象方法的集合，抽象类是抽象方法和具体方法的集合。</li><li><strong>什么是泛型？</strong><br>泛型允许你使用一个通用类型来表示多个类型。</li><li><strong>什么是 Java 注解？</strong><br>注解是元数据，用于为 Java 代码提供额外的信息。注解可用于生成文档，跟踪代码中的依赖关系，甚至在运行时执行检查和编译时检查。</li><li><strong>什么是 Java 反射？</strong><br>Java 反射使你可以在运行时查看和修改 Java 对象。</li><li><strong>什么是 Java 序列化？</strong><br>Java 序列化允许你使用 <code>ObjectOutputStream</code> 和 <code>ObjectInputStream</code> 保存和读取 Java 对象。</li><li><strong>什么是 Java 异常处理？</strong><br>Java 异常处理通过检查异常，参数检查，运行时异常和错误处理来处理错误。</li><li><strong>什么是 Java 枚举？</strong><br>Java 枚举允许你声明一个枚举类型，其中每个常量都是枚举类型中的唯一实例。 </li><li><strong>什么是 Java 注解处理器？</strong><br>Java 注解处理器允许你扫描和处理 Java 源文件。</li><li><strong>什么是 Java 集合？</strong><br>Java 集合用于存储和操作数据。Java 集合类提供了一种存储和访问对象的统一方式。</li><li><strong>什么是 Java 泛型？</strong><br>   Java 泛型允许你使用一个通用类型来表示多个类型。</li><li><strong>什么是 Java 并发？</strong><br>   Java 并发用于在 Java 程序中实现并发。</li><li><strong>什么是 Java IO？</strong><br>   Java IO 用于读取和写入原始数据。</li><li><strong>什么是 Java 字符串？</strong><br>   Java 字符串用于存储和操作文本。</li><li><strong>什么是 Java 字符串？</strong><br>   Java 字符串用于存储和操作文本。</li><li><strong>Java中如何创建线程？</strong><br>   Java 提供了三种创建线程的方法：</li></ol><ul><li>继承 <code>Thread</code> 类</li><li>实现 <code>Runnable</code> 接口</li><li>实现 <code>Callable</code> 接口</li></ul><ol start="16"><li><strong>Java 中的同步是什么？</strong><br>   Java 同步用于防止线程冲突。</li><li><strong>Java 中的同步锁是什么？</strong><br>   Java 同步锁用于防止线程冲突。</li><li><strong>Java 中的同步集合是什么？</strong><br>   Java 同步集合用于防止线程冲突。</li><li><strong>Java 中的同步方法是什么？</strong><br>   Java 同步方法用于防止线程冲突。</li><li><strong>Java 中的同步代码块是什么？</strong><br>   Java 同步代码块用于防止线程冲突。</li><li><strong>Java 中的同步类是什么？</strong><br>   Java 同步类用于防止线程冲突。</li><li><strong>Java 中的同步变量是什么？</strong><br>   Java 同步变量用于防止线程冲突。</li><li><strong>Java中的Builder和Buffer有什么区别和联系？</strong><br>   在 Java 编程中，”Builder” 和 “Buffer” 是两个不同的概念，它们用于不同的目的，并且通常与不同的数据类型相关联。</li></ol><ul><li>“Builder” 通常用于创建不可变对象（Immutable Objects）。它是一种设计模式，目的是解决创建复杂对象的问题，允许你通过一系列的方法链式调用来设置对象的属性，最后返回一个不可变的对象。这有助于确保对象在创建后不会被修改，提高了线程安全性。</li><li>常见的使用场景包括 <code>StringBuilder</code>、<code>StringBuilder</code>、<code>DateTimeFormatter.Builder</code> 等。</li></ul>   <div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">StringBuilder</span> <span class="hljs-variable">builder</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();builder.append(<span class="hljs-string">&quot;Hello&quot;</span>).append(<span class="hljs-string">&quot; &quot;</span>).append(<span class="hljs-string">&quot;World&quot;</span>);<span class="hljs-type">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> builder.toString();</code></pre></div><ul><li>“Buffer” 通常用于缓存数据，特别是在处理 I&#x2F;O 操作或大量数据时。它是一块内存区域，可以用来临时存储数据。通常与 I&#x2F;O 操作（如文件读写、网络通信）或处理大型数据集合时结合使用。</li><li>常见的使用场景包括 <code>ByteBuffer</code>（用于处理二进制数据）、<code>CharBuffer</code>（用于处理字符数据）、<code>StringBuffer</code>（<code>StringBuilder</code> 的线程安全版本）等。</li></ul>   <div class="code-wrapper"><pre><code class="hljs java"><span class="hljs-type">ByteBuffer</span> <span class="hljs-variable">buffer</span> <span class="hljs-operator">=</span> ByteBuffer.allocate(<span class="hljs-number">1024</span>);<span class="hljs-comment">// 将数据写入缓冲区</span>buffer.put(<span class="hljs-string">&quot;Hello, World&quot;</span>.getBytes());<span class="hljs-comment">// 从缓冲区读取数据</span><span class="hljs-type">byte</span>[] data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[buffer.remaining()];buffer.get(data);</code></pre></div><p>总之：</p><ul><li>“Builder” 用于构建不可变对象，支持链式方法调用，返回最终不可变对象。</li><li>“Buffer” 用于临时存储数据，通常用于 I&#x2F;O 操作和数据处理。</li><li>它们在概念上不同，没有直接的联系，因为它们用于不同的用途和场景。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JAVA</tag>
+      
+      <tag>开发</tag>
+      
+      <tag>编程语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MySQL快速入门</title>
+    <link href="/2023/09/19/MySQL%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <url>/2023/09/19/MySQL%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="MySQL基本数据类型"><a href="#MySQL基本数据类型" class="headerlink" title="MySQL基本数据类型"></a>MySQL基本数据类型</h2><p>MySQL 支持多种基本数据类型，这些数据类型用于定义表中列的属性。以下是一些常见的 MySQL 基本数据类型：</p><ol><li><p><strong>整数类型</strong>：</p><ul><li><code>TINYINT</code>：1 字节的有符号整数，范围从 -128 到 127。</li><li><code>SMALLINT</code>：2 字节的有符号整数，范围从 -32,768 到 32,767。</li><li><code>MEDIUMINT</code>：3 字节的有符号整数，范围从 -8,388,608 到 8,388,607。</li><li><code>INT</code> 或 <code>INTEGER</code>：4 字节的有符号整数，范围从 -2,147,483,648 到 2,147,483,647。</li><li><code>BIGINT</code>：8 字节的有符号整数，范围从 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807。</li></ul></li><li><p><strong>浮点数类型</strong>：</p><ul><li><code>FLOAT</code>：单精度浮点数。</li><li><code>DOUBLE</code>：双精度浮点数。</li><li><code>DECIMAL</code> 或 <code>NUMERIC</code>：带有定点小数的精确数值。</li></ul></li><li><p><strong>日期和时间类型</strong>：</p><ul><li><code>DATE</code>：日期，格式为 ‘YYYY-MM-DD’。</li><li><code>TIME</code>：时间，格式为 ‘HH:MM:SS’。</li><li><code>DATETIME</code>：日期和时间，格式为 ‘YYYY-MM-DD HH:MM:SS’。</li><li><code>TIMESTAMP</code>：日期和时间，与时区有关。</li><li><code>YEAR</code>：年份，可以是 2 位或 4 位。</li></ul></li><li><p><strong>字符串类型</strong>：</p><ul><li><code>CHAR</code>：固定长度字符串，最多 255 个字符。</li><li><code>VARCHAR</code>：可变长度字符串，最多 65,535 个字符。</li><li><code>TINYTEXT</code>、<code>TEXT</code>、<code>MEDIUMTEXT</code>、<code>LONGTEXT</code>：存储文本数据，每个类型支持不同的最大长度。</li></ul></li><li><p><strong>二进制类型</strong>：</p><ul><li><code>BINARY</code>：固定长度二进制字符串。</li><li><code>VARBINARY</code>：可变长度二进制字符串。</li><li><code>TINYBLOB</code>、<code>BLOB</code>、<code>MEDIUMBLOB</code>、<code>LONGBLOB</code>：存储二进制数据，每个类型支持不同的最大长度。</li></ul></li><li><p><strong>枚举和集合类型</strong>：</p><ul><li><code>ENUM</code>：表示一组字符串值中的一个。</li><li><code>SET</code>：表示一组字符串值的一个或多个组合。</li></ul></li><li><p><strong>其它类型</strong>：</p><ul><li><code>BOOLEAN</code> 或 <code>BOOL</code>：用于存储布尔值，通常实际为 TINYINT(1)。</li><li><code>BIT</code>：用于存储位字段值。</li></ul></li></ol><p>这些是 MySQL 中的一些基本数据类型。你可以根据具体需求选择适当的数据类型来定义表中的列。要注意数据类型的存储需求和数据精度，以确保数据库表的设计满足你的应用需求。</p><h2 id="MySQL的基本操作"><a href="#MySQL的基本操作" class="headerlink" title="MySQL的基本操作"></a>MySQL的基本操作</h2><p>MySQL 是一个流行的关系型数据库管理系统，用于存储和管理数据。以下是一些 MySQL 的基本操作：</p><ol><li><p><strong>连接到 MySQL 服务器</strong>：可以使用 MySQL 命令行工具或数据库客户端工具连接到 MySQL 服务器。</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 通过 MySQL 命令行连接到 MySQL 服务器</span>mysql -u 用户名 -p</code></pre></div></li><li><p><strong>创建数据库</strong>：使用 <code>CREATE DATABASE</code> 语句创建一个新的数据库。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> DATABASE 数据库名;</code></pre></div></li><li><p><strong>删除数据库</strong>：使用 <code>DROP DATABASE</code> 语句删除一个数据库。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> DATABASE 数据库名;</code></pre></div></li><li><p><strong>选择数据库</strong>：使用 <code>USE</code> 语句选择要操作的数据库。</p><div class="code-wrapper"><pre><code class="hljs sql">USE 数据库名;</code></pre></div></li><li><p><strong>创建表</strong>：使用 <code>CREATE TABLE</code> 语句创建一个新的数据表。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名 (    列<span class="hljs-number">1</span> 数据类型,    列<span class="hljs-number">2</span> 数据类型,    列<span class="hljs-number">3</span> 数据类型,    ...);</code></pre></div></li><li><p><strong>插入数据</strong>：使用 <code>INSERT INTO</code> 语句将数据插入表中。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> 表名 (列<span class="hljs-number">1</span>, 列<span class="hljs-number">2</span>, 列<span class="hljs-number">3</span>, ...)<span class="hljs-keyword">VALUES</span> (值<span class="hljs-number">1</span>, 值<span class="hljs-number">2</span>, 值<span class="hljs-number">3</span>, ...);</code></pre></div></li><li><p><strong>查询数据</strong>：使用 <code>SELECT</code> 语句从表中检索数据。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 列<span class="hljs-number">1</span>, 列<span class="hljs-number">2</span> <span class="hljs-keyword">FROM</span> 表名 <span class="hljs-keyword">WHERE</span> 条件;</code></pre></div></li><li><p><strong>更新数据</strong>：使用 <code>UPDATE</code> 语句更新表中的数据。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">UPDATE</span> 表名 <span class="hljs-keyword">SET</span> 列<span class="hljs-number">1</span> <span class="hljs-operator">=</span> 新值<span class="hljs-number">1</span>, 列<span class="hljs-number">2</span> <span class="hljs-operator">=</span> 新值<span class="hljs-number">2</span> <span class="hljs-keyword">WHERE</span> 条件;</code></pre></div></li><li><p><strong>删除数据</strong>：使用 <code>DELETE</code> 语句从表中删除数据。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> 表名 <span class="hljs-keyword">WHERE</span> 条件;</code></pre></div></li><li><p><strong>排序数据</strong>：使用 <code>ORDER BY</code> 子句对结果进行排序。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 列<span class="hljs-number">1</span>, 列<span class="hljs-number">2</span> <span class="hljs-keyword">FROM</span> 表名 <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> 列<span class="hljs-number">1</span> <span class="hljs-keyword">ASC</span><span class="hljs-operator">/</span><span class="hljs-keyword">DESC</span>;</code></pre></div></li><li><p><strong>聚合数据</strong>：使用聚合函数如 <code>SUM</code>、<code>COUNT</code>、<code>AVG</code>、<code>MAX</code>、<code>MIN</code> 对数据进行汇总。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">FROM</span> 表名;</code></pre></div></li><li><p><strong>分组数据</strong>：使用 <code>GROUP BY</code> 子句将数据按照一列或多列分组。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 列<span class="hljs-number">1</span>, <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">FROM</span> 表名 <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> 列<span class="hljs-number">1</span>;</code></pre></div></li><li><p><strong>连接表</strong>：使用 <code>JOIN</code> 子句将多个表连接在一起。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 列<span class="hljs-number">1</span> <span class="hljs-keyword">FROM</span> 表<span class="hljs-number">1</span> <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> 表<span class="hljs-number">2</span> <span class="hljs-keyword">ON</span> 表<span class="hljs-number">1.</span>列 <span class="hljs-operator">=</span> 表<span class="hljs-number">2.</span>列;</code></pre></div></li><li><p><strong>创建索引</strong>：使用 <code>CREATE INDEX</code> 语句创建索引以提高查询性能。</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> INDEX 索引名 <span class="hljs-keyword">ON</span> 表名 (列名);</code></pre></div></li><li><p><strong>备份和还原</strong>：使用 <code>mysqldump</code> 命令备份数据库，使用 <code>mysql</code> 命令还原。</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 备份数据库</span>mysqldump -u 用户名 -p 数据库名 &gt; 备份文件.sql<span class="hljs-comment"># 还原数据库</span>mysql -u 用户名 -p 数据库名 &lt; 备份文件.sql</code></pre></div></li></ol><p>这些是 MySQL 的基本操作，可以帮助你开始使用 MySQL 数据库管理数据。</p><h2 id="MySQL的重难点内容"><a href="#MySQL的重难点内容" class="headerlink" title="MySQL的重难点内容"></a>MySQL的重难点内容</h2><p>MySQL 是一个强大的关系型数据库管理系统，有一些重要的概念和操作可能被视为重难点。以下是一些重要的主题和相关示例代码：</p><ol><li><p><strong>SQL 查询语句</strong>：<br>SQL（结构化查询语言）是 MySQL 中最重要的部分之一。熟悉 SQL 查询对于检索和操作数据库数据非常关键。</p><p>示例：查询表中的数据</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 列<span class="hljs-number">1</span>, 列<span class="hljs-number">2</span> <span class="hljs-keyword">FROM</span> 表名 <span class="hljs-keyword">WHERE</span> 条件;</code></pre></div></li><li><p><strong>索引</strong>：<br>索引是提高查询性能的关键。了解何时创建索引，以及如何优化索引，对于大型数据库至关重要。</p><p>示例：创建一个索引</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> INDEX 索引名 <span class="hljs-keyword">ON</span> 表名 (列名);</code></pre></div></li><li><p><strong>事务处理</strong>：<br>了解如何使用事务来确保数据库的一致性。这对于处理并发访问和防止数据损坏非常重要。</p><p>示例：启动和提交事务</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">START</span> TRANSACTION;<span class="hljs-comment">-- 执行 SQL 查询和修改</span><span class="hljs-keyword">COMMIT</span>;</code></pre></div></li><li><p><strong>范式</strong>：<br>数据库范式是组织表以减少数据冗余的过程。理解不同的范式以及何时使用它们对于数据库设计至关重要。</p></li><li><p><strong>外键</strong>：<br>外键是表之间建立关联的重要工具。了解如何创建外键以确保引用完整性。</p><p>示例：创建外键</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 子表 (    子表ID <span class="hljs-type">INT</span> <span class="hljs-keyword">PRIMARY</span> KEY,    主表ID <span class="hljs-type">INT</span>,    <span class="hljs-keyword">FOREIGN</span> KEY (主表ID) <span class="hljs-keyword">REFERENCES</span> 主表(主表ID));</code></pre></div></li><li><p><strong>性能优化</strong>：<br>了解如何优化查询，包括避免全表扫描，使用合适的索引和缓存查询结果。</p></li><li><p><strong>存储过程和触发器</strong>：<br>存储过程和触发器允许你在数据库中存储业务逻辑。了解如何创建和使用它们。</p><p>示例：创建存储过程</p><div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">PROCEDURE</span> 存储过程名<span class="hljs-keyword">AS</span><span class="hljs-keyword">BEGIN</span>    <span class="hljs-comment">-- 存储过程代码</span><span class="hljs-keyword">END</span>;</code></pre></div></li><li><p><strong>安全性</strong>：<br>数据库安全性是一个关键问题。了解如何配置和管理用户权限，以及如何保护敏感数据。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>技能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数据库</tag>
+      
+      <tag>MySQL</tag>
+      
+      <tag>编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>再见青岛</title>
+    <link href="/2023/09/02/%E5%86%8D%E8%A7%81%E9%9D%92%E5%B2%9B/"/>
+    <url>/2023/09/02/%E5%86%8D%E8%A7%81%E9%9D%92%E5%B2%9B/</url>
+    
+    <content type="html"><![CDATA[<p>像做客一样来到青岛，<br>像做贼一样回到青大！</p><p>“近乡情更怯”的感触是有的，但不是青岛，而是青大！我想，越是熟悉的地方，再回到那里的时候，你就越是陌生！我像个外来客一样细细观察每一个角落，是的，她变了，但是她没变——她再也不是属于我们的青大，但她依然是青大。当你游历完每一个角落后，定然是要开始感伤的，“去年今日此门中”与“再听已是曲中人”这样的词句总能将你带入深沉的回忆里。</p><p>如果你喜欢青大，那么你一定不能只喜欢青大，你还要喜欢她所在的青岛。以前认为半岛的风是妖异古怪的，现在更是如此，许是新冠的种子也融入了五月的风，吹得人从骨子里觉得有些不适！但你爱青岛，就要恨青岛，过于纯粹的情感总是苍白无力的；倘若你对她只有爱意，那一定是没有深刻地认识过她，一定是没有想过要深深地拥有着她。</p><p>五月的风自由地吹，天空的风筝自由地飞，愚蠢的人却在风中不停地追！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+      <tag>青岛</tag>
+      
+      <tag>青岛大学</tag>
+      
+      <tag>五月的风</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>雨夜别记</title>
+    <link href="/2023/06/26/%E9%9B%A8%E5%A4%9C%E5%88%AB%E8%AE%B0/"/>
+    <url>/2023/06/26/%E9%9B%A8%E5%A4%9C%E5%88%AB%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<p>沈城此别故人稀，狂风嘶卷惊雷起。</p><p>无晴无影无人迹，无月无眠无归期。</p><p>注：是日离校，偏逢骤雨，雨夜离别，最是伤感，卧铺难眠，遂记之！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>诗词</tag>
+      
+      <tag>生活</tag>
+      
+      <tag>文言</tag>
+      
+      <tag>毕业</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>本溪-棋盘山自驾游</title>
+    <link href="/2023/06/17/%E6%9C%AC%E6%BA%AA-%E6%A3%8B%E7%9B%98%E5%B1%B1%E8%87%AA%E9%A9%BE%E6%B8%B8/"/>
+    <url>/2023/06/17/%E6%9C%AC%E6%BA%AA-%E6%A3%8B%E7%9B%98%E5%B1%B1%E8%87%AA%E9%A9%BE%E6%B8%B8/</url>
+    
+    <content type="html"><![CDATA[<p>所谓“偷得浮生半日闲”者，着一“偷”字而意境全出也！</p><p>毕业季是极其繁忙的，但若不在这忙碌的日子里挤出一时半会的闲暇时光，是无法体会“偷得浮生半日闲”的雅兴的！自五月始便曾做过几个计划，却无一不是泡汤了的；我想，今天的行程虽不是可报以期待的，但至少是可行的！只消携上三五人，租上两辆车，我们的队伍便立时可以出发了。</p><p>穿过五里河，跨过解放南，迈进迎宾路，也就看到了本溪水洞风景区，我虽不是第一次来到这里，却怀着大致相同的心情——大底是两头堵时的间歇性愉悦感吧。沿着景区大道走上一刻钟，映入眼帘的就是“本溪水洞”四个大字了。初入水洞尚有满面汗珠，踏入水洞后就进去了下一个季节，真可谓“一日之间，百步之遥，季节交错，气候不齐”。旱洞的观赏性是差些的，我想，它存在的意义应该是衬托水洞的奇美。</p><p>乘上游艇，最佳的观测位置当属第一排，既可以更早的领略前方的风景，又没有人遮挡你的视野。水洞的钟乳石是险奇的，谁又能在无数的悬剑之下保持镇静呢？行至低矮处，我们不禁想起了双龙洞一文，大底和我们是同样的一种感受吧！回音壁最能给人留下印象，大可以不那么拘谨地像印第安人传递信号那样发出阵阵呼喊，向石壁传达自己的情感！</p><p>出了水洞，一定是沿着湖岸行走的，否则将会痛失一半的观景乐趣！放眼望去是分不清水中倒影还是青山绿树的，这时候你才会突发奇想，猴子捞月应该是怎样的一种美景！偶尔飞来的丹顶鹤立足在湖中间仿佛入定一样，你又不禁要想，多是一种静态的美！</p><p>山与水总是分不大开的，但我们要在分开的地方看山、看水！如果你不曾来过沈阳，倒不必为此而感到遗憾；倘若到了沈阳，却不曾见识过那里的日出和日落，着实是不可原谅的！早就听说棋盘山的日出很有名气，于是趁着难得的闲暇前去夜爬棋盘山。</p><p>棋盘山脚处是极为平坦的，走起来不费一点力气，而此时的“爬山虎”们也是极为稀少的。越往前走，道路从林间小道越发形成石阶路，却也越发陡峭起来，不大时间已经是满头大汗！及至半山腰处，游客们从四面八方一齐涌了出来并迅速占领了各个日出观测点，他们大概是做足了攻略的。</p><p>站定在观景台，等待足有三十分钟，太阳才缓缓地从雾霭中探出头来。日出大概是分了三个阶段的，第一个阶段的太阳浑身笼罩了厚厚的一层烟幕，使人难以看到太阳的光芒；第二个阶段好似太阳感受到了热量，褪去了一层纱一般，太阳通体的颜色更加鲜亮起来。第三个阶段，肉眼可见的红色光芒已经遍布了太阳的全身，此时便完成了整个日出过程。大致我是幸运的，看到了三个阶段集于一身的日出；大致我是欠缺了一些幸运的，没能亲眼目睹云海日出！</p><p>我想我会怀念这里的风景，和路程！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+      <tag>本溪</tag>
+      
+      <tag>棋盘山</tag>
+      
+      <tag>日出</tag>
+      
+      <tag>水洞</tag>
+      
+      <tag>自驾游</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>沈阳有感</title>
+    <link href="/2023/05/03/%E6%B2%88%E9%98%B3%E6%9C%89%E6%84%9F/"/>
+    <url>/2023/05/03/%E6%B2%88%E9%98%B3%E6%9C%89%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/../images/2023shenyang/NeuPic.jpg" alt="NEU"><br>沈阳甚是一个不讲道理的地方，我却要在这里讲一讲沈阳的道理。</p><p>你到了沈阳，如果从沈阳北出来，一定要走那条并行五车道，这并不是所有城市都有的大气。可越是往前走，道路就越狭窄，行不几里路，便已经看到了尽头。于是它干脆卸下了伪装，露出旧工业区的面貌。沿途一色的年代感十足俄式建筑，仿佛是它光荣的历史勋章。我想，沈阳也曾是辉煌过的。</p><p><img src="/../images/2023shenyang/NanHuPark.jpg" alt="Nanhu"></p><p>我不甚喜欢沈阳的天气，它是怪脾气的！三月份和九月份大概是属于黄沙和扬尘的，你总能在某一天的清晨看到满面尘土的汽车，看到四角高悬的黄色天幕。呼啸的寒风虽不是独独属于沈阳的，却也少不了沾染些沈阳的习气，你大可以想象当你的头发战胜了发梳后，站在头皮上进行独立宣言的时候，它是怎样的奔放与自由！四五月份也大概是被四季瓜分了的，像高中时的体育课总会被占据一样，它没有固定的风格。冰雹是晴空里的不速之客，夜雪也会应了春雨的邀约；连续的阴雨天总是有的，连续的好日子却总不长久。</p><p>沈阳的春天和秋天是难以区分的，枯树黄草占据了大半个春天，加之频繁的寒风阴雨天，与其说沈阳的春天是生机勃勃的，不如说是萧瑟肃杀的，它是不愿给新生物多一些生长时间的。我不倾向于认为沈阳是有秋天的，它唯一可以向人们证明秋天存在的方式，是那满地的银杏叶和银杏果卷在一起时散发出的像爱情一样的腐臭味。好在冬天算是正常的，至少时节上是的，虽然并不让人觉得舒适，多少也是有些浪漫事情可做的。</p><p><img src="/../images/2023shenyang/NEUHunNanLabrary.jpg" alt="HunNan"></p><p>我向来是不喜评价一个人的，但沈阳像极了作风古板的老头，连带着许多与它有关的人和事也都变得如此如此。满眼可以看到的是嶙峋的骨架，不含一丁点的血肉，大概是风气感染了建筑，楼盘也成了空洞的形式。保安至少是懂得借势的，闸机一开一合间，便赋予了他们掌控万人出入的权利。或许沈阳是富庶的，想找到一辆豪车也是不难的；也或许沈阳并不富庶，想找到一片功能齐全的商业区并不容易。我想它是需要一些门面的，但却不是很求上进的。</p><p>沈阳，古怪的沈阳！</p><p>注：2023年春，这个季节极其漫长，从2月份到5月份一直刮着狂风，天很少是晴着的，而时常是阴着的；偏又是咳嗽不止，闻风便起，闻雨便发。在沈阳生活了三年，虽没有什么深入的认识，但大概还是对它有些感情了，也多少是有点了解的，遂有感而记之。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>南湖钓叟</title>
+    <link href="/2023/04/16/%E5%8D%97%E6%B9%96%E9%92%93%E5%8F%9F/"/>
+    <url>/2023/04/16/%E5%8D%97%E6%B9%96%E9%92%93%E5%8F%9F/</url>
+    
+    <content type="html"><![CDATA[<p>四月鳜鱼肥，钓叟不空回。久闻南湖钓叟众多，又值春深水暖，遂早起望观之。</p><p>四月的南湖吹着三月的凉风，五月的日头照耀着六旬的钓叟，倒也别有一番风味。辗转于钓叟之间，得趣事两则，遂成文记之。</p><div class="code-wrapper"><pre><code class="hljs">                        其一    一钓叟满载将归，游于渔者之间，    遇钓而不得者，则曰：得鱼不易，垂钓良久，方得一篓。    遇钓而不多者，则曰：鱼之不多，食不果腹，吾当勉励之。    遇多而不肥者，则曰：鱼之不肥，食之无味，于我无益也。    遇多而肥者，则曰：我亦有之，不复有求也。    善哉，钓叟之志何其高也，渔者之志何其微也！                          其二    有叟游于钓者之间，曰：我亦渔人，苦无渔技，又无渔具。    今从彼处得来渔具，希冀得汝之渔技，助我得鱼，不知可否焉？    彼渔者趔趄、踉跄，痴痴曰：复有何求？    叟曰：无他，大而肥者！    余窃窃叹曰：渔者无渔，何谓渔者？渔者不渔，何求鱼也？</code></pre></div><p>注：已是深春，久不得晴，是日天朗气清，独往南湖公园，观钓鱼佬有感而发。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>东北大学</tag>
+      
+      <tag>生活</tag>
+      
+      <tag>文言</tag>
+      
+      <tag>南湖公园</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>沈阳故宫-大帅府游记</title>
+    <link href="/2022/10/01/%E6%B2%88%E9%98%B3%E6%95%85%E5%AE%AB-%E5%A4%A7%E5%B8%85%E5%BA%9C%E6%B8%B8%E8%AE%B0/"/>
+    <url>/2022/10/01/%E6%B2%88%E9%98%B3%E6%95%85%E5%AE%AB-%E5%A4%A7%E5%B8%85%E5%BA%9C%E6%B8%B8%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/../images/2020ShenyangPalace/Palace.jpg" alt="Palace"><br>沈阳秋天的雨，不疾不徐。它打湿着我的外衣，却无法熄灭我内心的火。</p><p>驱车（当然是单车）仅需半小时，也并非拒人于千里，更显得亲和力十足，这就是沈阳故宫–蕴含着清史的瑰宝。</p><p><img src="/../images/2020ShenyangPalace/DaQingLou.jpg" alt="DaQingLou"></p><p>从大清门到大政殿，再从大政殿到文溯阁……这便完成了一次观赏。陶俑、玉雕、诗词……透露着满清的风韵。若非涌动的人流，定会驻足多滞留片刻；若非关闭的窗壁，定要握在手上细细品玩。</p><p><img src="/../images/2020ShenyangPalace/ZhangXueLiang.jpg" alt="ZhangXueLiang"></p><p>张氏帅府，为中国抗战做出巨大贡献的张学良，肃穆沉重的老虎厅，前后伫立的大小青楼。</p><p><img src="/../images/2020ShenyangPalace/TianXiaWeiGong.jpg" alt="TianXiaWeiGong"></p><p>帅府竟也陈列着西安古文物，唐彩釉陶俑背负着千年的历史就站在面前，驼背上承载的是无形却无尽的重物，使往来的人都能感受到的负重感。李仲元先生的词独居一室，我不懂他的词，也不懂他的字，只能浅显观看–而非观赏。</p><p><img src="/../images/2020ShenyangPalace/LiZhongYuan.jpg" alt="LiZhongYuan"></p><p>淋雨一直走的感觉不错；在沈阳第一次独自出这么远没迷路，我也是突破了自己的极限。强的不行！！</p><p><img src="/../images/2020ShenyangPalace/HanTaoYong.jpg" alt="HanTaoYong"></p><p>注：2020年国庆节，天气：雨！一人往沈阳故宫，转大帅府，归途逢大雨，带伞，不用！又逢中秋，室友尚未回家，带月饼给室友，归而记之。后往本溪水洞，排队两小时，得观，适时方知东北洗浴之多，澡堂遍地而餐厅无一，一饭难求，有感而发。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+      <tag>游记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>摇曳的秋风</title>
+    <link href="/2021/10/21/%E6%91%87%E6%9B%B3%E7%9A%84%E7%A7%8B%E9%A3%8E/"/>
+    <url>/2021/10/21/%E6%91%87%E6%9B%B3%E7%9A%84%E7%A7%8B%E9%A3%8E/</url>
+    
+    <content type="html"><![CDATA[<p>梦的空间紧紧封闭<br>金色的思绪<br>在寒风中游弋<br>卷起的叶浪<br>变成了沉默的秘密</p><p>银杏子守着谜底<br>埋葬在落叶堆砌的坟墓<br>脚步踩碎了梦境<br>秋风也带走了秘密<br>银杏子便发着腐臭的气息</p><p>轻轻的一片叶<br>压碎了满江的月<br>似彩色的梦<br>撞上萧瑟的风<br>散成了满天荒唐的雪<br>南国的柔<br>遇着北国的烈<br>是 $ arctanx&#x3D;\frac{\pi}{2} $得不到的解</p><p>注：继《东大秋天的梦》下篇</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>东北大学</tag>
+      
+      <tag>秋天</tag>
+      
+      <tag>诗词</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>东大秋天的梦</title>
+    <link href="/2021/10/19/%E4%B8%9C%E5%A4%A7%E7%A7%8B%E5%A4%A9%E7%9A%84%E6%A2%A6/"/>
+    <url>/2021/10/19/%E4%B8%9C%E5%A4%A7%E7%A7%8B%E5%A4%A9%E7%9A%84%E6%A2%A6/</url>
+    
+    <content type="html"><![CDATA[<p>用画笔描绘秋天，<br>用秋风编织秋天的故事！</p><p>将一场梦，<br>偷偷地藏在某一片银杏叶中，<br>再小心翼翼地勾勒出一条条纹理；<br>用细致的纹理和薄薄的叶片，<br>密密地缝制出梦的衣裳。</p><p>我牵引着秋风，<br>悄悄地拂过银杏树，<br>那被撩拨起的泛黄的树叶，<br>是另一个人遗失的梦！</p><p>那漫天飞舞着的银杏叶，<br>是从春天到秋天孕育的故事；<br>我揪着心，<br>捧起一个梦，<br>生怕她在滑落的刹那，<br>支离破碎！</p><p>—–观秋风与落叶有感</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>东北大学</tag>
+      
+      <tag>秋天</tag>
+      
+      <tag>诗词</tag>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>研一夏济南小聚</title>
+    <link href="/2021/07/25/%E7%A0%94%E4%B8%80%E5%A4%8F%E6%B5%8E%E5%8D%97%E5%B0%8F%E8%81%9A/"/>
+    <url>/2021/07/25/%E7%A0%94%E4%B8%80%E5%A4%8F%E6%B5%8E%E5%8D%97%E5%B0%8F%E8%81%9A/</url>
+    
+    <content type="html"><![CDATA[<p>把离别的岁月酿成酒，<br>把相聚的时光写成歌。</p><p>待佳酿满壶，<br>歌声悠扬，<br>我们便从夜幕中走来。</p><p>月色迷离，<br>因为我们掬下一角月亮，<br>成为人群中的光芒！<br>风雨骤急，<br>我们行色匆匆，<br>无需一把伞，<br>我们用火热的胸膛，<br>便蒸干了大街小巷！</p><p>酒醒不待，<br>曲终不闻，<br>朝阳的光芒再次洒向四方。</p><p>注：时逢疫情，前脚离校，后脚封校，谓之万幸；携花冠两瓶，次日方醉，酒醒记之。此后常备葡糖糖口服溶液。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+      <tag>聚会</tag>
+      
+      <tag>济南</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>拒绝宿舍搬迁联名书</title>
+    <link href="/2021/05/23/%E6%8B%92%E7%BB%9D%E5%AE%BF%E8%88%8D%E6%90%AC%E8%BF%81%E8%81%94%E5%90%8D%E4%B9%A6/"/>
+    <url>/2021/05/23/%E6%8B%92%E7%BB%9D%E5%AE%BF%E8%88%8D%E6%90%AC%E8%BF%81%E8%81%94%E5%90%8D%E4%B9%A6/</url>
+    
+    <content type="html"><![CDATA[<h4 id="理学院全体男研究生写给辅导员老师及所有校领导们的一封信"><a href="#理学院全体男研究生写给辅导员老师及所有校领导们的一封信" class="headerlink" title="理学院全体男研究生写给辅导员老师及所有校领导们的一封信"></a><center>理学院全体男研究生写给辅导员老师及所有校领导们的一封信</h4><p>尊敬的辅导员老师、院领导、校领导们：<br>&emsp;&emsp;您好，关于宿舍搬迁事宜，自通知下发的短时间内，我们便收到诸多反馈。言语之间已充分反映了学生情绪高涨，坚决反对宿舍搬迁的态度！</p><p>&emsp;&emsp;自进入东大以来，同学们希望能有一个良好的学习环境，能在大家共同的努力之下将东大建设的更加美好，但学校的一系列做法一次又一次地伤透了大家的心。去年因疫情封校期间，大家无不积极配合学校工作，但校食堂却趁火打劫，哄抬物价，学校对此置若罔闻，视众学子诉求而不见；同是封校期间，我校接入水果店，而水果店利用学生出入不便的特点，再次抬高物价，我校再次无视学生诉求；三舍B区暖气供暖不足，使得大家睡眠严重受影响，经反应之后，却只安排形式作业，并无任何实际改善；今年，学校热水机更新，水费价格上涨颇多，学校又一次无视学生抗议。诸如此类，不可胜数。至此，我们明白，沉默是得不到任何回应的，我们的希望只会在一次次的期待中破灭，学校的种种行为在一次次地向学生群体的底线发出挑战。</p><p>&emsp;&emsp;今天，东大再次对我们提出不合理要求：进行无谓的宿舍搬迁！但我们不会再沉默，我们接受这个挑战，我们不会一味的顺从，我们有思想，我们要用自己的行为来建设我们心中的东大。我们可能会碰壁，但我们决不放弃，我们也在此表明，这样的抗议行为也绝对不会是最后一次！<br>关于此次搬迁，我们理学院研究生男生全体在此表态：坚决反对无谓的搬迁！学校必须做出有实际意义的改变，这次，我们绝不低头！</p><p>&emsp;&emsp;我们对此次搬迁指出如下不合理问题（包括但不限于），以表明我们的诉求是合理的、是符合大家的利益需求的，我们所做出的行为是完全正义的，是应当受到支持的！</p><p>1、三舍C紧邻培训餐厅，每天都会造成巨大且持久的噪音；此外五楼极其燥热，三舍C尚无条件解决夏日纳凉问题。这些问题严重地影响了大家休息，研究生的休息时间本就短暂，我们需要安静的睡眠环境来维持日常的精力消耗。</p><p>2、三舍C与三舍B相距不足百米，就加强管理之类理由而言，这类搬迁毫无意义，而进行搬迁则会消耗人力物力，更消耗人的精力。多数学生已在当前宿舍安置固定设备，如果进行搬迁，势必造成损失，这些损失却无人来负责。</p><p>3、适应新环境需要一定的时间，我们已经在原宿舍扎根生存，心理乃至生理上都已经有了认同感。新的环境下势必影响生活质量，造成学习效率低下等问题。</p><p>4、宿舍条件并没有得到改善，一切基于此的搬迁都是徒劳的。目前的各个宿舍夏无空调，燥热难耐、入睡困难；冬季暖气失灵、供热不足，这已经是三舍普遍存在的问题。</p><p>5、大家广泛表示，在繁忙的学业中抽出时间进行如此没有意义且损害自己利益的行为，完全是在浪费时间！</p><p>6、搬迁新址对学习环境没有任何改善，原研究生都在八舍，唯有我们这一群体被遗留至三舍，造成各种交通障碍，且与实验室相距甚远，现行搬迁安排更加剧了这一不合理性。</p><p>&emsp;&emsp;此次的搬迁只会将精力浪费在搬迁的途中，只会在过程中造成更多的损失，而不会带来任何实际效益，从根本利益上造成了需求与安排之间的矛盾，这是此次搬迁无用的根本依据。</p><p>&emsp;&emsp;我们恳切的希望学院、学校各级组织重新考虑搬迁决定，这是理学院研究生全体男生的共同发声。如果该诉求依然得不到回应，那么大家将酌情采取其他行动来控诉、抵制这种不负责任、侵犯学生权益的行为，从而维护我们的基本权益。我们不想在此招生的关键时刻对学校造成不良影响，但也绝不容忍此类侵犯权益的行为继续发生。我们相信，即使我们的声音在东大被淹没，也会在社会上浮起。我们相信，东大各级领导始终是和东大学子站在同一战线的。我们也相信，上级组织会给出一个令人满意的处理结果。</p><p>&emsp;&emsp;理学院全体男研究生致各级领导！</p><p>我认同以上内容，反对宿舍搬迁，并在此签名表明态度，我保证该签名真实有效：</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>东北大学</tag>
+      
+      <tag>生活</tag>
+      
+      <tag>联名书</tag>
+      
+      <tag>宿舍</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>东大第一秋</title>
+    <link href="/2020/10/31/%E4%B8%9C%E5%A4%A7%E7%AC%AC%E4%B8%80%E7%A7%8B/"/>
+    <url>/2020/10/31/%E4%B8%9C%E5%A4%A7%E7%AC%AC%E4%B8%80%E7%A7%8B/</url>
+    
+    <content type="html"><![CDATA[<p>金色的秋风，</p><p>散落一地，</p><p>凉嗖嗖的银杏叶，</p><p>肆无忌惮。</p><p>将所有思绪，</p><p>写进一叶秋风，</p><p>等银杏叶来，</p><p>秋风便要散尽。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>诗词</tag>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>美丽新世界读后感</title>
+    <link href="/2020/09/13/%E7%BE%8E%E4%B8%BD%E6%96%B0%E4%B8%96%E7%95%8C%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <url>/2020/09/13/%E7%BE%8E%E4%B8%BD%E6%96%B0%E4%B8%96%E7%95%8C%E8%AF%BB%E5%90%8E%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p><strong>“集体、统一、稳定”</strong></p><p>福特纪元，文明的时代。所谓文明，是通过无性繁殖进行延续的社会;是抛却宗教信仰，以唆麻来提供精神世界的慰藉;是消除人们的思考，以胚胎的教化来完成人格塑造(这与《1984》是如此的契合，它强调“无知即力量”)。</p><p>人不再是有性繁殖的产物，是可以经过实验室量产的产品;福特纪元的社会产生多大的人口缺口，实验室就可以量产多大批量的“产品”，只需要指定功能、配额！<br>人口的分工，依然沿用着古老的种姓制度，但他们称之为“文明”。人们的职业从胚胎时期就已经被指定，他们所属的阶级不过是别人的意志。<br>这里的阶级划分是理所当然的，是与生俱来的，这种阶级的鸿沟远超阶级壁垒，他们的阶级是不求改变的，即使是最底层的阶级–没有所谓的物质缺乏，为什么要寻求改变？</p><p>研究科学被看做是扰乱社会秩序的行为，它会导致社会的动荡。九年的福特纪元战争，让统治者严格管制起科学的研究–要么稳定地生活，要么流放。</p><p>野蛮人保留地–我愿称之为“真正的时代”，只有在那里，所有的一切才是真实的。情感、思想、伦理、文化都得以延续，莎士比亚可以被诵读，男欢女爱存在羞耻，唯独资源极其匮乏–这也是“野蛮人保留地”不会被开发为“文明”的原因。</p><p>任何一种社会，都存在思想极其前卫的人物，伯纳德、赫尔姆茨霍、野蛮人约翰–尤其是约翰。最可笑的是，他们所谓的野蛮人，企图改变他们所谓的“文明”。赫尔姆茨霍追求科学，因而被流放;约翰，始终追寻着真正的自由，他得到了一方生存之地，却不能度过一个春秋。而伯纳德，是这一切改变的纽带，是他将野蛮与文明联系在一起，但他在改变面前却是最懦弱的。</p><p>他们说，前古时代，他们是相信上帝的，因为上帝赐予他们食物和信仰;而福特纪元的人们是不相信存在上帝的–既然物质与精神都可以得到满足，有什么必要去依赖“一个可有可无的人”呢？(这似乎是老子的思想“太上，不知有之;其次，亲而誉之)</p><p>改变的结局自然是失败的，在文明的压迫之下，个别人物的努力总是掀不起长久的风波的。</p><p>野蛮人留给文明的最后印象，是在野猪脊一样的山脉里孤零零立着的一间小草屋，是播撒了十几包种子尚未得到收获的庄稼，是一张打磨好的木弓和几支装点了羽毛的木箭，是悬在半空中来回摆动的双脚。</p><p>–《美丽新世界》</p><p>注：时研一开学，两周无事，恰《美丽新世界》尚未读完，遂阅读之，后有感而记。</p><p><img src="/../images/BraveNewWorld/BraveNewWorld.jpg" alt="BraveNewWorldCover"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>后感</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>本科毕业有感</title>
+    <link href="/2020/06/24/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E6%9C%89%E6%84%9F/"/>
+    <url>/2020/06/24/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E6%9C%89%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p>此一别，</p><p>又两三载，</p><p>虽四度春秋，</p><p>五月良人未归，</p><p>六弦琴诉离别愁，</p><p>七星宿天各一方，</p><p>怀八九分同窗情，</p><p>再定十年期。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>青岛大学</tag>
+      
+      <tag>毕业</tag>
+      
+      <tag>大学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>观流星有感</title>
+    <link href="/2019/11/22/%E8%A7%82%E6%B5%81%E6%98%9F%E6%9C%89%E6%84%9F/"/>
+    <url>/2019/11/22/%E8%A7%82%E6%B5%81%E6%98%9F%E6%9C%89%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p>望日未至，人众满庭，举足展目之间，<br>尽在于星野，嘈杂议论之声，皆入于耳畔，心奇之惑之，遂往观之。<br>院庭乍动众纷纭，忍将眉目移星辰？<br>星朗月羞非望日，倏忽苍芒遗天痕。<br>一母化得身千亿，花开岂有复合时？<br>怎堪重把潦倒盏？此身凐灭毋自惜！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>肖申克的救赎观后感</title>
+    <link href="/2019/11/03/%E8%82%96%E7%94%B3%E5%85%8B%E7%9A%84%E6%95%91%E8%B5%8E%E8%A7%82%E5%90%8E%E6%84%9F/"/>
+    <url>/2019/11/03/%E8%82%96%E7%94%B3%E5%85%8B%E7%9A%84%E6%95%91%E8%B5%8E%E8%A7%82%E5%90%8E%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p>更喜欢这个版本的翻译:“<strong>有的鸟是关不住的，它们的每一片羽毛都闪耀着自由的光辉。</strong>”<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; – 十刷《肖申克的救赎》<br>Some birds aren’t meant to be caged.Their feathers are just too bright. And when they fly away, the part of you that know it was a sin to lock them up does rejoice. But still the place you live in is that much more drab and empty that they are gone. </p><p>I like to think it was something so beautiful, it can’t be expressed in words and makes your heart ache because of it. I tell you, those voices soared higher and farther than anybody in a gray place dares to dream. It was like a beautiful birds flapped into our drab cage and made those walls dissolve away. And for the briefest of moments, every last man at Shawshank felt free.<br>(这两句是在Andy逃出升天后，Red看着落日的内心独白)</p><p>I am the light of the world, Ye that followeth me shall have the light of life. （典狱长在监狱对Andy说）</p><p>Hope is a good thing, maybe the best thing, and no good thing ever dies. （当Red劝Andy放弃对希望的幻想时，Andy对Red如是说）</p><p>Get busy living, or get busy dying.（当Red劝Andy放弃对希望的幻想时，Andy对Red如是说）</p><p>His judgement cometh and that right soon…（典狱长办公室挂着的刺绣，其夫人手织）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>观影笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>有感</tag>
+      
+      <tag>电影</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>中秋夜有感</title>
+    <link href="/2019/09/06/%E4%B8%AD%E7%A7%8B%E5%A4%9C%E6%9C%89%E6%84%9F/"/>
+    <url>/2019/09/06/%E4%B8%AD%E7%A7%8B%E5%A4%9C%E6%9C%89%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p>今夜的月，属于清凉的风和咆哮的海，或许，也应该属于我吧！</p><p>难得一时闲暇，遂独自往观小麦岛。</p><p>薄薄的轻纱笼罩着朦胧的月，淡淡的水汽覆盖着汹涌的海。皎月无晕而轻风不止，怒海欲静而波浪不息。</p><p>此起彼落的虫鸣声在这样的夜色中竟也显得如此和谐，仿佛大自然演奏的交响乐。这乐曲冲破闹市的喧嚣，用音符渲染出一方静谧的乐土。岸滩边的鼓乐声回应着，这是人与自然亲密的交融。</p><p>曲径幽长，惊涛呼啸，海浪像鼓槌一样敲击着路缘，一挂挂水帘交相呼应，这是大海在深夜孤独地演出，是大海对白天压抑的宣泄。这低沉的怒吼声，正悄无声息地弥漫着整个城市。</p><p>极目之处，一城一岛一海已尽收眼底。夜空广袤如斯，却星只一枚，月不满弓，况人如蜉蝣，能得几何？灯火阑珊而穷途未知，一星残月而归宿已定！<br>少顷，往归</p><p>注：当时考研，恰逢中秋，久未回家，思乡之情甚切，独往小麦岛观月、听海，良久有感而记，后归<br>music：《Home》</p><p><img src="/../images/2019MidAtumn/2019MidAutumn.jpg" alt="中秋夜"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>杂记</tag>
+      
+      <tag>小麦岛</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>种族歧视系列电影观后感</title>
+    <link href="/2019/04/23/%E7%A7%8D%E6%97%8F%E6%AD%A7%E8%A7%86%E7%B3%BB%E5%88%97%E7%94%B5%E5%BD%B1%E8%A7%82%E5%90%8E%E6%84%9F/"/>
+    <url>/2019/04/23/%E7%A7%8D%E6%97%8F%E6%AD%A7%E8%A7%86%E7%B3%BB%E5%88%97%E7%94%B5%E5%BD%B1%E8%A7%82%E5%90%8E%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p><strong>上帝爱每个人，但并不是爱每个人做的所有的事！</strong></p><p>所谓的平等，大概是建立在对其他人的不平等的基础之上，当自身处于下层时，动乱便发生了。</p><p>王朝的更迭，时代的变迁，都必然带有一定的民族性；几乎所有的政变、暴乱都始于统治权的争夺，然而，几乎所有的结局都“造就”了民族不平等性！</p><p>是为了生存而逃避，还是为了改变而牺牲，我想Cristopher给出了他的回答：哪怕微不足道，我也要与我的信众同在；哪怕身首异处，我也要试着去做出任何有可能发生的改变！</p><p>这不只是一场政权斗争，还是人性的试炼之地。人并非生而好杀，当权、利占据了心灵、大脑之后，那么这个人便不能再称之为人了，他的所做，已非人为；人并非生而有别，当统治者的所谓的“候选人”–姑且如此称呼–想要将暴行公诸于世的时候，仇恨便随之而来，性别之差，肤色之别，种族之异都将成为愚昧的民众开始自相仇恨的理由，再无血缘，再无理性，再无和平！</p><p>或许有一种现代化的“公平”，它提倡人权，它提倡自由，但它却不提供任何社会保证；在它的领土上，<strong>黑色的皮肤依然行走在黑夜，白色的皮肤也没有在阳光下闪光</strong>！</p><p>一个国家的羞耻在于，即使是艺术也难逃种族歧视的命运；艺术被划清了界限，这是时代的悲哀，也是人类文明的失败！</p><p>当你不知道你能为这份平等的到来做些什么的时候，保护他们，给他们应有的待遇–像你对待你的朋友、邻居、亲人那样！像托尼与唐雪利那样！</p><p>———-《绿皮书》《辛德勒名单》《卢旺达饭店》《杀戮禁区》</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>观影笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>后感</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>观樱花</title>
+    <link href="/2019/04/13/%E8%A7%82%E6%A8%B1%E8%8A%B1/"/>
+    <url>/2019/04/13/%E8%A7%82%E6%A8%B1%E8%8A%B1/</url>
+    
+    <content type="html"><![CDATA[<p>樱花路长，人众满目；</p><p>微风不起，樱花不落；</p><p>十里微醺尽樱香，奈何五瓣不成双！</p><p>敢教黛玉再拈花，杀尽樱花期未央！</p><p>注：时清明节后，中山公园樱花盛开，乘兴而往，归后记</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>诗词</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>元旦有感</title>
+    <link href="/2019/01/02/%E5%85%83%E6%97%A6%E6%9C%89%E6%84%9F/"/>
+    <url>/2019/01/02/%E5%85%83%E6%97%A6%E6%9C%89%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs">岁之元，气凛冽，股颤颤！蜷曲在榻者众，飒飒搦寒者寡。往视东庭，日光灿灿，林木潇潇，林瑟瑟而挺立，人则寒芒刺骨，不可久居！昔逢旦日，红桃新装以辞旧，今至旦日，以学以思以迎新。古人求欢以美酒，今能尽乐食珍馐？吾思岁月固长，旦日其源可究。崔瑗名以“元正”，阳都赋以“元辰”，而来千年有余，会逢盛世，“元旦”沿袭者六十又七！时已至矣，邀三五同行，或达天人，或思情欲，或为绩业；觥筹之间，或两两，或三五，凡酒水不尽，言难尽矣！常自比于大能，虽不胜管乐，可甘于市井？生而不可为，无奈为小人！饮此忘忧水，吞吐复回转！目炫炫而足绵绵，头沉沉而肢缓缓，无思无度，欲眠未眠之言，乃至于此。劣言斑斑，不知所言！</code></pre></div><p>注：恰逢元旦，众人宴饮尽兴，后半夜而归！次日早，尚未酒醒，乍觉寒冷，起身视窗外，寒风呼啸，行人寥寥，寒气逼人，有感而记！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+      <tag>文言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>圣诞小记</title>
+    <link href="/2018/12/25/%E5%9C%A3%E8%AF%9E%E5%B0%8F%E8%AE%B0/"/>
+    <url>/2018/12/25/%E5%9C%A3%E8%AF%9E%E5%B0%8F%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs">卯时初至，雾霭蔽日，意神游而肢渐有觉，榻将远，吾安忍弃之？踌躇之间，如有惊雷击心，更似鹈鹕灌顶，双目神聚，身负九牛，晨事顷刻毕！凡古之学者，无不勤于豫，精于习，通于贯。今吾学业甚繁，而怠于行，惰于神，是以学而弗明，攻而弗精，贯而弗通也！恰某科堂试于是日，济济美玉掩一陋石；冷冷战战，美玉生珠；怡然静处，石未知其缘。试末，冷石浸衫，战战兢兢；美玉熠熠，未知致石如此者何也！三五结伴而行者，言此言彼，默而不语。或曰，当歌对酒者若何？群起而和之，携侣十有五六往之。夫人俯仰天地，不尽人意者甚多，或流诸江河，或消弭朔风，或止于前尘。呱呱者日初生，垂垂者夕迟暮，日月虽有轮转，人生岂得轮回？将托吾于金樽，寄凌云于长歌！然值鸿志年少时，怎能失意为英杰，群侣觥筹相交，尽把年少风流，难得一逢盛会，点墨志于今日！时一八年腊月廿五，歌而记之。              </code></pre></div><p>注：时冬日圣诞，又寿险考试！是日晚，众人宴饮归来，题以圣诞小记。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+      <tag>文言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>1984读后感</title>
+    <link href="/2018/12/22/1984%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <url>/2018/12/22/1984%E8%AF%BB%E5%90%8E%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p><strong>战争即和平</strong><br><strong>自由即奴役</strong><br><strong>无知即力量</strong><br>或许还应该有这样一条：<br><strong>谬误即真理</strong></p><p>这个时代，人们没有思考，却很安逸；历史没有定式，完全主观！这个时代，没有任何一杆评判的标尺，我用即对，我不用即错–或许可以称之为一种双重标尺。</p><p>我从谬论中鹤立，向真理扭动着身躯，而当我触碰到真理的那一刻，我的信念崩塌了–真理舞动血淋淋的皮鞭驱使着我相信，真理即谬论–我所追寻的并非真理，而是相信“真理”的心。</p><p>倘若真理真的存在的话，那应该是被社会认可的一切信条，当民众不认可的时候，2+2便等于5。</p><p>所谓追寻真理，不过是以另一种方式求证谬误即真理–只要你想，真理可以是任何东西。</p><p>每一个渴望寻求光明的人，最终都会被投入黑暗，所以光明预示着黑暗！你所在即是光明，你所往便是黑暗！自由的人总是费尽心思地去寻找囚禁自己的牢笼–直到自由不复存在，才是真正的自由！</p><p>我想温斯顿该是得到了彻彻底底的洗礼，无论是身体上还是精神上！当然，当一个人的身体接受洗礼的时候，精神也便开始被洗礼着。</p><p>当统治者想要改变的时候，无论如何你是无法反抗的，改变语言，增减文字成为一种强力的方式！让反对者从语言，从文字上失去力量，自然，反抗也就悄无声息，湮灭无形了！</p><p>陌生，相识相交，以命相托。是敌人，也是朋友，猫与老鼠的战争，是战争，亦是和平。惺惺相惜，情不自禁，这是温斯顿得以解脱的根源！</p><p>致 乔治奥威尔和他的《1984》</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>后感</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>初雪小思</title>
+    <link href="/2018/12/05/%E5%88%9D%E9%9B%AA%E5%B0%8F%E6%80%9D/"/>
+    <url>/2018/12/05/%E5%88%9D%E9%9B%AA%E5%B0%8F%E6%80%9D/</url>
+    
+    <content type="html"><![CDATA[<p><strong>初雪小思</strong></p><p>白茶冷风浅忧思，黄盏映雪暮迟迟。</p><p>欲将芒道寻前程，幽径漉漉敢妄行？</p><p>注：时值期末考试周，已是寒冬，久不下雪；出食堂，逢初雪，独自一人行于食堂前林间小道，在教室有感而发，记之。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>诗词</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>赌</title>
+    <link href="/2018/05/22/%E8%B5%8C/"/>
+    <url>/2018/05/22/%E8%B5%8C/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs">东方古城--华阳城，处日极盛、月极盈、风极美、雨极乐之地；万古以来，收纳天地灵气，吸食日月精华，吞吐万物生机，故多产原石，而采之不易；所谓原石者，内敛珍宝而裹以陋石，非切之不得其内含！有此美物，伴之以伯乐，故而多鉴原师，以探其所有。当地因此特色，多造赌原阁，以求生计，名满华阳者，水月阁(水月，取水中之月，繁华一梦，转瞬成空)也！华阳城风水宝地，钟灵毓秀，多出才人！鉴原术有城北世家墨家，墨家则以墨玉为最！因久居高台，挑战者甚繁，而屡战不败。又有城南一脉，单传水苍，踪迹不定，少有故事而多传奇，未尝一败！这一日，华阳失了往昔端庄，去了那时静好，余了喧嚣风雨，聚了哗然人群！原石激起千层浪，波涛兴于水月阁！阁内大堂，一袭墨色长衣拂起，一缕墨色长发飘逸，一顶墨色发冠挺立，一把墨色折扇展毕，定是那墨玉公子无疑！“我听说，这墨玉公子今日要将这水月阁最大的几块原化开！”“这几块原的分量可不小，向来没人敢动它们，只这原的价格就让人却步，这要是化不出个珍宝，那可真就血本无归了。”“嗨，要我说啊，这墨玉公子今日既然敢做，必有十足的把握。”…… 似不闻众人唏嘘，眼前这眉清目秀的青年缓步向前道:“掌柜，可否将那镇阁的数枚原石取出，今日我等在贵阁做赌，众人为见证！”掌柜自然吩咐下人去做，片刻功夫就见堂上摆放十数块原石！只不知这墨玉公子今日约了何人在此，不过想来也定是大手笔之人！且做稍等，墨玉略一抬头，往大门迎去，“王兄今日来此，可是也要与我做赌？”墨玉俯首，微然一笑。原来，这墨玉公子所迎之人乃是华阳城城主府世子，两家交情素来深厚，世子点头回礼“不然，不然！墨兄高才，实不可及，不过墨兄既如此说辞，不妨玩上一玩，做个引，权做抛砖引玉。”“王兄先请！”墨玉作势先请。世子斟酌一二，选定一块石皮精致的原石，回首道:“墨兄请！”墨玉也不做思索，点了就前一块原石，吩咐下人将所选石料抬到化原台上，两人便开始做工！墨玉自带一副刀具精糙分明，一套手法炉火纯青，刮推凿划，出神入化，蜕下的片片石皮薄如蝉翼！再看世子这边，接过刀具，大刀阔斧，只做切推，但见碎石哗哗坠地！良久，二人做状收工，世子这边但剩拳头大小原石，墨玉这边四四方方恰如半尺石匣！墨玉一刀划去，似匣子打开一般，一缕光芒闪过，一块鸡卵大小的芙蓉玉呈现众人眼前，台下一篇哗然“墨公子端的一副慧眼，竟视得如此珍宝”；再观世子这边，一刀落下，只有碎石滑落，世子眼中的遗憾表露无遗，却也大方的拂去碎石，取出仅有的一块琉璃球大小的一块祖母绿！世子付了这原石的银两，向墨玉示了好便往堂前！墨玉站立，似有迫切之意！“好眼光，好手法，好！好！好！”台下连爆三个好字来称赞墨玉，着实引人注意！搭眼望去，此人与墨玉年纪相仿，虽也清秀，却衣衫褴褛，颇有醉意，步履蹒跚地走上前来！“墨兄好手段，在下城南水苍，前来赴赌！”墨玉闻言，快速上前“原来是水苍兄，墨玉在此恭候多时，水苍兄请！”这墨玉与水苍本不曾有过交集，因有不成文的规矩“同行之间不相探密”，为的是避免泄了这原术之中的奥妙，但今日此赌，受全城关注，由城主安排，难以推脱！水苍作势“请！”两人表面波澜不经，实则心中惊涛骇浪，能与高手一较高下，实是人生一大快事！步至石前，墨玉环石一周，拍石而止，止而复拍，所击打之处似有清风吹过，轻灵佩乐流转，手法流畅自然，最终选定一块天狗吠日状的原石，命人抬至化石台上，墨玉满意的抚摸着这块精心挑选的自然之作！水苍这边也不迟疑，只做踏步，而步法精妙，每踏一步，石下如有波动，似有沉沉古韵入耳，再踏一步，复归自然，踏步一周半，选定一块石人状原石，取至台上！这次，墨玉的手法却与之前截然不同，刀具只取一片，全做平削，软刀在他手中削石如泥，刀过之处，石皮薄如蝉翼，落地即碎，刀石相接之声清脆悦耳，似天籁！水苍手持一把大片刀，裁去尺许石人头、石臂、石腿，但余石身，切出窄刃，做刮，一来一往，不见石沫扬起，所过之处，沫随刃尖如流水般丝丝滑落，往来之音，归于混沌！台下不时一阵阵赞叹，唏嘘，议论；接近尾声时却一阵怀疑--水苍化石台上已不剩什么！墨玉此时无暇他顾，自己手下只剩两三寸厚度石片，小心翼翼切边，刮表层，除尘，余下功夫一气呵成，随时间流转，石层愈发鲜红，似残阳、如饮血！最后一刀落下，血光大盛--一块尺许大小自然天成的血玉盘！！台下阵阵尖叫，不绝于耳！墨玉对此甚是满意，点头淡然一笑，转而望向水苍。水苍手下已不剩下什么，显然是输了，众人惊愕，没想到传奇众多的城南水苍竟会化出空石，输得如此惨淡。水苍却只悠闲的席地饮酒，墨玉不由心生疑惑，目光转动，注视良久，转而惊，继而敬，屈身抱拳作势:“水苍兄，请！”水苍闻言，面色诧异，转而镇静，笑曰:“有此一赌，快活，快活，墨兄，山高水长，你我后会有期！”说完飘然离去！墨玉心道:真天人也，有此一赌，无憾，无憾！众人不解“墨玉公子，这是何意啊？”墨玉解释道:“水苍兄真高人也，在下不及！”“墨玉公子，这大家伙都看到了，水苍他什么也没化出来啊，这明显您赢了啊，怎么您……”墨玉也不搭话，在众人不解的眼光下，踱步至水苍用弃的石料，摸起石人头，一套精妙刀法，解石完毕，绿光大绽，待光芒敛去，只余下一尊飞仙状帝王玉；剖开石臂，两滴琥珀蜂；剖开石腿，两节血玉竹！全场寂然…… 墨玉怅然“痛哉，快哉！”</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>小说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>女见花</title>
+    <link href="/2018/05/02/%E5%A5%B3%E8%A7%81%E8%8A%B1/"/>
+    <url>/2018/05/02/%E5%A5%B3%E8%A7%81%E8%8A%B1/</url>
+    
+    <content type="html"><![CDATA[<p>女见（xiàn）花</p><p>浅着霓裳百羽开，半含桃花五蕴来！</p><p>玉兰本在昨日落，又逢今日花满怀。</p><p>注：玉兰初谢，有感而发</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>诗词</tag>
+      
+      <tag>生活</tag>
+      
+      <tag>文言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>铭志者传</title>
+    <link href="/2016/04/01/%E9%93%AD%E5%BF%97%E8%80%85%E4%BC%A0/"/>
+    <url>/2016/04/01/%E9%93%AD%E5%BF%97%E8%80%85%E4%BC%A0/</url>
+    
+    <content type="html"><![CDATA[<p>李海豹，号铭志，幼喜文，性乖张。一三年中三桐，尤勤奋致思，而以理化为最。又随和，故多交游。</p><p>初中一年，其性尤善，颇得欢喜，于众亦得彰显。然劣者，顺言也，以此三而受惩，终不易。完美无瑕，非圣人莫能全，况其一介狂俗邪？时网文行诸世，人多观之，其固不免。所好者，“仙侠”“网游”而已；二者世好其一而恶其一，独钟二类，可见异志。后以事故，弃志而从俗，多有叹惋者。</p><p>初中二年，盛行手游之风，究其源，竟之人也！亦醉梦其中，探其中精髓且悟新技，超人一等。别有激殴而群聚者，之人义不苟免。学业由此倾颓，志识由此消靡。</p><p>初中三年，本不自意经济旧学，奈何义气各散一方，幡然致明，遂愤而求学，终不欺心枉度。</p><p>斯人之风变也，自于高中，谓之“换神”。</p><p>高中一年，以低分之耻愤而图强，终致前茅。而性痞，师多厌，唯一二人喜之。后临考，以侵规，主而求罚，且愤而居首。后侃曰：“罚而居首，不若考而罚，罚而首”。深然之。</p><p>高中二年，“双耳不闻窗外事，一心只读圣贤书”为写照也。</p><p>高中三年，“踏上征程，剑指沧澜，披荆斩棘，有我无敌”自信的口号，将是其成功的标语。成功唯铭志，铭志定成功。<br>时一六年四月，为战高考.铭己志而著。</p><p>注：时高三，为战高考.铭志而著。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>自传</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>

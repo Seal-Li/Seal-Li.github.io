@@ -1,0 +1,971 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Seal Li">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="让我们开始学习HTML。 HTML是什么？HTML（HyperText Markup Language）是一种标记语言，用于创建和呈现网页。HTML使用各种标记和标签来定义文档的结构、内容和链接。HTML文件通常以.html扩展名结尾。 HTML文档结构一个标准的HTML文档包含以下几个主要部分：  &lt;!DOCTYPE&gt;声明：指定文档的版本和类型。 &lt;html&gt;元素：包裹整">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML入门">
+<meta property="og:url" content="http://seal-li.github.io/2023/10/22/HTML%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="Seal&#39;s Whisky">
+<meta property="og:description" content="让我们开始学习HTML。 HTML是什么？HTML（HyperText Markup Language）是一种标记语言，用于创建和呈现网页。HTML使用各种标记和标签来定义文档的结构、内容和链接。HTML文件通常以.html扩展名结尾。 HTML文档结构一个标准的HTML文档包含以下几个主要部分：  &lt;!DOCTYPE&gt;声明：指定文档的版本和类型。 &lt;html&gt;元素：包裹整">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-22T12:58:58.000Z">
+<meta property="article:modified_time" content="2023-12-02T16:01:42.170Z">
+<meta property="article:author" content="Seal Li">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="网页">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>HTML入门 - Seal&#39;s Whisky</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"seal-li.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"2623283313733e2775c175798b084e6e","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?2623283313733e2775c175798b084e6e";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Seal&#39;s Whisky</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="HTML入门"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-10-22 20:58" pubdate>
+          October 22, 2023 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.6k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          47 mins
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> views
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">HTML入门</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>让我们开始学习HTML。</p>
+<h3 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h3><p>HTML（HyperText Markup Language）是一种标记语言，用于创建和呈现网页。HTML使用各种标记和标签来定义文档的结构、内容和链接。HTML文件通常以<code>.html</code>扩展名结尾。</p>
+<h3 id="HTML文档结构"><a href="#HTML文档结构" class="headerlink" title="HTML文档结构"></a>HTML文档结构</h3><p>一个标准的HTML文档包含以下几个主要部分：</p>
+<ol>
+<li><code>&lt;!DOCTYPE&gt;</code>声明：指定文档的版本和类型。</li>
+<li><code>&lt;html&gt;</code>元素：包裹整个HTML文档的根元素。</li>
+<li><code>&lt;head&gt;</code>元素：包含元信息和链接到外部资源，不可见于页面。</li>
+<li><code>&lt;title&gt;</code>元素：设置网页标题，显示在浏览器的标签页上。</li>
+<li><code>&lt;meta&gt;</code>元素：包含关于文档的元信息，如字符编码、作者、描述等。</li>
+<li><code>&lt;link&gt;</code>元素：用于引入外部资源，通常是样式表。</li>
+<li><code>&lt;script&gt;</code>元素：用于嵌入JavaScript代码或引入外部JavaScript文件。</li>
+<li><code>&lt;style&gt;</code>元素：包含内部样式表，用于定义页面的样式。</li>
+<li><code>&lt;body&gt;</code>元素：包含可见于页面的内容，如文本、图片、链接等。</li>
+</ol>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>我的网页<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>欢迎来到我的网页<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个简单的HTML文档示例。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div>
+
+<p>在上面的示例中，我们有一个基本的HTML文档结构，包括<code>&lt;!DOCTYPE&gt;</code>声明、<code>&lt;html&gt;</code>、<code>&lt;head&gt;</code>、<code>&lt;body&gt;</code>等元素。</p>
+<h3 id="HTML标签和元素"><a href="#HTML标签和元素" class="headerlink" title="HTML标签和元素"></a>HTML标签和元素</h3><p>HTML中使用标签来定义元素。标签通常成对出现，由开始标签和结束标签组成，中间包裹内容。开始标签通常以<code>&lt;</code>开头，结束标签以<code>&lt;/</code>开头。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个段落。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+
+<p>在这个示例中，<code>&lt;p&gt;</code>是开始标签，<code>&lt;/p&gt;</code>是结束标签，内容”这是一个段落”被包裹在两个标签之间。</p>
+<h3 id="HTML元素的常见类型"><a href="#HTML元素的常见类型" class="headerlink" title="HTML元素的常见类型"></a>HTML元素的常见类型</h3><p>在HTML中，有许多不同类型的元素，包括：</p>
+<ul>
+<li><strong>文本元素：</strong> 用于显示文本内容，如 <code>&lt;p&gt;</code>（段落）、<code>&lt;h1&gt;</code>（标题）、<code>&lt;a&gt;</code>（链接）等。</li>
+<li><strong>媒体元素：</strong> 用于显示多媒体内容，如 <code>&lt;img&gt;</code>（图片）、<code>&lt;audio&gt;</code>（音频）、<code>&lt;video&gt;</code>（视频）等。</li>
+<li><strong>表单元素：</strong> 用于创建输入表单，如 <code>&lt;form&gt;</code>（表单）、<code>&lt;input&gt;</code>（输入框）、<code>&lt;button&gt;</code>（按钮）等。</li>
+<li><strong>列表元素：</strong> 用于创建有序或无序列表，如 <code>&lt;ul&gt;</code>（无序列表）、<code>&lt;ol&gt;</code>（有序列表）、<code>&lt;li&gt;</code>（列表项）等。</li>
+<li><strong>表格元素：</strong> 用于创建表格，如 <code>&lt;table&gt;</code>（表格）、<code>&lt;tr&gt;</code>（行）、<code>&lt;th&gt;</code>（表头单元格）、<code>&lt;td&gt;</code>（数据单元格）等。</li>
+</ul>
+<h3 id="文本元素"><a href="#文本元素" class="headerlink" title="文本元素"></a>文本元素</h3><h4 id="标题标签-到"><a href="#标题标签-到" class="headerlink" title="标题标签 &lt;h1&gt; 到 &lt;h6&gt;"></a>标题标签 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code></h4><p>HTML提供了六个级别的标题标签，分别是 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>，表示标题的重要性递减。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>这是一级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>这是二级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>这是三级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></code></pre></div>
+
+<h4 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签 &lt;p&gt;"></a>段落标签 <code>&lt;p&gt;</code></h4><p><code>&lt;p&gt;</code> 标签用于创建段落，通常用于包裹文本内容。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个段落。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+
+<h4 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签 &lt;a&gt;"></a>链接标签 <code>&lt;a&gt;</code></h4><p><code>&lt;a&gt;</code> 标签用于创建超链接，允许用户点击链接跳转到其他页面。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.example.com&quot;</span>&gt;</span>访问示例网站<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
+
+<h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签 &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;"></a>列表标签 <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></h4><p>HTML提供了无序列表和有序列表的标签。无序列表使用 <code>&lt;ul&gt;</code> 标签，有序列表使用 <code>&lt;ol&gt;</code> 标签，列表项使用 <code>&lt;li&gt;</code> 标签。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>无序列表项 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>无序列表项 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>有序列表项 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>有序列表项 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code></pre></div>
+
+<h3 id="媒体元素"><a href="#媒体元素" class="headerlink" title="媒体元素"></a>媒体元素</h3><h4 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签 &lt;img&gt;"></a>图片标签 <code>&lt;img&gt;</code></h4><p><code>&lt;img&gt;</code> 标签用于显示图像。它有一个 <code>src</code> 属性，指定图像文件的路径。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;图片描述&quot;</span>&gt;</span></code></pre></div>
+
+<h4 id="音频标签"><a href="#音频标签" class="headerlink" title="音频标签 &lt;audio&gt;"></a>音频标签 <code>&lt;audio&gt;</code></h4><p><code>&lt;audio&gt;</code> 标签用于嵌入音频文件，允许用户播放音频。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;music.mp3&quot;</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span></code></pre></div>
+
+<h4 id="视频标签"><a href="#视频标签" class="headerlink" title="视频标签 &lt;video&gt;"></a>视频标签 <code>&lt;video&gt;</code></h4><p><code>&lt;video&gt;</code> 标签用于嵌入视频文件，允许用户观看视频。示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;video.mp4&quot;</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span></code></pre></div>
+
+<h3 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h3><p>HTML中的表单元素用于收集用户输入。以下是一些常见的表单元素：</p>
+<ul>
+<li><code>&lt;form&gt;</code>：创建表单。</li>
+<li><code>&lt;input&gt;</code>：用于文本输入、单选框、复选框等。</li>
+<li><code>&lt;button&gt;</code>：创建按钮。</li>
+<li><code>&lt;label&gt;</code>：为表单元素创建标签。</li>
+<li><code>&lt;select&gt;</code>：创建下拉列表。</li>
+<li><code>&lt;textarea&gt;</code>：创建多行文本输入。</li>
+</ul>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>用户名：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>密码：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>登录<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre></div>
+
+<h3 id="表格元素"><a href="#表格元素" class="headerlink" title="表格元素"></a>表格元素</h3><p>HTML中的表格元素用于创建表格以显示数据。以下是一些表格元素和属性：</p>
+<ul>
+<li><code>&lt;table&gt;</code>：定义表格。</li>
+<li><code>&lt;tr&gt;</code>：定义表格行。</li>
+<li><code>&lt;th&gt;</code>：定义表格标题单元格。</li>
+<li><code>&lt;td&gt;</code>：定义表格数据单元格。</li>
+<li><code>colspan</code>：指定单元格横跨的列数。</li>
+<li><code>rowspan</code>：指定单元格横跨的行数。</li>
+</ul>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>姓名<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>年龄<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>小明<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>25<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>小红<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>22<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code></pre></div>
+
+<h3 id="嵌套元素"><a href="#嵌套元素" class="headerlink" title="嵌套元素"></a>嵌套元素</h3><p>HTML允许元素嵌套，这意味着你可以将一个元素放在另一个元素内部。例如，你可以在段落中嵌套链接或在列表中嵌套其他元素。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>请点击 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.example.com&quot;</span>&gt;</span>这里<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> 查看示例网站。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+
+<h3 id="HTML注释"><a href="#HTML注释" class="headerlink" title="HTML注释"></a>HTML注释</h3><p>你可以在HTML代码中添加注释，这些注释不会在浏览器中显示，但可以帮助你和其他开发者理解代码。HTML注释以 <code>&lt;!--</code> 开始，以 <code>--&gt;</code> 结束。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 这是一个HTML注释，用于说明代码的作用 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这段文字在浏览器中显示。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+
+<h3 id="HTML实体引用"><a href="#HTML实体引用" class="headerlink" title="HTML实体引用"></a>HTML实体引用</h3><p>HTML实体引用用于在HTML中显示特殊字符，如小于号 <code>&lt;</code> 或版权符号 ©。以下是一些常用的实体引用：</p>
+<ul>
+<li><code>&amp;lt;</code>：小于号 <code>&lt;</code></li>
+<li><code>&amp;gt;</code>：大于号 <code>&gt;</code></li>
+<li><code>&amp;amp;</code>：和符号 <code>&amp;</code></li>
+<li><code>&amp;copy;</code>：版权符号 ©</li>
+</ul>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> <span class="hljs-symbol">&amp;copy;</span> 版权所有<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+
+<h3 id="表单元素-1"><a href="#表单元素-1" class="headerlink" title="表单元素"></a>表单元素</h3><p>表单元素用于创建网页中的交互式表单，用户可以在表单中输入数据或进行选择。以下是一些常见的表单元素：</p>
+<ul>
+<li><code>&lt;form&gt;</code>：定义一个表单。</li>
+<li><code>&lt;input&gt;</code>：定义一个输入字段，如文本框、单选框、复选框等。</li>
+<li><code>&lt;textarea&gt;</code>：定义多行文本输入字段。</li>
+<li><code>&lt;label&gt;</code>：定义表单元素的标签。</li>
+<li><code>&lt;select&gt;</code>：定义下拉列表框。</li>
+<li><code>&lt;button&gt;</code>：定义按钮。</li>
+</ul>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>用户名：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>密码：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;提交&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre></div>
+
+<h3 id="链接和锚点"><a href="#链接和锚点" class="headerlink" title="链接和锚点"></a>链接和锚点</h3><p>HTML中的链接元素 <code>&lt;a&gt;</code> 用于创建超链接，使用户能够点击链接以导航到其他页面。链接可以指向其他网页、文件或站点内的其他部分。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.example.com&quot;</span>&gt;</span>访问示例网站<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
+
+<p>你还可以使用锚点来创建页面内部链接。在目标位置设置一个锚点，然后使用链接将用户导航到该锚点。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#section2&quot;</span>&gt;</span>跳转到第二部分<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;section2&quot;</span>&gt;</span>第二部分内容<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></code></pre></div>
+
+<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>图像元素 <code>&lt;img&gt;</code> 用于在网页上显示图像。你需要指定图像的 <code>src</code> 属性来指定图像文件的路径。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;示例图像&quot;</span>&gt;</span></code></pre></div>
+
+<h3 id="HTML注释-1"><a href="#HTML注释-1" class="headerlink" title="HTML注释"></a>HTML注释</h3><p>HTML注释可以帮助你在代码中添加注释和说明，这对于维护和合作开发非常有用。HTML注释以 <code>&lt;!--</code> 开始，以 <code>--&gt;</code> 结束。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 这是一个HTML注释，用于解释代码 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这段文字将在浏览器中显示。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+
+
+<h3 id="HTML框架"><a href="#HTML框架" class="headerlink" title="HTML框架"></a>HTML框架</h3><p>HTML框架允许你将网页分割成若干部分，每个部分显示不同的内容。常见的框架元素包括 <code>&lt;frameset&gt;</code>、<code>&lt;frame&gt;</code> 和 <code>&lt;iframe&gt;</code>。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">frameset</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">&quot;25%,50%,25%&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">frame</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;left.html&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">frame</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;main.html&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">frame</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;right.html&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">frameset</span>&gt;</span></code></pre></div>
+
+<h3 id="HTML元数据"><a href="#HTML元数据" class="headerlink" title="HTML元数据"></a>HTML元数据</h3><p>元数据元素提供关于文档的信息，如文档的字符编码、作者、关键字等。常见的元数据元素包括 <code>&lt;head&gt;</code>、<code>&lt;title&gt;</code>、<code>&lt;meta&gt;</code>、<code>&lt;link&gt;</code> 等。</p>
+<p>示例：</p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>示例网页<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一个示例网页。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E8%83%BD/" class="category-chain-item">技能</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/HTML/" class="print-no-link">#HTML</a>
+      
+        <a href="/tags/%E7%BD%91%E9%A1%B5/" class="print-no-link">#网页</a>
+      
+        <a href="/tags/%E5%89%8D%E7%AB%AF/" class="print-no-link">#前端</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>HTML入门</div>
+      <div>http://seal-li.github.io/2023/10/22/HTML入门/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Seal Li</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>October 22, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/10/22/vscode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/" title="vscode插件推荐">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">vscode插件推荐</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/10/22/Hexo-GithubPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="Hexo+GithubPages搭建自己的博客">
+                        <span class="hidden-mobile">Hexo+GithubPages搭建自己的博客</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="SOHUCS" sid='http://seal-li.github.io/2023/10/22/HTML%E5%85%A5%E9%97%A8/'></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cywWvbn0O","appkey":"3eb6e66dccceed81f6a4f94edc83bab0"})
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        Views: 
+        <span id="busuanzi_value_site_pv"></span>
+        
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        Visitors: 
+        <span id="busuanzi_value_site_uv"></span>
+        
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP证123456号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>京公网安备12345678号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,873 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Seal Li">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Git配置初次使用Git时，有一些重要的配置设置是必须的，以确保Git正常工作。以下是一些你应该进行的初次配置步骤：  设置用户名和邮箱：你需要配置Git使用的用户名和电子邮件地址，这些信息将与你的提交相关联。你可以使用以下命令分别设置用户名和电子邮件地址： git config --global user.name &quot;Your Name&quot; git config --globa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git入门及常用命令">
+<meta property="og:url" content="http://seal-li.github.io/2023/09/23/Git%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="Seal&#39;s Whisky">
+<meta property="og:description" content="Git配置初次使用Git时，有一些重要的配置设置是必须的，以确保Git正常工作。以下是一些你应该进行的初次配置步骤：  设置用户名和邮箱：你需要配置Git使用的用户名和电子邮件地址，这些信息将与你的提交相关联。你可以使用以下命令分别设置用户名和电子邮件地址： git config --global user.name &quot;Your Name&quot; git config --globa">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-23T02:56:04.000Z">
+<meta property="article:modified_time" content="2023-12-02T16:01:42.169Z">
+<meta property="article:author" content="Seal Li">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="协同开发">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Git入门及常用命令 - Seal&#39;s Whisky</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"seal-li.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"2623283313733e2775c175798b084e6e","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?2623283313733e2775c175798b084e6e";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Seal&#39;s Whisky</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Git入门及常用命令"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-23 10:56" pubdate>
+          September 23, 2023 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.3k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          28 mins
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> views
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Git入门及常用命令</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><p>初次使用Git时，有一些重要的配置设置是必须的，以确保Git正常工作。以下是一些你应该进行的初次配置步骤：</p>
+<ol>
+<li><p><strong>设置用户名和邮箱</strong>：你需要配置Git使用的用户名和电子邮件地址，这些信息将与你的提交相关联。你可以使用以下命令分别设置用户名和电子邮件地址：</p>
+<div class="code-wrapper"><pre><code class="hljs stylus">git config <span class="hljs-attr">--global</span> user<span class="hljs-selector-class">.name</span> <span class="hljs-string">&quot;Your Name&quot;</span>
+git config <span class="hljs-attr">--global</span> user<span class="hljs-selector-class">.email</span> <span class="hljs-string">&quot;youremail@example.com&quot;</span></code></pre></div>
+
+<p>将”Your Name”和”<a href="mailto:&#x79;&#111;&#x75;&#x72;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;</a>“替换为你的实际姓名和电子邮件地址。</p>
+</li>
+<li><p><strong>选择默认文本编辑器</strong>：Git会在某些情况下要求你输入文本消息（例如提交消息）。你可以设置你喜欢的文本编辑器，例如，使用以下命令将默认编辑器设置为VSCode：</p>
+<div class="code-wrapper"><pre><code class="hljs css">git config <span class="hljs-attr">--global</span> core<span class="hljs-selector-class">.editor</span> &quot;<span class="hljs-selector-tag">code</span> <span class="hljs-attr">--wait</span>&quot;</code></pre></div>
+
+<p>如果你使用其他文本编辑器，将其替换为适当的命令。</p>
+</li>
+<li><p><strong>配置全局忽略文件</strong>：你可以创建一个全局的.gitignore文件，用于指定Git应该忽略的文件或目录。这样，你就可以避免将不需要的文件提交到仓库中。使用以下命令设置全局.gitignore文件：</p>
+<div class="code-wrapper"><pre><code class="hljs jboss-cli">git config <span class="hljs-params">--global</span> core.excludesfile ~<span class="hljs-string">/.gitignore_global</span></code></pre></div>
+
+<p>然后，在用户主目录下创建.gitignore_global文件并定义你要忽略的内容。</p>
+</li>
+<li><p><strong>配置SSH密钥</strong>（可选）：如果你计划通过SSH协议访问远程仓库，你可以为GitHub、GitLab等服务生成SSH密钥，并将公钥添加到你的帐户。这可以减少每次推送或拉取时的认证需求。<br>要生成新的SSH密钥对，请使用以下命令：</p>
+<div class="code-wrapper"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> <span class="hljs-symbol">ed25519</span> -C <span class="hljs-string">&quot;youremail@example.com&quot;</span></code></pre></div>
+
+<p>将”<a href="mailto:&#121;&#111;&#x75;&#x72;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#109;">&#121;&#111;&#x75;&#x72;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#109;</a>“替换为你的电子邮件地址。</p>
+<p>要添加公钥，请使用以下命令：</p>
+<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_ed25519.pub</code></pre></div>
+
+<p>然后，将公钥复制并粘贴到你的GitHub、GitLab等帐户中。</p>
+</li>
+</ol>
+<h3 id="Git基本操作"><a href="#Git基本操作" class="headerlink" title="Git基本操作"></a>Git基本操作</h3><ol>
+<li><p><strong>初始化仓库</strong>：创建一个新的Git仓库，可以使用<code>git init</code>命令。例如，<code>git init my-repo</code>将在名为<code>my-repo</code>的文件夹中创建一个新的Git仓库。</p>
+</li>
+<li><p><strong>克隆仓库</strong>：获取现有的Git仓库的拷贝，可以使用<code>git clone</code>命令。例如，<code>git clone https://github.com/user/repo.git</code>将克隆远程仓库到本地。</p>
+</li>
+<li><p><strong>添加文件</strong>：将文件添加到暂存区，可以使用<code>git add</code>命令。例如，<code>git add filename</code>将文件添加到下一次提交中。</p>
+</li>
+<li><p><strong>提交更改</strong>：将已添加到暂存区的文件提交到版本历史，可以使用<code>git commit</code>命令。例如，<code>git commit -m &quot;提交信息&quot;</code>将更改提交到仓库。</p>
+</li>
+<li><p><strong>查看状态</strong>：查看仓库中文件的状态，可以使用<code>git status</code>命令。这将显示已修改、已暂存和未跟踪的文件。</p>
+</li>
+<li><p><strong>查看历史</strong>：查看提交历史，可以使用<code>git log</code>命令。你可以使用不同的选项来定制输出的格式和范围。</p>
+</li>
+<li><p><strong>创建分支</strong>：创建新的分支，可以使用<code>git branch</code>命令。例如，<code>git branch new-branch</code>将创建一个名为<code>new-branch</code>的新分支。</p>
+</li>
+<li><p><strong>切换分支</strong>：切换到不同的分支，可以使用<code>git checkout</code>命令。例如，<code>git checkout new-branch</code>将切换到<code>new-branch</code>分支。</p>
+</li>
+<li><p><strong>合并分支</strong>：将不同分支的更改合并到当前分支，可以使用<code>git merge</code>命令。例如，<code>git merge feature-branch</code>将合并<code>feature-branch</code>的更改到当前分支。</p>
+</li>
+<li><p><strong>远程操作</strong>：与远程仓库交互，可以使用<code>git remote</code>命令。例如，<code>git remote add origin https://github.com/user/repo.git</code>将添加一个名为<code>origin</code>的远程仓库。</p>
+</li>
+<li><p><strong>推送更改</strong>：将本地更改推送到远程仓库，可以使用<code>git push</code>命令。例如，<code>git push origin master</code>将将本地<code>master</code>分支的更改推送到远程仓库。</p>
+</li>
+<li><p><strong>拉取更改</strong>：从远程仓库获取最新的更改，可以使用<code>git pull</code>命令。例如，<code>git pull origin master</code>将获取<code>origin</code>上<code>master</code>分支的最新更改。</p>
+</li>
+<li><p><strong>解决冲突</strong>：在合并分支或拉取更改时，可能会出现冲突。解决冲突需要手动编辑文件并标记解决的部分。</p>
+</li>
+<li><p><strong>标签版本</strong>：为重要的提交创建标签，可以使用<code>git tag</code>命令。例如，<code>git tag v1.0</code>将创建一个名为<code>v1.0</code>的标签。</p>
+</li>
+<li><p><strong>撤销更改</strong>：撤销已提交的更改，可以使用<code>git reset</code>和<code>git revert</code>等命令，具体取决于情况。</p>
+</li>
+<li><p><strong>删除文件</strong>：从仓库中删除文件，可以使用<code>git rm</code>命令。例如，<code>git rm filename</code>将删除文件。</p>
+</li>
+<li><p><strong>删除仓库</strong>：删除本地仓库，可以使用<code>git rm -rf --cached .</code>命令。</p>
+</li>
+<li><p><strong>重置仓库</strong>：重置本地仓库，可以使用<code>git reset --hard</code>命令。</p>
+</li>
+<li><p><strong>回退版本</strong>：回退到以前的版本，可以使用<code>git checkout</code>命令。例如，<code>git checkout HEAD~1</code>将回退</p>
+</li>
+<li><p><strong>删除分支</strong>：删除分支，可以使用<code>git branch -d</code>命令。例如，<code>git branch -d feature-branch</code>将删除名为<code>feature-branch</code>的分支</p>
+</li>
+<li><p><strong>查看分支</strong>：查看所有分支，可以使用<code>git branch</code>命令。例如，<code>git branch</code>将列出所有分支。</p>
+</li>
+<li><p><strong>代码审查</strong>：code review，可以使用<code>git diff</code>命令。例如，<code>git diff</code>将显示所有未提交的更改。</p>
+</li>
+<li><p><strong>代码优选</strong>：选择有一个最优的commit进行合并，可以使用<code>git cherry-pick</code>命令。例如，<code>git cherry-pick commit-id</code>将选择<code>commit-id</code>的更改。</p>
+</li>
+<li><p><strong>分支合并</strong>：将分支合并到主分支，可以使用<code>git merge</code>命令。例如，<code>git merge feature-branch</code>将将<code>feature-branch</code>分支合并到当前分支。</p>
+</li>
+</ol>
+<h3 id="Git优点"><a href="#Git优点" class="headerlink" title="Git优点"></a>Git优点</h3><p>使用Git进行代码托管具有许多好处，其中一些主要好处包括：</p>
+<ol>
+<li><p><strong>版本控制</strong>：Git允许开发者跟踪项目的不同版本，并轻松切换、恢复或回滚到不同的版本。这使得开发过程更加可控，有助于团队合作和错误修复。</p>
+</li>
+<li><p><strong>团队协作</strong>：多人协作开发时，Git使团队成员能够在不干扰其他人的情况下并行工作，然后轻松合并各自的更改。Git的分支模型为团队协作提供了便利。</p>
+</li>
+<li><p><strong>追踪更改</strong>：Git会自动记录每个文件的更改历史，包括何时修改、谁修改以及修改了什么。这有助于了解代码的演化过程。</p>
+</li>
+<li><p><strong>本地开发</strong>：Git支持本地仓库，开发者可以在不需要互联网连接的情况下进行开发，仅在需要时与远程仓库同步。</p>
+</li>
+<li><p><strong>分布式开发</strong>：Git是分布式版本控制系统，每个开发者都拥有完整的仓库，可以在本地执行版本控制操作。这种模型使得协作和合并更加灵活。</p>
+</li>
+<li><p><strong>容易修复错误</strong>：如果出现问题，你可以轻松恢复到以前的版本，而不会丢失任何代码。这可以减少错误修复的风险。</p>
+</li>
+<li><p><strong>支持多平台</strong>：Git可以运行在不同的操作系统上，包括Windows、macOS和Linux。这意味着团队成员可以使用他们最熟悉的操作系统。</p>
+</li>
+<li><p><strong>社区支持</strong>：Git拥有庞大的用户社区，提供了大量的教程、文档和开源工具，帮助开发者更好地使用Git。</p>
+</li>
+<li><p><strong>持续集成</strong>：Git与持续集成（CI）工具结合使用，可以自动构建、测试和部署代码，加速开发流程。</p>
+</li>
+<li><p><strong>备份和存档</strong>：Git仓库本身就是一个备份，即使某个存储位置出现问题，你仍然可以从其他存储库克隆代码。</p>
+</li>
+</ol>
+<p>总的来说，Git是一个强大的版本控制工具，可以提高代码质量、团队协作效率，以及开发者的工作流程。无论是个人项目还是大型团队项目，使用Git都可以提供很多好处。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E8%83%BD/" class="category-chain-item">技能</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Git/" class="print-no-link">#Git</a>
+      
+        <a href="/tags/%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/" class="print-no-link">#协同开发</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Git入门及常用命令</div>
+      <div>http://seal-li.github.io/2023/09/23/Git入门及常用命令/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Seal Li</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>September 23, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/09/26/Redis%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Redis入门及常用命令">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Redis入门及常用命令</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/09/22/JAVA%E5%85%A5%E9%97%A8/" title="JAVA入门">
+                        <span class="hidden-mobile">JAVA入门</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="SOHUCS" sid='http://seal-li.github.io/2023/09/23/Git%E5%85%A5%E9%97%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/'></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cywWvbn0O","appkey":"3eb6e66dccceed81f6a4f94edc83bab0"})
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        Views: 
+        <span id="busuanzi_value_site_pv"></span>
+        
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        Visitors: 
+        <span id="busuanzi_value_site_uv"></span>
+        
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP证123456号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>京公网安备12345678号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
